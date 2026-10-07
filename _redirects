@@ -3,7 +3,6 @@
 /home/ / 301
 /nieuws /blog 301
 /nieuws/ /blog 301
-/nieuws/* /blog 301
 /blog/botulinetoxine-spierontspanners-hasselt /post/botulinetoxine-spierontspanners-hasselt 301
 /blog/botulinetoxine-spierontspanners-hasselt/ /post/botulinetoxine-spierontspanners-hasselt 301
 /blog/doet-het-pijn-mythes-esthetische-behandelingen /post/doet-het-pijn-mythes-esthetische-behandelingen 301
@@ -76,15 +75,12 @@
 /ipl-huidvlekken-pigmentvlekken-couperose-huidveroudering-behandeling-hasselt-limburg/ /behandelingen 301
 /microneedling /behandelingen 301
 /microneedling/ /behandelingen 301
-/behandeling-acné-littekens-behandelen-hasselt-limburg /behandelingen 301
-/behandeling-acné-littekens-behandelen-hasselt-limburg/ /behandelingen 301
 /behandeling-acn%C3%A9-littekens-behandelen-hasselt-limburg /behandelingen 301
 /behandeling-acn%C3%A9-littekens-behandelen-hasselt-limburg/ /behandelingen 301
-/blog/acné-littekens-Limburg-Hasselt /behandelingen 301
-/blog/acné-littekens-Limburg-Hasselt/ /behandelingen 301
 /blog/acn%C3%A9-littekens-Limburg-Hasselt /behandelingen 301
 /blog/acn%C3%A9-littekens-Limburg-Hasselt/ /behandelingen 301
 /blog/medische-huidverbetering-door-collageenstimulatie-prp-microneedling-mesotherapie /behandelingen 301
 /blog/medische-huidverbetering-door-collageenstimulatie-prp-microneedling-mesotherapie/ /behandelingen 301
 /blog/huidverjonging /blog 301
 /blog/huidverjonging/ /blog 301
+/nieuws/* /blog 301
