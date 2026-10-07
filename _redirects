@@ -83,4 +83,27 @@
 /blog/medische-huidverbetering-door-collageenstimulatie-prp-microneedling-mesotherapie/ /behandelingen 301
 /blog/huidverjonging /blog 301
 /blog/huidverjonging/ /blog 301
+# Slash-varianten en index.html permanent naar de canonieke URL (anders 307 van Cloudflare)
+/index.html / 301
+/over-ons/ /over-ons 301
+/behandelingen/ /behandelingen 301
+/spier-ontspanners/ /spier-ontspanners 301
+/fillers-hasselt/ /fillers-hasselt 301
+/skinboosters-hasselt/ /skinboosters-hasselt 301
+/biostimulators-hasselt/ /biostimulators-hasselt 301
+/haaruitval-behandeling-hasselt/ /haaruitval-behandeling-hasselt 301
+/medische-hifu-hasselt/ /medische-hifu-hasselt 301
+/blog/ /blog 301
+/contact/ /contact 301
+/maak-een-afspraak/ /maak-een-afspraak 301
+/post/botox-mythes/ /post/botox-mythes 301
+/post/botulinetoxine-spierontspanners-hasselt/ /post/botulinetoxine-spierontspanners-hasselt 301
+/post/doet-het-pijn-mythes-esthetische-behandelingen/ /post/doet-het-pijn-mythes-esthetische-behandelingen 301
+/post/fillers-hasselt-natuurlijk-resultaat/ /post/fillers-hasselt-natuurlijk-resultaat 301
+/post/fillers-of-botox/ /post/fillers-of-botox 301
+/post/huidroutine-najaar-hasselt/ /post/huidroutine-najaar-hasselt 301
+/post/klaar-voor-eerste-consult/ /post/klaar-voor-eerste-consult 301
+/post/prp-haaruitval/ /post/prp-haaruitval 301
+/post/skin-boosters-uitgelegd/ /post/skin-boosters-uitgelegd 301
+/post/skinboosters-stralende-huid-hasselt/ /post/skinboosters-stralende-huid-hasselt 301
 /nieuws/* /blog 301

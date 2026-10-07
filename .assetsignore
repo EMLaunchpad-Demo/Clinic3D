@@ -9,3 +9,12 @@ src
 LEES-MIJ.md
 # Nog niet gepubliceerde artikels van het nieuwe ontwerp (data in de toekomst)
 blog/
+# Door de Cloudflare-build aangemaakt
+wrangler.jsonc
+wrangler.json
+wrangler.toml
+.wrangler
+.gitignore
+node_modules
+package.json
+package-lock.json
