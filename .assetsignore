@@ -1,0 +1,9 @@
+# Deze bestanden horen niet publiek op de site
+.git
+.gitattributes
+.assetsignore
+.claude
+build.py
+blog_build.py
+src
+LEES-MIJ.md
