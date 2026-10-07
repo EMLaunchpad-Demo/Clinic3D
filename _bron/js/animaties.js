@@ -6,14 +6,14 @@
 
   var BLOKKEN = [
     ".reveal", ".section-head",
-    ".c3w .head", ".c3t .head", ".c3f .head", ".c3c .head", ".c3p .head", ".c3p .group", ".c3p .note",
+    ".waarom-intro", ".waarom-knoppen", ".c3t .head", ".c3f .head", ".c3c .head", ".c3p .head", ".c3p .group", ".c3p .note",
     ".c3w .cta", ".c3t .foot", ".c3d-about-media", ".c3d-about-copy",
     ".c3b .photo", ".c3b .wrap > div:last-child", ".c3c .grid > *",
     ".tp-h2", ".tp-sub", ".tp-cta", ".tp-cross", ".tp .wrap > h2", ".tp .cta", ".tp .note",
     ".afs-info-grid > *", ".post-auteur", ".post-meer .section-head", ".map-embed", ".extern--reviews"
   ];
   var RASTERS = [ /* kinderen komen een voor een binnen */
-    ".c3u .grid", ".c3w .grid", ".c3t .grid", ".grid-3", ".blog-grid",
+    ".c3u .grid", ".waarom-lijst", ".c3t .grid", ".grid-3", ".blog-grid",
     ".tp-zones", ".tp-price-grid", ".tp-trust", ".tp-steps", ".tp .grid", ".tp-faq", ".c3f .wrap > details"
   ];
 

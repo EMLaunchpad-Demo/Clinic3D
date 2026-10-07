@@ -868,23 +868,6 @@ body.no-scroll{overflow:hidden;}
 .c3u h3{font-family:var(--fd);color:var(--ink);font-size:1.25rem;margin:0 0 .5rem}
 .c3u p{font-size:.95rem;margin:0}
 
-/* ---- css\paginas\c3w.css ---- */
-.c3w{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--cream);font-family:var(--fs);color:var(--ink-soft)}
-.c3w .wrap{max-width:1180px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
-.c3w .head{text-align:center;max-width:640px;margin:0 auto 2.2rem}
-.c3w .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600;color:var(--gold-dark);margin-bottom:.6rem}
-.c3w h2{font-family:var(--fd);color:var(--ink);font-weight:600;font-size:clamp(1.8rem,3.4vw,2.6rem);margin:0}
-.c3w .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem}
-@media(max-width:760px){.c3w .grid{grid-template-columns:1fr}}
-.c3w .cell{background:#fff;border:1px solid var(--line);border-radius:20px;padding:1.7rem}
-.c3w h3{font-family:var(--fd);color:var(--ink);font-size:1.4rem;margin:0 0 .35rem}
-.c3w p{font-size:.95rem;margin:0 0 .6rem}
-.c3w .tag{color:var(--gold-dark);font-weight:600;font-size:.95rem}
-.c3w .cta{text-align:center;margin-top:2.2rem}
-.c3w .cta .lead{font-family:var(--fd);font-size:1.5rem;color:var(--ink);margin:0 0 1rem}
-.c3w .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:500;padding:.9rem 2rem;border-radius:999px;text-decoration:none;margin:0 .3rem .5rem}
-.c3w .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-
 /* ---- css\paginas\tp-biostimulators-hasselt.css ---- */
 .p-biostimulators-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .p-biostimulators-hasselt .tp .wrap{max-width:900px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
@@ -1189,6 +1172,78 @@ body.no-scroll{overflow:hidden;}
   .p-spier-ontspanners .tp-cta{ padding:38px 26px; }
 }
 
+/* ---- css\paginas\waarom.css ---- */
+/* Homepage – "Waarom Clinic3D": redactionele opbouw.
+   Links (op desktop meeschuivend) de kop, het consult en de knoppen; rechts vier genummerde
+   redenen als een pad: gouden cirkels verbonden door een fijne lijn, elk met een eigen belofte. */
+.waarom{position:relative;overflow:hidden;overflow:clip;background:
+  radial-gradient(60% 55% at 88% 12%,rgba(176,137,79,.13),transparent 70%),
+  radial-gradient(45% 50% at 6% 92%,rgba(217,194,164,.28),transparent 70%),
+  var(--cream);}
+.waarom-wrap{max-width:var(--maxw);margin:0 auto;padding:var(--section-y,5.5rem) clamp(1.2rem,4vw,2.5rem);
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2.5rem,6vw,5.5rem);align-items:start;}
+
+/* ---- linkerzijde ---- */
+.waarom-zij{position:sticky;top:120px;padding-bottom:clamp(7rem,12vw,10.5rem);}
+.waarom-intro h2{margin:.2rem 0 1.2rem;max-width:18ch;}
+.waarom-lead{font-family:var(--font-display);font-size:clamp(1.3rem,1.1vw + .95rem,1.6rem);line-height:1.35;color:var(--ink);max-width:24ch;margin:0;}
+.waarom-lead strong{color:#7A5C30;font-weight:600;}
+.waarom-knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;position:relative;z-index:1;}
+.waarom-knoppen .btn--ghost{background:rgba(253,250,245,.6);}
+.waarom-knoppen .btn{flex:0 0 auto;}
+.waarom-monogram{position:absolute;left:-.05em;bottom:-.18em;z-index:0;pointer-events:none;user-select:none;
+  font-family:var(--font-display);font-weight:600;font-size:clamp(9rem,15vw,15rem);line-height:1;letter-spacing:-.04em;
+  color:rgba(176,137,79,.11);}
+
+/* ---- het pad met de vier redenen ---- */
+.waarom-lijst{position:relative;list-style:none;margin:0;padding:.6rem 0;counter-reset:none;
+  background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:var(--radius-media,28px);
+  box-shadow:0 30px 70px -30px rgba(43,37,32,.22),0 2px 10px rgba(43,37,32,.04);}
+.waarom-lijst::before{content:"";position:absolute;top:3.2rem;bottom:3.2rem;left:calc(clamp(1.3rem,3vw,2.2rem) + 26px);width:1px;
+  background:linear-gradient(to bottom,var(--gold) 0%,var(--gold-soft) 55%,rgba(217,194,164,0) 100%);}
+.waarom-item{position:relative;display:grid;grid-template-columns:52px 1fr;gap:clamp(1.1rem,2.5vw,1.8rem);
+  padding:clamp(1.4rem,2.6vw,1.9rem) clamp(1.3rem,3vw,2.2rem);border-radius:22px;margin:0 .6rem;
+  transition:background var(--transition),transform var(--transition);}
+.waarom-item + .waarom-item::after{content:"";position:absolute;top:0;left:calc(52px + clamp(2.4rem,5.5vw,4rem));right:clamp(1.3rem,3vw,2.2rem);height:1px;background:var(--line);}
+.waarom-nr{position:relative;z-index:1;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--font-display);font-size:1.35rem;font-weight:600;color:var(--gold-dark);font-variant-numeric:lining-nums;
+  background:var(--ivory);border:1px solid var(--gold);box-shadow:0 0 0 6px rgba(255,255,255,.92);
+  transition:background var(--transition),color var(--transition),transform var(--transition),box-shadow var(--transition);}
+.waarom-tekst h3{font-size:clamp(1.35rem,1vw + 1rem,1.6rem);line-height:1.2;margin:.55rem 0 .35rem;}
+.waarom-tekst > p{margin:0;font-size:1rem;line-height:1.6;color:var(--ink-soft);}
+.waarom-belofte{display:flex;gap:.6rem;align-items:flex-start;margin-top:.8rem!important;
+  font-size:.95rem!important;line-height:1.5!important;color:#7A5C30!important;font-weight:500;}
+.waarom-vink{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;margin-top:.05rem;background:rgba(176,137,79,.14);color:var(--gold-dark);}
+.waarom-vink svg{width:13px;height:13px;}
+
+@media (hover:hover){
+  .waarom-item:hover{background:var(--ivory);transform:translateX(4px);}
+  .waarom-item:hover .waarom-nr{background:var(--gold);color:#fff;transform:scale(1.06);box-shadow:0 0 0 6px var(--ivory),0 10px 24px -8px rgba(176,137,79,.6);}
+}
+
+/* ---- tablet en mobiel: kop, dan het pad, dan de knoppen ---- */
+@media (max-width:900px){
+  .waarom-wrap{display:flex;flex-direction:column;align-items:stretch;gap:2rem;}
+  .waarom-zij{display:contents;}
+  .waarom-intro{order:1;}
+  .waarom-lijst{order:2;}
+  .waarom-knoppen{order:3;margin-top:0;justify-content:center;}
+  .waarom-monogram{display:none;}
+  .waarom-intro h2{max-width:none;}
+  .waarom-lead{max-width:none;}
+}
+@media (max-width:480px){
+  .waarom-lijst{border-radius:22px;padding:.3rem 0;}
+  .waarom-item{grid-template-columns:40px 1fr;margin:0 .3rem;padding:1.3rem 1rem;}
+  .waarom-nr{width:40px;height:40px;font-size:1.1rem;box-shadow:0 0 0 5px rgba(255,255,255,.92);}
+  .waarom-lijst::before{left:calc(1rem + .3rem + 20px);top:2.4rem;bottom:2.4rem;}
+  .waarom-item + .waarom-item::after{left:calc(40px + 2.3rem);right:1rem;}
+  .waarom-tekst h3{margin-top:.3rem;}
+  .waarom-knoppen{display:grid;grid-template-columns:1fr;}
+  .waarom-knoppen .btn{width:100%;justify-content:center;}
+}
+@media (prefers-reduced-motion:reduce){.waarom-item,.waarom-nr{transition:none;}.waarom-item:hover{transform:none;}}
+
 /* ---- css\verfijning\01-eenheid.css ---- */
 /* Verfijning: één ontwerpsysteem over alle paginablokken heen.
    Zelfde kleuren, lettertypes en componenten; enkel strakker en consequenter.
@@ -1230,8 +1285,6 @@ body[class] :is(.card,.c3c .card,.tp .card,.c3w .cell,.c3t a.card,.blog-kaart-li
 body[class] :is(.split-media,.c3h .visual,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
 body[class] .tp-zone{border-radius:16px;}
 
-/* "Waarom Clinic3D": zinnen als rustige chip i.p.v. hoofdletter-pil (botsing met globale .tag) */
-body[class] .c3w .tag{display:inline-block;text-transform:none;letter-spacing:0;font-size:.88rem;font-weight:500;line-height:1.45;border-radius:10px;padding:.4rem .75rem;margin:.7rem 0 0;}
 
 /* ---------- Verticaal ritme en achtergronden ---------- */
 .section{padding-block:var(--section-y);}
@@ -1367,8 +1420,7 @@ body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost
 .cc-btn--goud:hover,.extern-plaatshouder button:hover,.c3d-float-cta.is-zichtbaar:hover{background:var(--gold-btn-hover);border-color:var(--gold-btn-hover);}
 
 /* kleine gouden tekst op crème: iets donkerder voor contrast */
-body[class] :is(.section--cream,.c3w,.c3d-about,.post-cta,.reviews) :is(.eyebrow,.c3d-eyebrow){color:#7A5C30;}
-body[class] .c3w .tag{color:#7A5C30;}
+body[class] :is(.section--cream,.waarom,.c3d-about,.post-cta,.reviews) :is(.eyebrow,.c3d-eyebrow){color:#7A5C30;}
 
 /* focus op donkere vlakken */
 .site-footer :focus-visible,.c3d-float-panel-head :focus-visible,.tp-cta :focus-visible{outline-color:var(--gold-soft);}

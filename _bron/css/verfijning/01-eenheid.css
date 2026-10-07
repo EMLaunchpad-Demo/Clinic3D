@@ -38,8 +38,6 @@ body[class] :is(.card,.c3c .card,.tp .card,.c3w .cell,.c3t a.card,.blog-kaart-li
 body[class] :is(.split-media,.c3h .visual,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
 body[class] .tp-zone{border-radius:16px;}
 
-/* "Waarom Clinic3D": zinnen als rustige chip i.p.v. hoofdletter-pil (botsing met globale .tag) */
-body[class] .c3w .tag{display:inline-block;text-transform:none;letter-spacing:0;font-size:.88rem;font-weight:500;line-height:1.45;border-radius:10px;padding:.4rem .75rem;margin:.7rem 0 0;}
 
 /* ---------- Verticaal ritme en achtergronden ---------- */
 .section{padding-block:var(--section-y);}

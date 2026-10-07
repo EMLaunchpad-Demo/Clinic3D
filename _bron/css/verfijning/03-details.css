@@ -9,8 +9,7 @@ body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost
 .cc-btn--goud:hover,.extern-plaatshouder button:hover,.c3d-float-cta.is-zichtbaar:hover{background:var(--gold-btn-hover);border-color:var(--gold-btn-hover);}
 
 /* kleine gouden tekst op crème: iets donkerder voor contrast */
-body[class] :is(.section--cream,.c3w,.c3d-about,.post-cta,.reviews) :is(.eyebrow,.c3d-eyebrow){color:#7A5C30;}
-body[class] .c3w .tag{color:#7A5C30;}
+body[class] :is(.section--cream,.waarom,.c3d-about,.post-cta,.reviews) :is(.eyebrow,.c3d-eyebrow){color:#7A5C30;}
 
 /* focus op donkere vlakken */
 .site-footer :focus-visible,.c3d-float-panel-head :focus-visible,.tp-cta :focus-visible{outline-color:var(--gold-soft);}
