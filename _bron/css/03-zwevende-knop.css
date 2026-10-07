@@ -1,0 +1,59 @@
+/* Zwevende knop 'Boek een afspraak' met boekingspaneel.
+   Desktop: knop verschijnt na de hero en opent een paneel met het GHL-boekingssysteem.
+   Telefoon: ronde knop die rechtstreeks naar /maak-een-afspraak gaat. */
+.c3d-float-cta{
+  position:fixed; right:20px; bottom:20px; z-index:9998;
+  display:inline-flex; align-items:center; gap:10px;
+  background:#B0894F; color:#fff; border:none; cursor:pointer;
+  font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:14px; font-weight:500; letter-spacing:.3px;
+  padding:14px 22px; border-radius:999px;
+  box-shadow:0 12px 30px -10px rgba(34,29,25,.45);
+  opacity:0; visibility:hidden; transform:translateY(14px) scale(.96);
+  transition:opacity .35s ease,transform .4s cubic-bezier(.22,.61,.36,1),visibility 0s linear .4s,background .2s ease,box-shadow .2s ease;
+}
+.c3d-float-cta.is-zichtbaar{
+  opacity:1; visibility:visible; transform:none;
+  transition:opacity .35s ease,transform .4s cubic-bezier(.22,.61,.36,1),visibility 0s,background .2s ease,box-shadow .2s ease;
+}
+.c3d-float-cta.is-zichtbaar:hover{ background:#8A6836; transform:translateY(-2px); box-shadow:0 16px 36px -10px rgba(34,29,25,.55); }
+.c3d-float-cta[aria-expanded="true"]{ background:#221D19; }
+.c3d-float-cta:focus-visible{ outline:none; box-shadow:0 0 0 3px #FDFAF5,0 0 0 5px #B0894F; }
+.c3d-float-cta svg{ width:18px; height:18px; flex:none; }
+
+.c3d-float-panel{
+  position:fixed; right:20px; bottom:92px; z-index:9999;
+  width:480px; max-width:calc(100vw - 32px);
+  height:min(640px, calc(100vh - 186px));
+  height:min(640px, calc(100dvh - 186px));
+  background:#fff; border-radius:20px; overflow:hidden;
+  box-shadow:0 30px 70px -20px rgba(34,29,25,.5);
+  display:flex; flex-direction:column;
+  font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  visibility:hidden; opacity:0; transform:translateY(12px) scale(.98); transform-origin:100% 100%;
+  transition:opacity .25s ease,transform .35s cubic-bezier(.22,.61,.36,1),visibility 0s linear .35s;
+}
+.c3d-float-panel.is-open{
+  visibility:visible; opacity:1; transform:none;
+  transition:opacity .25s ease,transform .35s cubic-bezier(.22,.61,.36,1),visibility 0s;
+}
+.c3d-float-panel-head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 18px; background:#221D19; color:#fff; flex:none;
+}
+.c3d-float-panel-head span{ font-size:14px; font-weight:500; }
+.c3d-float-panel-close{
+  background:transparent; border:none; color:#fff; cursor:pointer;
+  width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+  border-radius:50%; opacity:.85;
+}
+.c3d-float-panel-close:hover{ background:rgba(255,255,255,.12); opacity:1; }
+.c3d-float-panel iframe{ flex:1; width:100%; border:none; }
+
+@media (max-width:600px), (max-height:560px){
+  .c3d-float-cta{ right:14px; bottom:calc(14px + env(safe-area-inset-bottom)); width:52px; height:52px; padding:0; justify-content:center; border-radius:50%; }
+  .c3d-float-cta svg{ width:20px; height:20px; }
+  .c3d-float-cta .c3d-float-cta-text{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .c3d-float-panel{ display:none; }
+}
+@media (prefers-reduced-motion:reduce){ .c3d-float-cta,.c3d-float-panel{ transition:none; } }

@@ -1,0 +1,45 @@
+/* Blogoverzicht en artikelpagina (eigen opmaak, vervangt de GHL-blog) */
+.extern--kaart{height:100%;min-height:inherit;}
+.extern:not(.is-geladen) iframe{display:none;}
+
+.blog-hero{padding-bottom:clamp(1rem,3vw,2rem);}
+.blog-hero .lead{margin-inline:auto;}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,2rem);}
+@media (max-width:980px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:640px){.blog-grid{grid-template-columns:1fr;}}
+.blog-kaart{height:100%;}
+.blog-kaart-link{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;color:inherit;box-shadow:var(--shadow-sm);transition:transform var(--transition),box-shadow var(--transition),border-color var(--transition);}
+.blog-kaart-link:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--gold-soft);color:inherit;}
+.blog-kaart-beeld{aspect-ratio:16/10;background:var(--cream);overflow:hidden;display:grid;place-items:center;}
+.blog-kaart-beeld img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,.61,.36,1);}
+.blog-kaart-link:hover .blog-kaart-beeld img{transform:scale(1.04);}
+.blog-kaart-beeld.is-logo{background:linear-gradient(150deg,var(--cream),var(--cream-deep));}
+.blog-kaart-merk{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--ink);letter-spacing:.01em;}
+.blog-kaart-merk b{color:var(--gold);font-weight:700;}
+.blog-kaart-tekst{display:flex;flex-direction:column;gap:.55rem;padding:1.3rem 1.4rem 1.5rem;flex:1;}
+.blog-kaart-meta{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0;}
+.blog-kaart-meta span{color:var(--gold-dark);font-weight:600;}
+.blog-kaart h2,.blog-kaart h3{font-size:1.45rem;line-height:1.2;margin:0;}
+.blog-kaart-tekst>p:not(.blog-kaart-meta){font-size:.95rem;line-height:1.6;margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.blog-kaart-meer{margin-top:auto;padding-top:.4rem;font-size:.92rem;font-weight:500;color:var(--gold-dark);}
+
+/* Artikel */
+.post-kop{padding-block:clamp(2rem,5vw,3.5rem) clamp(1.2rem,3vw,2rem);}
+.post-kop h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:.2rem 0 1rem;}
+.kruimel{display:flex;flex-wrap:wrap;gap:.45rem;font-size:.85rem;color:var(--muted);margin-bottom:1.4rem;}
+.kruimel a{color:var(--muted);}
+.kruimel a:hover{color:var(--gold-dark);}
+.post-meta{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.92rem;color:var(--muted);margin:0;}
+.post-meta a{color:var(--ink);font-weight:500;}
+.post-beeld{margin-block:0 clamp(1.5rem,4vw,2.5rem);}
+.post-beeld img{display:block;width:auto;max-width:100%;height:auto;max-height:520px;margin-inline:auto;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);}
+.post-inhoud{padding-bottom:clamp(2rem,5vw,3rem);}
+.post-auteur{display:flex;gap:1.3rem;align-items:flex-start;padding:1.6rem;margin-bottom:clamp(3rem,7vw,5rem);background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);}
+.post-auteur img{width:96px;height:96px;border-radius:50%;object-fit:cover;flex:none;}
+.post-auteur-naam{font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;}
+.post-auteur p{font-size:.95rem;line-height:1.65;margin-bottom:.6rem;}
+.post-auteur a{font-weight:500;}
+@media (max-width:560px){.post-auteur{flex-direction:column;}}
+.post-cta h2{margin-bottom:1rem;}
+.post-cta-knoppen{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1.6rem;}
+.post-meer .section-head{margin-bottom:2rem;}

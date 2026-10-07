@@ -1,0 +1,14 @@
+.c3nf{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft);min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem}
+.c3nf .inner{max-width:560px}
+.c3nf .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;font-weight:600;color:var(--gold-dark);margin-bottom:1rem}
+.c3nf .code{font-family:var(--fd);font-weight:700;color:var(--gold);line-height:1;font-size:clamp(5rem,18vw,9rem);letter-spacing:-.02em;margin-bottom:.5rem}
+.c3nf h1{font-family:var(--fd);color:var(--ink);font-weight:600;font-size:clamp(1.7rem,4vw,2.6rem);margin:0 0 1rem}
+.c3nf p{font-size:1.05rem;line-height:1.6;max-width:44ch;margin:0 auto 2rem}
+.c3nf .btns{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.c3nf a{display:inline-flex;align-items:center;justify-content:center;font-weight:500;font-size:.95rem;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;transition:.25s}
+.c3nf .p{background:var(--gold);color:#fff}
+.c3nf .p:hover{background:var(--gold-dark)}
+.c3nf .g{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.c3nf .g:hover{border-color:var(--gold);color:var(--gold-dark)}
+.c3nf .links{margin-top:2.2rem;font-size:.9rem;color:var(--ink-soft)}
+.c3nf .links a{padding:0;border:0;color:var(--gold-dark);font-weight:600;text-decoration:underline;text-underline-offset:3px}

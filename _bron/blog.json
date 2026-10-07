@@ -1,0 +1,193 @@
+{
+ "auteur": {
+  "naam": "Dr. Sasha Kenis",
+  "bio": "Dr. Sasha Kenis is esthetisch arts en oprichter van Clinic3D in Hasselt. Met een medische achtergrond en een scherp oog voor natuurlijke resultaten begeleidt hij elke patiënt persoonlijk, van spierontspanners en fillers tot huidverbetering en haargroeibehandelingen. Zijn filosofie is eenvoudig: subtiele, op maat gemaakte behandelingen die je eigen schoonheid versterken in plaats van veranderen.",
+  "afbeelding": "/img/logo-clinic3d-vierkant.png",
+  "afbeelding_alt": "Dr. Sasha Kenis, esthetisch arts bij Clinic3D in Hasselt",
+  "url": "/over-ons"
+ },
+ "artikels": {
+  "botox-mythes": {
+   "titel": "Botox: 7 mythes die gewoon niet kloppen (en de waarheid erachter)",
+   "beschrijving": "Botox maakt je gezicht niet bevroren en is niet verslavend. Een arts van Clinic3D Hasselt ontkracht de 7 grootste botox-mythes.",
+   "datum": "2026-06-30T15:08:02.000Z",
+   "gewijzigd": "2026-08-25T13:25:00.922Z",
+   "categorieen": [
+    "Botox"
+   ],
+   "tags": [
+    "botox Hasselt"
+   ],
+   "afbeelding": "/img/blog/botox-mythes.webp",
+   "afbeelding_alt": "Vrouw krijgt een botoxbehandeling in het gezicht bij Clinic3D in Hasselt",
+   "type": "c3d-article",
+   "leestijd": 7
+  },
+  "botulinetoxine-spierontspanners-hasselt": {
+   "titel": "Botulinetoxine in Hasselt: wat spierontspanners echt doen (en wat niet)",
+   "beschrijving": "Wat doet botulinetoxine nu precies, en wat niet? Dr. Sasha Kenis legt uit hoe spierontspanners werken bij Clinic3D in Hasselt. Boek je gratis consult.",
+   "datum": "2026-09-05T22:00:00.000Z",
+   "gewijzigd": "2026-09-03T16:22:31.402Z",
+   "categorieen": [
+    "Botox"
+   ],
+   "tags": [
+    "botulinetoxine hasselt",
+    "Hasselt",
+    "botox Hasselt",
+    "botox prijs Hasselt",
+    "spierontspanners hasselt",
+    "esthetisch arts hasselt",
+    "rimpelbehandeling hasselt"
+   ],
+   "afbeelding": "/img/logo-clinic3d-vierkant.png",
+   "afbeelding_alt": "Wat doet botulinetoxine nu precies, en wat niet? Dr. Sasha Kenis legt uit hoe spierontspanners werken bij Clinic3D in Hasselt. Boek je gratis consult.",
+   "type": "bp",
+   "leestijd": 6
+  },
+  "doet-het-pijn-mythes-esthetische-behandelingen": {
+   "titel": "Doet een behandeling bij Clinic3D pijn? De grootste mythes ontkracht",
+   "beschrijving": "Pijn, hersteltijd, onnatuurlijk resultaat? Dr. Sasha Kenis ontkracht de grootste mythes over esthetische behandelingen bij Clinic3D Hasselt.",
+   "datum": "2026-09-19T22:00:00.000Z",
+   "gewijzigd": "2026-09-03T16:27:25.784Z",
+   "categorieen": [
+    "Algemeen"
+   ],
+   "tags": [
+    "doet een behandeling pijn",
+    "mythes esthetische behandelingen",
+    "gratis consult hasselt",
+    "esthetisch arts hasselt"
+   ],
+   "afbeelding": "/img/logo-clinic3d-vierkant-creme.png",
+   "afbeelding_alt": "Ontspannen patiënt tijdens een gratis consult bij Clinic3D Hasselt",
+   "type": "bp",
+   "leestijd": 6
+  },
+  "fillers-hasselt-natuurlijk-resultaat": {
+   "titel": "Fillers in Hasselt: volume en contour op een natuurlijke manier",
+   "beschrijving": "Ontdek hoe fillers bij Clinic3D in Hasselt volume en contour subtiel herstellen. Dr. Sasha Kenis legt uit. Eerste consult is gratis en vrijblijvend.",
+   "datum": "2026-09-26T22:00:00.000Z",
+   "gewijzigd": "2026-09-03T16:29:39.625Z",
+   "categorieen": [
+    "Fillers"
+   ],
+   "tags": [
+    "fillers hasselt",
+    "lipfiller hasselt",
+    "jukbeenderen filler",
+    "natuurlijke fillers hasselt"
+   ],
+   "afbeelding": "/img/blog/fillers-hasselt-natuurlijk-resultaat.webp",
+   "afbeelding_alt": "Natuurlijke lip- en jukbeenfiller behandeling bij Clinic3D Hasselt",
+   "type": "bp",
+   "leestijd": 7
+  },
+  "fillers-of-botox": {
+   "titel": "Fillers of botox? Zo kies je de juiste behandeling voor jouw rimpels",
+   "beschrijving": "Alles over fillers bij Clinic3D in Hasselt: volume, contour en lippen op een natuurlijke manier herstellen met hyaluronzuur.",
+   "datum": "2026-06-30T22:00:00.000Z",
+   "gewijzigd": "2026-08-25T13:25:30.195Z",
+   "categorieen": [
+    "Botox",
+    "Fillers"
+   ],
+   "tags": [
+    "botox Hasselt"
+   ],
+   "afbeelding": "/img/blog/fillers-of-botox.webp",
+   "afbeelding_alt": "Fillerbehandeling bij Clinic3D in Hasselt",
+   "type": "c3d-article",
+   "leestijd": 8
+  },
+  "huidroutine-najaar-hasselt": {
+   "titel": "Terug naar je routine: zo maak je je huid klaar voor het najaar",
+   "beschrijving": "Na de zomer verdient je huid een reset. Ontdek hoe mesotherapie, peeling en microneedling helpen en boek je gratis consult bij Clinic3D in Hasselt.",
+   "datum": "2026-09-12T22:00:00.000Z",
+   "gewijzigd": "2026-09-03T16:25:03.503Z",
+   "categorieen": [
+    "Huidverbetering"
+   ],
+   "tags": [
+    "huid najaar",
+    "huidverzorging na de zomer",
+    "mesotherapie hasselt",
+    "peeling hasselt",
+    "microneedling hasselt"
+   ],
+   "afbeelding": "/img/blog/huidroutine-najaar-hasselt.webp",
+   "afbeelding_alt": "Stralende huid na huidverbetering bij Clinic3D Hasselt, klaar voor het najaar",
+   "type": "bp",
+   "leestijd": 6
+  },
+  "klaar-voor-eerste-consult": {
+   "titel": "5 tekenen dat je klaar bent voor je eerste consult",
+   "beschrijving": "Twijfel je over een esthetische behandeling? Herken je deze 5 tekenen, dan ben je klaar voor een vrijblijvend consult bij Clinic3D Hasselt.",
+   "datum": "2026-07-19T22:00:00.000Z",
+   "gewijzigd": "2026-08-25T13:31:06.366Z",
+   "categorieen": [
+    "Consult & advies"
+   ],
+   "tags": [
+    "esthetisch consult Hasselt"
+   ],
+   "afbeelding": "/img/blog/klaar-voor-eerste-consult.jpg",
+   "afbeelding_alt": "Consult",
+   "type": "c3d-article",
+   "leestijd": 5
+  },
+  "prp-haaruitval": {
+   "titel": "Haaruitval stoppen: werkt een PRP-behandeling echt?",
+   "beschrijving": "Werkt PRP echt tegen haaruitval? Ontdek eerlijk wat je wél en niet mag verwachten van deze lichaamseigen behandeling — uitgelegd door een arts.",
+   "datum": "2026-07-12T22:00:00.000Z",
+   "gewijzigd": "2026-08-25T13:30:50.820Z",
+   "categorieen": [
+    "Haaruitval"
+   ],
+   "tags": [
+    "PRP",
+    "haaruitval",
+    "Hasselt"
+   ],
+   "afbeelding": "",
+   "afbeelding_alt": null,
+   "type": "c3d-article",
+   "leestijd": 7
+  },
+  "skin-boosters-uitgelegd": {
+   "titel": "Profhilo, Sculptra & co: skin boosters simpel uitgelegd",
+   "beschrijving": "Wat zijn skin boosters zoals Profhilo en Sculptra? Ontdek hoe ze je huid van binnenuit verbeteren — simpel uitgelegd door een arts in Hasselt.",
+   "datum": "2026-07-04T22:00:00.000Z",
+   "gewijzigd": "2026-08-25T13:30:32.542Z",
+   "categorieen": [
+    "Huidverbetering"
+   ],
+   "tags": [
+    "skin boosters Hasselt"
+   ],
+   "afbeelding": "",
+   "afbeelding_alt": null,
+   "type": "c3d-article",
+   "leestijd": 8
+  },
+  "skinboosters-stralende-huid-hasselt": {
+   "titel": "Skinboosters: de geheime stap naar een stralende huid",
+   "beschrijving": "Skinboosters geven je huid diepe hydratatie en glans, zonder volume toe te voegen. Dr. Sasha Kenis legt uit hoe. Gratis consult bij Clinic3D Hasselt.",
+   "datum": "2026-10-06T09:00:00.000Z",
+   "gewijzigd": "2026-10-07T10:54:28.052Z",
+   "categorieen": [
+    "Skinboosters"
+   ],
+   "tags": [
+    "skinboosters hasselt",
+    "hyaluronzuur huid",
+    "stralende huid",
+    "huidhydratatie hasselt"
+   ],
+   "afbeelding": "",
+   "afbeelding_alt": "Skinbooster-behandeling voor een stralende, gehydrateerde huid bij Clinic3D Hasselt",
+   "type": "bp",
+   "leestijd": 6
+  }
+ }
+}

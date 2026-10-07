@@ -1,0 +1,8 @@
+.c3u{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
+.c3u .wrap{max-width:1180px;margin:0 auto;padding:.5rem clamp(1.2rem,4vw,2.5rem) clamp(2.5rem,5vw,3.5rem)}
+.c3u .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+@media(max-width:860px){.c3u .grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.c3u .grid{grid-template-columns:1fr}}
+.c3u .cell{background:var(--ivory);padding:2rem 1.6rem}
+.c3u .ico{width:40px;height:40px;color:var(--gold);margin-bottom:1rem}
+.c3u h3{font-family:var(--fd);color:var(--ink);font-size:1.25rem;margin:0 0 .5rem}
+.c3u p{font-size:.95rem;margin:0}

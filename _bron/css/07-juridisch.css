@@ -1,0 +1,27 @@
+/* Juridische pagina's (privacybeleid, algemene voorwaarden) */
+.juridisch-kop{padding-bottom:0;}
+.juridisch h2{font-size:clamp(1.5rem,2.6vw,1.9rem);margin:2.4rem 0 .8rem;}
+.juridisch h2:first-child{margin-top:0;}
+.juridisch ul{list-style:none;padding:0;margin:0 0 1rem;display:grid;gap:.5rem;}
+.juridisch li{position:relative;padding-left:1.4rem;}
+.juridisch li::before{content:"";position:absolute;left:0;top:.72em;width:.5rem;height:1px;background:var(--gold);}
+.juridisch a{text-decoration:underline;text-underline-offset:2px;}
+.juridisch-tabel{overflow-x:auto;margin:1rem 0 1.4rem;border:1px solid var(--line);border-radius:var(--radius);background:#fff;}
+.juridisch-tabel table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:520px;}
+.juridisch-tabel th,.juridisch-tabel td{text-align:left;vertical-align:top;padding:.85rem 1rem;border-bottom:1px solid var(--line);}
+.juridisch-tabel th{font-weight:600;color:var(--ink);background:var(--cream);}
+.juridisch-tabel tr:last-child td{border-bottom:none;}
+.juridisch code{font-size:.85em;background:var(--cream);padding:.05rem .35rem;border-radius:5px;}
+.juridisch-datum{margin-top:2rem;font-size:.9rem;color:var(--muted);}
+.juridisch-knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;}
+.tekstknop{font:inherit;color:var(--gold-dark);background:none;border:none;padding:0;text-decoration:underline;text-underline-offset:2px;cursor:pointer;}
+.tekstknop:hover{color:var(--ink);}
+
+@media (max-width:560px){
+  .juridisch-tabel{overflow:visible;border:0;background:transparent;}
+  .juridisch-tabel table{min-width:0;}
+  .juridisch-tabel thead{display:none;}
+  .juridisch-tabel tr{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card,20px);padding:.4rem 0;margin-bottom:.8rem;}
+  .juridisch-tabel td{display:block;border:0;padding:.35rem 1rem;}
+  .juridisch-tabel td::before{content:attr(data-label);display:block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dark);}
+}

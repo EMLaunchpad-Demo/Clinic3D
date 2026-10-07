@@ -1,0 +1,83 @@
+.afs{
+    --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
+    --line:#E7DCCD; --muted:#6B5C4A;
+    font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink); background:var(--ivory);
+  }
+  .afs *{ box-sizing:border-box; }
+  .afs-wrap{ max-width:1040px; margin:0 auto; padding:0 24px; }
+  .afs-eyebrow{ font-size:12px; letter-spacing:4px; text-transform:uppercase;
+    color:var(--gold); font-weight:600; margin:0 0 14px; }
+
+  /* Hero */
+  .afs-hero{ text-align:center; padding:64px 0 40px;
+    background:linear-gradient(180deg,#fff 0%,var(--ivory) 100%); }
+  .afs-title{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:600;
+    font-size:48px; line-height:1.1; margin:0 0 16px; }
+  .afs-title span{ color:var(--gold); }
+  .afs-lead{ font-size:16px; line-height:1.6; color:var(--muted);
+    max-width:520px; margin:0 auto; }
+
+  /* Boekingssysteem */
+  .afs-booking{ padding:8px 0 64px; }
+  .afs-widget{ position:relative; background:#fff; border:1px solid var(--line); border-radius:20px;
+    padding:12px; box-shadow:0 24px 60px -34px rgba(80,60,30,.35); overflow:hidden; }
+  .afs-widget iframe{ display:block; border-radius:14px; }
+
+  .afs-loader{ position:absolute; inset:12px; z-index:2; display:flex; flex-direction:column;
+    align-items:center; justify-content:flex-start; padding-top:140px; gap:16px;
+    background:#fff; border-radius:14px; transition:opacity .4s ease, visibility .4s ease; }
+  .afs-loader p{ margin:0; font-size:14px; color:var(--muted); letter-spacing:.3px; }
+  .afs-spinner{ width:34px; height:34px; border-radius:50%;
+    border:3px solid var(--line); border-top-color:var(--gold);
+    animation:afs-spin .9s linear infinite; }
+  .afs-widget.is-loaded .afs-loader{ opacity:0; visibility:hidden; pointer-events:none; }
+  @keyframes afs-spin{ to{ transform:rotate(360deg); } }
+
+  .afs-fallback{ text-align:center; margin:16px 0 0; font-size:13px; color:var(--muted); }
+  .afs-fallback a{ color:var(--gold-dark); text-decoration:underline; text-underline-offset:3px; }
+
+  /* Contact & uren */
+  .afs-info{ padding:8px 0 76px; }
+  .afs-info-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
+  .afs-h2{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:600;
+    font-size:30px; margin:0 0 16px; line-height:1.15; }
+  .afs-info-text{ font-size:15px; line-height:1.6; color:var(--muted); margin:0 0 22px; max-width:420px; }
+  .afs-contact{ display:flex; flex-wrap:wrap; gap:12px; }
+  .afs-btn{ display:inline-block; padding:14px 26px; border-radius:999px;
+    font-size:14px; font-weight:500; letter-spacing:.3px; text-decoration:none; transition:.2s; }
+  .afs-btn--primary{ background:var(--gold); color:#fff; }
+  .afs-btn--primary:hover{ background:var(--gold-dark); }
+  .afs-btn--ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); }
+  .afs-btn--ghost:hover{ border-color:var(--gold); color:var(--gold-dark); }
+
+  .afs-hours{ background:#fff; border:1px solid var(--line); border-radius:18px; padding:28px 30px; }
+  .afs-hours-label{ font-size:11px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--gold); font-weight:600; margin:0 0 14px; }
+  .afs-hours ul{ list-style:none; margin:0 0 16px; padding:0; }
+  .afs-hours li{ display:flex; justify-content:space-between; align-items:center;
+    padding:10px 0; border-bottom:1px solid #F3ECDF; font-size:14px; }
+  .afs-hours li:last-child{ border-bottom:0; }
+  .afs-hours li span:first-child{ color:var(--ink); font-weight:500; }
+  .afs-hours li span:last-child{ color:var(--muted); }
+  .afs-hours em{ font-style:normal; color:var(--gold-dark); font-size:12px; }
+  .afs-addr{ margin:0; padding-top:4px; font-size:13px; color:var(--muted); letter-spacing:.3px; }
+
+  @media (max-width:860px){
+    .afs-info-grid{ grid-template-columns:1fr; gap:28px; }
+    .afs-title{ font-size:36px; }
+  }
+  @media (max-width:520px){
+    .afs-hero{ padding:48px 0 30px; }
+    .afs-title{ font-size:30px; }
+    .afs-wrap{ padding:0 16px; }
+    .afs-widget{ border-radius:16px; padding:8px; }
+    .afs-loader{ inset:8px; padding-top:100px; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .afs-spinner{ animation-duration:2.4s; }
+  }
+
+/* ruimte reserveren tot het boekingssysteem geladen is (geen ingeklapte balk) */
+.afs-widget{min-height:clamp(480px,72vh,760px);}
+@media (max-width:520px){.afs-loader{padding-top:72px;}}

@@ -1,0 +1,63 @@
+.c3d-success{
+    --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
+    --line:#E7DCCD; --muted:#6B5C4A;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:var(--ivory); padding:48px 20px; box-sizing:border-box;
+    font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  .c3d-success *{ box-sizing:border-box; }
+  .c3d-success .c3d-card{
+    background:#fff; max-width:560px; width:100%; text-align:center;
+    padding:52px 44px 40px; border:1px solid var(--line); border-radius:22px;
+    box-shadow:0 24px 60px -30px rgba(80,60,30,.35);
+  }
+  .c3d-success .c3d-badge{
+    width:88px; height:88px; margin:0 auto 26px; border-radius:50%;
+    background:radial-gradient(circle at 30% 25%, #F5EBD9, #EBDBC0);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 8px rgba(176,137,79,.10);
+  }
+  .c3d-success .c3d-check-circle{ stroke:var(--gold); stroke-width:2.5;
+    stroke-dasharray:151; stroke-dashoffset:151; animation:c3d-circle .6s ease-out forwards; }
+  .c3d-success .c3d-check-mark{ stroke:var(--gold-dark); stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:44; stroke-dashoffset:44; animation:c3d-mark .35s .55s ease-out forwards; }
+  @keyframes c3d-circle{ to{ stroke-dashoffset:0; } }
+  @keyframes c3d-mark{ to{ stroke-dashoffset:0; } }
+
+  .c3d-success .c3d-eyebrow{ font-size:12px; letter-spacing:4px; text-transform:uppercase;
+    color:var(--gold); font-weight:600; margin:0 0 14px; }
+  .c3d-success .c3d-title{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:600;
+    font-size:40px; line-height:1.12; color:var(--ink); margin:0 0 18px; }
+  .c3d-success .c3d-title span{ color:var(--gold); }
+  .c3d-success .c3d-lead{ font-size:16px; line-height:1.7; color:var(--muted); margin:0 auto 30px; max-width:420px; }
+
+  .c3d-success .c3d-divider{ display:flex; align-items:center; gap:16px; margin:8px 0 24px; }
+  .c3d-success .c3d-divider::before,.c3d-success .c3d-divider::after{ content:""; flex:1; height:1px; background:var(--line); }
+  .c3d-success .c3d-divider span{ font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; }
+
+  .c3d-success .c3d-steps{ list-style:none; margin:0 0 32px; padding:0; text-align:left; }
+  .c3d-success .c3d-steps li{ display:flex; gap:16px; padding:14px 0; border-bottom:1px solid #F3ECDF; }
+  .c3d-success .c3d-steps li:last-child{ border-bottom:0; }
+  .c3d-success .c3d-num{ flex:none; width:34px; height:34px; border-radius:50%;
+    border:1px solid var(--gold); color:var(--gold-dark); font-weight:600;
+    display:flex; align-items:center; justify-content:center; font-size:15px; }
+  .c3d-success .c3d-steps strong{ display:block; color:var(--ink); font-size:16px; font-weight:500; margin-bottom:2px; }
+  .c3d-success .c3d-steps p{ margin:0; font-size:14px; color:var(--muted); line-height:1.5; }
+  .c3d-success .c3d-steps em{ color:var(--gold-dark); font-style:normal; font-weight:500; }
+
+  .c3d-success .c3d-actions{ display:flex; flex-direction:column; gap:12px; margin-bottom:30px; }
+  .c3d-success .c3d-btn{ display:block; padding:15px 26px; border-radius:999px; font-size:14px;
+    font-weight:500; letter-spacing:.3px; text-decoration:none; transition:.2s; }
+  .c3d-success .c3d-btn--primary{ background:var(--gold); color:#fff; }
+  .c3d-success .c3d-btn--primary:hover{ background:var(--gold-dark); }
+  .c3d-success .c3d-btn--ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); }
+  .c3d-success .c3d-btn--ghost:hover{ border-color:var(--gold); color:var(--gold-dark); }
+
+  .c3d-success .c3d-footnote{ border-top:1px solid var(--line); padding-top:22px; }
+  .c3d-success .c3d-footnote p{ margin:0 0 4px; font-size:12px; color:var(--muted); letter-spacing:.3px; }
+  .c3d-success .c3d-footnote strong{ color:var(--ink); }
+
+  @media (max-width:520px){
+    .c3d-success .c3d-card{ padding:40px 26px 32px; border-radius:18px; }
+    .c3d-success .c3d-title{ font-size:32px; }
+  }

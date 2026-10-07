@@ -3,13 +3,9 @@
 .gitattributes
 .assetsignore
 .claude
-build.py
-blog_build.py
-src
-LEES-MIJ.md
-# Nog niet gepubliceerde artikels van het nieuwe ontwerp (data in de toekomst)
-blog/
-# Door de Cloudflare-build aangemaakt
+_bron
+README.md
+# Door de Cloudflare-build gebruikt of aangemaakt
 wrangler.jsonc
 wrangler.json
 wrangler.toml

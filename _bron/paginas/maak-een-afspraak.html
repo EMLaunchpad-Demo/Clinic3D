@@ -1,0 +1,85 @@
+<div class="afs">
+
+  <!-- HERO -->
+  <section class="afs-hero">
+    <div class="afs-wrap">
+      <p class="afs-eyebrow">Clinic3D · Hasselt</p>
+      <h1 class="afs-title">Maak een <span>afspraak</span></h1>
+      <p class="afs-lead">
+        Kies hieronder je behandeling en een moment dat jou past. Het eerste consult is gratis en vrijblijvend.
+      </p>
+    </div>
+  </section>
+
+  <!-- BOEKINGSSYSTEEM -->
+  <section class="afs-booking">
+    <div class="afs-wrap">
+      <div class="afs-widget" id="afsWidget">
+        <div class="afs-loader" aria-hidden="true">
+          <span class="afs-spinner"></span>
+          <p>Beschikbare momenten laden…</p>
+        </div>
+        <iframe src="https://api.leadconnectorhq.com/booking/U08LkHeoQdx8yNxCQvps?heightMode=full&showHeader=true"
+                title="Maak een afspraak bij Clinic3D"
+                allow="payment"
+                style="width:100%;border:none;overflow:hidden;min-height:900px;"
+                scrolling="no"
+                id="U08LkHeoQdx8yNxCQvps_1787752270322"></iframe>
+      </div>
+      <p class="afs-fallback">
+        Laadt het boekingssysteem niet?
+        <a href="https://api.leadconnectorhq.com/booking/U08LkHeoQdx8yNxCQvps" target="_blank" rel="noopener">Open het in een nieuw venster</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT / UREN -->
+  <section class="afs-info">
+    <div class="afs-wrap afs-info-grid">
+      <div>
+        <p class="afs-eyebrow">Liever telefonisch?</p>
+        <h2 class="afs-h2">We helpen je graag verder</h2>
+        <p class="afs-info-text">
+          Kom je er niet uit of heb je een vraag? Bel of mail ons gerust,
+          dan plannen we je afspraak samen in.
+        </p>
+        <div class="afs-contact">
+          <a href="tel:+32468216136" class="afs-btn afs-btn--primary">Bel +32 468 21 61 36</a>
+          <a href="mailto:info@clinic3d.be" class="afs-btn afs-btn--ghost">info@clinic3d.be</a>
+        </div>
+      </div>
+      <div class="afs-hours">
+        <p class="afs-hours-label">Openingsuren</p>
+        <ul>
+          <li><span>Maandag</span><span>10 – 19u</span></li>
+          <li><span>Dinsdag</span><span>16 – 19u</span></li>
+          <li><span>Woensdag</span><span>Gesloten</span></li>
+          <li><span>Donderdag</span><span>16 – 19u</span></li>
+          <li><span>Vrijdag</span><span>11 – 19u</span></li>
+          <li><span>Za &amp; Zo</span><span>Gesloten</span></li>
+        </ul>
+        <p class="afs-addr">Luikersteenweg 301 bus 1 · 3500 Hasselt</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
+
+<script>
+(function () {
+  var widget = document.getElementById("afsWidget");
+  if (!widget) return;
+  var frame = widget.querySelector("iframe");
+  var klaar = false;
+  function ready() { if (klaar) return; klaar = true; widget.classList.add("is-loaded"); }
+  // form_embed.js verbergt de iframe tot de agenda klaar is; pas dan het laadscherm weg
+  if (window.MutationObserver) {
+    new MutationObserver(function () { if (frame.style.visibility === "visible") ready(); })
+      .observe(frame, { attributes: true, attributeFilter: ["style"] });
+  }
+  frame.addEventListener("load", function () { setTimeout(function () { if (frame.style.visibility !== "hidden") ready(); }, 300); });
+  setTimeout(ready, 12000); // vangnet
+})();
+</script>

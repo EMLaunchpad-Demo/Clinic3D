@@ -1,0 +1,186 @@
+{
+ "home": {
+  "uitvoer": "index.html",
+  "titel": "Clinic3D Hasselt | Spierontspanners, fillers & haarbehandelingen",
+  "beschrijving": "Medisch-esthetische kliniek in Hasselt voor spierontspanners, fillers, HIFU & haargroei. Natuurlijke resultaten door Dr. Sasha Kenis. Boek je consult – gratis.",
+  "canonical": "https://clinic3d.be/",
+  "robots": "index",
+  "og_image": "https://clinic3d.be/img/og-clinic3d.jpg",
+  "keywords": "esthetische kliniek Hasselt, spierontspanners Hasselt, fillers Hasselt, HIFU Hasselt, haaruitval behandeling Hasselt, medisch esthetisch arts Hasselt, Dr. Sasha Kenis, Clinic3D",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"MedicalClinic\",\n      \"@id\": \"https://clinic3d.be/#clinic\",\n      \"name\": \"Clinic3D\",\n      \"alternateName\": \"3D Clinic\",\n      \"description\": \"Medisch-esthetische kliniek in Hasselt voor botulinetoxine, fillers, skinboosters, biostimulators, medische HIFU en haarbehandelingen. Onder leiding van erkend esthetisch arts dr. Sasha Kenis.\",\n      \"url\": \"https://clinic3d.be/\",\n      \"logo\": \"https://clinic3d.be/img/logo-clinic3d.jpg\",\n      \"image\": \"https://clinic3d.be/img/ingang-clinic3d.jpg\",\n      \"telephone\": \"+32468216136\",\n      \"email\": \"info@clinic3d.be\",\n      \"currenciesAccepted\": \"EUR\",\n      \"medicalSpecialty\": \"Esthetische geneeskunde\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n        \"postalCode\": \"3500\",\n        \"addressLocality\": \"Hasselt\",\n        \"addressRegion\": \"Limburg\",\n        \"addressCountry\": \"BE\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 50.9081954,\n        \"longitude\": 5.3557564\n      },\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Monday\",\n          \"opens\": \"10:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Tuesday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Thursday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Friday\",\n          \"opens\": \"11:00\",\n          \"closes\": \"19:00\"\n        }\n      ],\n      \"sameAs\": [\n        \"https://www.facebook.com/clinic3d\",\n        \"https://www.instagram.com/aesthetics_clinic_3d/\"\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "over-ons": {
+  "uitvoer": "over-ons.html",
+  "titel": "Over Clinic3D | Esthetische Kliniek Hasselt",
+  "beschrijving": "Clinic3D is de medisch-esthetische kliniek in Hasselt o.l.v. Dr. Sasha Kenis. Een persoonlijke, wetenschappelijke aanpak voor natuurlijke resultaten.",
+  "canonical": "https://clinic3d.be/over-ons",
+  "robots": "index",
+  "og_image": "https://clinic3d.be/img/og-clinic3d.jpg",
+  "keywords": "over Clinic3D, esthetische kliniek Hasselt, Dr. Sasha Kenis, esthetisch arts Hasselt, medisch esthetische kliniek Limburg",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"MedicalClinic\",\n      \"@id\": \"https://clinic3d.be/#clinic\",\n      \"name\": \"Clinic3D\",\n      \"alternateName\": \"3D Clinic\",\n      \"description\": \"Medisch-esthetische kliniek in Hasselt voor botulinetoxine, fillers, skinboosters, biostimulators, medische HIFU en haarbehandelingen. Onder leiding van erkend esthetisch arts dr. Sasha Kenis.\",\n      \"url\": \"https://clinic3d.be/\",\n      \"logo\": \"https://clinic3d.be/img/logo-clinic3d.jpg\",\n      \"image\": \"https://clinic3d.be/img/ingang-clinic3d.jpg\",\n      \"telephone\": \"+32468216136\",\n      \"email\": \"info@clinic3d.be\",\n      \"currenciesAccepted\": \"EUR\",\n      \"medicalSpecialty\": \"Esthetische geneeskunde\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n        \"postalCode\": \"3500\",\n        \"addressLocality\": \"Hasselt\",\n        \"addressRegion\": \"Limburg\",\n        \"addressCountry\": \"BE\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 50.9081954,\n        \"longitude\": 5.3557564\n      },\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Monday\",\n          \"opens\": \"10:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Tuesday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Thursday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Friday\",\n          \"opens\": \"11:00\",\n          \"closes\": \"19:00\"\n        }\n      ],\n      \"sameAs\": [\n        \"https://www.facebook.com/clinic3d\",\n        \"https://www.instagram.com/aesthetics_clinic_3d/\"\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "behandelingen": {
+  "uitvoer": "behandelingen.html",
+  "titel": "Behandelingen & Prijzen Hasselt | Clinic3D",
+  "beschrijving": "Ontdek alle esthetische behandelingen van Clinic3D in Hasselt: spierontspanners, fillers, biostimulatoren, HIFU, huidverbetering en haargroei — met duidelijke prijzen.",
+  "canonical": "https://clinic3d.be/behandelingen",
+  "robots": "index",
+  "og_image": "",
+  "keywords": "behandelingen Hasselt, prijzen spierontspanners Hasselt, esthetische behandelingen Hasselt, fillers prijs, HIFU prijs, Clinic3D tarieven",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://clinic3d.be/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Behandelingen\",\n          \"item\": \"https://clinic3d.be/behandelingen\"\n        }\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "spier-ontspanners": {
+  "uitvoer": "spier-ontspanners.html",
+  "titel": "Spierontspanners Hasselt | Botulinetoxine | Clinic3D",
+  "beschrijving": "Spierontspanners (botulinetoxine) bij Clinic3D Hasselt: frons, kraaienpootjes, wenkbrauwlift & bruxisme. Persoonlijk advies tijdens je gratis consult.",
+  "canonical": "https://clinic3d.be/spier-ontspanners",
+  "robots": "index",
+  "og_image": "",
+  "keywords": "spierontspanners hasselt, botulinetoxine hasselt, rimpelbehandeling hasselt, wenkbrauwlift hasselt, bruxisme behandeling hasselt, overmatig zweten oksels hasselt, esthetisch arts hasselt",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"MedicalProcedure\",\n      \"@id\": \"https://clinic3d.be/spier-ontspanners#procedure\",\n      \"name\": \"Spierontspanners (botulinetoxine)\",\n      \"description\": \"Behandeling met botulinetoxine om dynamische rimpels (frons, voorhoofd, kraaienpootjes) te verzachten, uitgevoerd door een arts.\",\n      \"procedureType\": \"https://schema.org/PercutaneousProcedure\",\n      \"bodyLocation\": \"Gelaat, kaak en oksels\",\n      \"howPerformed\": \"Precisie-injecties met botulinetoxine, toegediend door een arts na een persoonlijke intake.\",\n      \"url\": \"https://clinic3d.be/spier-ontspanners\",\n      \"provider\": {\n        \"@id\": \"https://clinic3d.be/#clinic\"\n      },\n      \"offers\": [\n        {\n          \"@type\": \"Offer\",\n          \"name\": \"1 zone\",\n          \"price\": \"120\",\n          \"priceCurrency\": \"EUR\",\n          \"url\": \"https://clinic3d.be/maak-een-afspraak\"\n        },\n        {\n          \"@type\": \"Offer\",\n          \"name\": \"2 zones\",\n          \"price\": \"230\",\n          \"priceCurrency\": \"EUR\",\n          \"url\": \"https://clinic3d.be/maak-een-afspraak\"\n        },\n        {\n          \"@type\": \"Offer\",\n          \"name\": \"3 zones\",\n          \"price\": \"320\",\n          \"priceCurrency\": \"EUR\",\n          \"url\": \"https://clinic3d.be/maak-een-afspraak\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Doet een behandeling met spierontspanners pijn?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"De meeste patiënten omschrijven het als een kort, licht prikje. De naaldjes zijn zeer dun en er is geen verdoving nodig.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Krijg ik een \\\"bevroren\\\" gezicht?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Nee. Bij een correct gedoseerde behandeling blijft je mimiek volledig behouden — je kunt nog gewoon fronsen, lachen en verbaasd kijken. Enkel de rimpels die daarbij ontstaan worden zachter.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Hoelang blijft het resultaat zichtbaar?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Het effect bouwt zich op vanaf dag drie en is na twee weken volledig zichtbaar. Gemiddeld blijft het resultaat drie tot vier maanden aanhouden.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Wat kost het eerste consult?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Niets. Het eerste consult bij dr. Sasha Kenis is steeds gratis en volledig vrijblijvend.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://clinic3d.be/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Behandelingen\",\n          \"item\": \"https://clinic3d.be/behandelingen\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Spierontspanners Hasselt\",\n          \"item\": \"https://clinic3d.be/spier-ontspanners\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"MedicalClinic\",\n      \"@id\": \"https://clinic3d.be/#clinic\",\n      \"name\": \"Clinic3D\",\n      \"url\": \"https://clinic3d.be\",\n      \"telephone\": \"+32468216136\",\n      \"priceRange\": \"€€\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n        \"postalCode\": \"3500\",\n        \"addressLocality\": \"Hasselt\",\n        \"addressRegion\": \"Limburg\",\n        \"addressCountry\": \"BE\"\n      },\n      \"physician\": {\n        \"@type\": \"Physician\",\n        \"name\": \"Dr. Sasha Kenis\",\n        \"address\": {\n          \"@type\": \"PostalAddress\",\n          \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n          \"postalCode\": \"3500\",\n          \"addressLocality\": \"Hasselt\",\n          \"addressRegion\": \"Limburg\",\n          \"addressCountry\": \"BE\"\n        }\n      }\n    }\n  ]\n}"
+  ]
+ },
+ "fillers-hasselt": {
+  "uitvoer": "fillers-hasselt.html",
+  "titel": "Fillers Hasselt | Lippen, Traangoot & Volume | Clinic3D",
+  "beschrijving": "Fillers bij Clinic3D Hasselt: lippen, traangoot, jukbeenderen en kaaklijn met hyaluronzuur — subtiel en natuurlijk. Boek je gratis consult.",
+  "canonical": "https://clinic3d.be/fillers-hasselt",
+  "robots": "index",
+  "og_image": "",
+  "keywords": "fillers hasselt, lipfillers hasselt, traanguitvulling hasselt, kaaklijn filler hasselt, jukbeenderen filler hasselt, hyaluronzuur behandeling hasselt, esthetisch arts hasselt",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"MedicalProcedure\",\n      \"@id\": \"https://clinic3d.be/fillers-hasselt#procedure\",\n      \"name\": \"Fillers\",\n      \"description\": \"Behandeling met hyaluronzuur-fillers om volume en contour te herstellen (lippen, traangoot, jukbeenderen, kaaklijn), uitgevoerd door een arts.\",\n      \"procedureType\": \"https://schema.org/PercutaneousProcedure\",\n      \"bodyLocation\": \"Gelaat\",\n      \"howPerformed\": \"Precisie-injecties met hyaluronzuur, toegediend door een arts na een persoonlijke intake.\",\n      \"url\": \"https://clinic3d.be/fillers-hasselt\",\n      \"provider\": {\n        \"@id\": \"https://clinic3d.be/#clinic\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Hoelang blijft het resultaat van fillers zichtbaar?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Afhankelijk van de zone en het gebruikte product houdt het resultaat gemiddeld zes tot twaalf maanden aan. Dit wordt tijdens je consult concreet met je besproken.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Doet een filler-behandeling pijn?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"De meeste patiënten ervaren enkel een lichte druk of prik. Indien gewenst wordt een verdovende crème aangebracht voor extra comfort.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Zie ik er \\\"opgespoten\\\" uit?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Dat is precies wat dr. Kenis wil vermijden. Er wordt bewust gekozen voor een terughoudende, natuurlijke aanpak — het doel is dat je er fris en uitgerust uitziet, niet \\\"behandeld\\\".\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Wat kost het eerste consult?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Niets. Het eerste consult bij dr. Sasha Kenis is steeds gratis en volledig vrijblijvend.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://clinic3d.be/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Behandelingen\",\n          \"item\": \"https://clinic3d.be/behandelingen\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Fillers Hasselt\",\n          \"item\": \"https://clinic3d.be/fillers-hasselt\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"MedicalClinic\",\n      \"@id\": \"https://clinic3d.be/#clinic\",\n      \"name\": \"Clinic3D\",\n      \"url\": \"https://clinic3d.be\",\n      \"telephone\": \"+32468216136\",\n      \"priceRange\": \"€€\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n        \"postalCode\": \"3500\",\n        \"addressLocality\": \"Hasselt\",\n        \"addressRegion\": \"Limburg\",\n        \"addressCountry\": \"BE\"\n      },\n      \"physician\": {\n        \"@type\": \"Physician\",\n        \"name\": \"Dr. Sasha Kenis\",\n        \"address\": {\n          \"@type\": \"PostalAddress\",\n          \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n          \"postalCode\": \"3500\",\n          \"addressLocality\": \"Hasselt\",\n          \"addressRegion\": \"Limburg\",\n          \"addressCountry\": \"BE\"\n        }\n      }\n    }\n  ]\n}"
+  ]
+ },
+ "skinboosters-hasselt": {
+  "uitvoer": "skinboosters-hasselt.html",
+  "titel": "Skinboosters Hasselt | Profhilo & Sunekos | Clinic3D",
+  "beschrijving": "Skinboosters in Hasselt: Profhilo, Sunekos en Jalupro voor diepe hydratatie, meer elasticiteit en een natuurlijke glow, zonder je gezicht te veranderen. Clinic3D.",
+  "canonical": "https://clinic3d.be/skinboosters-hasselt",
+  "robots": "index",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"hasPart\": [\n        {\n          \"@type\": \"WebPageElement\",\n          \"name\": \"section-llgR2-A289\"\n        },\n        {\n          \"@type\": \"WebPageElement\",\n          \"name\": \"section-YkxTwTkfjP\"\n        }\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "biostimulators-hasselt": {
+  "uitvoer": "biostimulators-hasselt.html",
+  "titel": "Sculptra & Radiesse Hasselt | Biostimulators | Clinic3D",
+  "beschrijving": "Biostimulators in Hasselt: Sculptra, Radiesse en Karisma herstellen stevigheid en volume via je eigen collageenaanmaak. Een geleidelijk, natuurlijk resultaat bij Clinic3D.",
+  "canonical": "https://clinic3d.be/biostimulators-hasselt",
+  "robots": "index",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"#webpage\",\n      \"hasPart\": [\n        {\n          \"@id\": \"#section-llgR2-A289\"\n        },\n        {\n          \"@id\": \"#section-EK26vl5igL\"\n        },\n        {\n          \"@id\": \"#section-YkxTwTkfjP\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"WebPageElement\",\n      \"@id\": \"#section-llgR2-A289\",\n      \"name\": \"SECTION [section-llgR2-A289]\",\n      \"isPartOf\": {\n        \"@id\": \"#webpage\"\n      }\n    },\n    {\n      \"@type\": \"WebPageElement\",\n      \"@id\": \"#section-EK26vl5igL\",\n      \"name\": \"SECTION [section-EK26vl5igL]\",\n      \"isPartOf\": {\n        \"@id\": \"#webpage\"\n      }\n    },\n    {\n      \"@type\": \"WebPageElement\",\n      \"@id\": \"#section-YkxTwTkfjP\",\n      \"name\": \"SECTION [section-YkxTwTkfjP]\",\n      \"isPartOf\": {\n        \"@id\": \"#webpage\"\n      }\n    }\n  ]\n}"
+  ]
+ },
+ "haaruitval-behandeling-hasselt": {
+  "uitvoer": "haaruitval-behandeling-hasselt.html",
+  "titel": "Haaruitval Hasselt | PRP & Mesotherapie | Clinic3D",
+  "beschrijving": "Haaruitval behandelen bij Clinic3D Hasselt met PRP en mesotherapie voor de hoofdhuid, onder begeleiding van dr. Sasha Kenis. Gratis consult.",
+  "canonical": "https://clinic3d.be/haaruitval-behandeling-hasselt",
+  "robots": "index",
+  "og_image": "",
+  "keywords": "haaruitval behandeling hasselt, prp haaruitval hasselt, mesotherapie haar hasselt, haargroei stimuleren hasselt, dunner haar behandeling hasselt, prp hoofdhuid hasselt",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://clinic3d.be/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Behandelingen\",\n          \"item\": \"https://clinic3d.be/behandelingen\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Haaruitval behandeling in Hasselt\",\n          \"item\": \"https://clinic3d.be/haaruitval-behandeling-hasselt\"\n        }\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "medische-hifu-hasselt": {
+  "uitvoer": "medische-hifu-hasselt.html",
+  "titel": "Medische HIFU Hasselt | Huidverstrakking | Clinic3D",
+  "beschrijving": "Medische HIFU in Hasselt: verstevig en lift gelaat, hals en lichaam zonder operatie, met medisch gecertificeerde apparatuur. Een natuurlijk, geleidelijk resultaat bij Clinic3D.",
+  "canonical": "https://clinic3d.be/medische-hifu-hasselt",
+  "robots": "index",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"hasPart\": [\n        {\n          \"@type\": \"WebPageElement\",\n          \"identifier\": \"section-llgR2-A289\"\n        },\n        {\n          \"@type\": \"WebPageElement\",\n          \"identifier\": \"section-B4BhZV5nAg\"\n        },\n        {\n          \"@type\": \"WebPageElement\",\n          \"identifier\": \"section-YkxTwTkfjP\"\n        }\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "contact": {
+  "uitvoer": "contact.html",
+  "titel": "Contact Clinic3D Hasselt | Afspraak & Bereikbaarheid",
+  "beschrijving": "Contacteer Clinic3D in Hasselt: Luikersteenweg 301 bus 1. Tel +32 468 21 61 36. Open ma 10-19u, di/do 16-19u, vr 11-19u. Boek je gratis consult.",
+  "canonical": "https://clinic3d.be/contact",
+  "robots": "index",
+  "og_image": "https://clinic3d.be/img/clinic3d-beauty-center.jpg",
+  "keywords": "contact Clinic3D hasselt, esthetisch arts hasselt contact, afspraak esthetische kliniek hasselt, telefoonnummer Clinic3D, adres Clinic3D hasselt",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"MedicalClinic\",\n      \"@id\": \"https://clinic3d.be/#clinic\",\n      \"name\": \"Clinic3D\",\n      \"alternateName\": \"3D Clinic\",\n      \"description\": \"Medisch-esthetische kliniek in Hasselt voor botulinetoxine, fillers, skinboosters, biostimulators, medische HIFU en haarbehandelingen. Onder leiding van erkend esthetisch arts dr. Sasha Kenis.\",\n      \"url\": \"https://clinic3d.be/\",\n      \"logo\": \"https://clinic3d.be/img/logo-clinic3d.jpg\",\n      \"image\": \"https://clinic3d.be/img/ingang-clinic3d.jpg\",\n      \"telephone\": \"+32468216136\",\n      \"email\": \"info@clinic3d.be\",\n      \"currenciesAccepted\": \"EUR\",\n      \"medicalSpecialty\": \"Esthetische geneeskunde\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n        \"postalCode\": \"3500\",\n        \"addressLocality\": \"Hasselt\",\n        \"addressRegion\": \"Limburg\",\n        \"addressCountry\": \"BE\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 50.9081954,\n        \"longitude\": 5.3557564\n      },\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Monday\",\n          \"opens\": \"10:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Tuesday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Thursday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Friday\",\n          \"opens\": \"11:00\",\n          \"closes\": \"19:00\"\n        }\n      ],\n      \"sameAs\": [\n        \"https://www.facebook.com/clinic3d\",\n        \"https://www.instagram.com/aesthetics_clinic_3d/\"\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "maak-een-afspraak": {
+  "uitvoer": "maak-een-afspraak.html",
+  "titel": "Maak een Afspraak | Gratis Consult | Clinic3D Hasselt",
+  "beschrijving": "Maak je afspraak bij Clinic3D in Hasselt. Boek je consult gratis, online of telefonisch via +32 468 21 61 36. Open ma 10-19u, di/do 16-19u, vr 11-19u.",
+  "canonical": "https://clinic3d.be/maak-een-afspraak",
+  "robots": "index",
+  "og_image": "",
+  "keywords": "afspraak maken esthetisch arts hasselt, gratis consult hasselt, boek consult Clinic3D, afspraak esthetische kliniek hasselt",
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"MedicalClinic\",\n      \"@id\": \"https://clinic3d.be/#clinic\",\n      \"name\": \"Clinic3D\",\n      \"description\": \"Medisch-esthetische kliniek in Hasselt onder leiding van dr. Sasha Kenis. Persoonlijke, wetenschappelijk onderbouwde behandelingen voor een natuurlijk resultaat.\",\n      \"url\": \"https://clinic3d.be\",\n      \"logo\": \"https://clinic3d.be/img/logo-clinic3d.jpg\",\n      \"image\": \"https://clinic3d.be/img/og-clinic3d.jpg\",\n      \"telephone\": \"+32468216136\",\n      \"email\": \"info@clinic3d.be\",\n      \"priceRange\": \"€€\",\n      \"currenciesAccepted\": \"EUR\",\n      \"medicalSpecialty\": \"Esthetische geneeskunde\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Luikersteenweg 301 bus 1\",\n        \"postalCode\": \"3500\",\n        \"addressLocality\": \"Hasselt\",\n        \"addressRegion\": \"Limburg\",\n        \"addressCountry\": \"BE\"\n      },\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Monday\",\n          \"opens\": \"10:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Tuesday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Thursday\",\n          \"opens\": \"16:00\",\n          \"closes\": \"19:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"dayOfWeek\": \"Friday\",\n          \"opens\": \"11:00\",\n          \"closes\": \"19:00\"\n        }\n      ],\n      \"sameAs\": [\n        \"https://www.facebook.com/clinic3d\",\n        \"https://www.instagram.com/aesthetics_clinic_3d/\"\n      ]\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://clinic3d.be/maak-een-afspraak#webpage\",\n      \"url\": \"https://clinic3d.be/maak-een-afspraak\",\n      \"name\": \"Maak een Afspraak | Gratis Consult | Clinic3D Hasselt\",\n      \"about\": {\n        \"@id\": \"https://clinic3d.be/#clinic\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://clinic3d.be/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Maak een afspraak\",\n          \"item\": \"https://clinic3d.be/maak-een-afspraak\"\n        }\n      ]\n    }\n  ]\n}"
+  ]
+ },
+ "afspraakgeboekt": {
+  "uitvoer": "afspraakgeboekt.html",
+  "titel": "Afspraak geboekt | Clinic3D",
+  "beschrijving": "Je afspraak bij Clinic3D in Hasselt is geboekt. Je ontvangt een bevestiging per e-mail.",
+  "canonical": null,
+  "robots": "noindex",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": []
+ },
+ "404": {
+  "uitvoer": "404-pagina.html",
+  "titel": "Pagina niet gevonden | Clinic3D",
+  "beschrijving": "Deze pagina bestaat niet (meer). Ga naar de startpagina van Clinic3D in Hasselt.",
+  "canonical": null,
+  "robots": "noindex",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": []
+ },
+ "blog": {
+  "uitvoer": "blog.html",
+  "titel": "Blog | Clinic3D Hasselt",
+  "beschrijving": "Uitleg van dr. Sasha Kenis over esthetische behandelingen: wat ze doen, hoe ze verlopen en waar je op let. De blog van Clinic3D in Hasselt.",
+  "canonical": "https://clinic3d.be/blog",
+  "robots": "index",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": [
+   "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"hasPart\": [\n        {\n          \"@id\": \"#section-llgR2-A289\"\n        },\n        {\n          \"@id\": \"#section-EidNs6x-u9\"\n        },\n        {\n          \"@id\": \"#section-YkxTwTkfjP\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"WebPageElement\",\n      \"@id\": \"#section-llgR2-A289\",\n      \"name\": \"SECTION [section-llgR2-A289]\"\n    },\n    {\n      \"@type\": \"WebPageElement\",\n      \"@id\": \"#section-EidNs6x-u9\",\n      \"name\": \"SECTION [section-EidNs6x-u9]\"\n    },\n    {\n      \"@type\": \"WebPageElement\",\n      \"@id\": \"#section-YkxTwTkfjP\",\n      \"name\": \"SECTION [section-YkxTwTkfjP]\"\n    }\n  ]\n}"
+  ]
+ },
+ "privacybeleid": {
+  "uitvoer": "privacybeleid.html",
+  "titel": "Privacybeleid | Clinic3D",
+  "beschrijving": "Hoe Clinic3D in Hasselt omgaat met je persoonsgegevens en cookies, volgens de AVG.",
+  "canonical": null,
+  "robots": "noindex",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": []
+ },
+ "algemene-voorwaarden": {
+  "uitvoer": "algemene-voorwaarden.html",
+  "titel": "Algemene voorwaarden | Clinic3D",
+  "beschrijving": "De algemene voorwaarden van Clinic3D, medisch-esthetische kliniek in Hasselt.",
+  "canonical": null,
+  "robots": "noindex",
+  "og_image": "",
+  "keywords": null,
+  "ldjson": []
+ }
+}

@@ -1,0 +1,131 @@
+/* Verfijning: één ontwerpsysteem over alle paginablokken heen.
+   Zelfde kleuren, lettertypes en componenten; enkel strakker en consequenter.
+   Laadt als laatste. "body[class]" geeft net genoeg gewicht om de oude blokregels te overstijgen. */
+
+:root{
+  --fs-h1:clamp(2.15rem,2.8vw + 1rem,3rem);       /* ±34px mobiel, 48px desktop */
+  --fs-h2:clamp(1.75rem,1.6vw + 1.1rem,2.5rem);   /* ±28px mobiel, 40px desktop */
+  --section-y:clamp(3rem,6.5vw,5.5rem);           /* ±48px mobiel, 88px desktop */
+  --section-y-tight:clamp(2.25rem,4.5vw,3.75rem);
+  --radius-card:20px;
+  --radius-media:28px;
+}
+body{font-variant-numeric:lining-nums;}            /* rechte cijfers in prijzen, uren en telefoon */
+
+/* ---------- Typografie ---------- */
+h1,body[class] :is(.c3h h1,.c3p h1,.c3nf h1,.c3c h1,.tp-title,.tp h1,.afs-title,.c3d-success .c3d-title,.post-kop h1){font-size:var(--fs-h1);line-height:1.08;}
+h2,body[class] :is(.section-head h2,.c3w h2,.c3t h2,.c3f h2,.c3b h2,.c3d-about-copy h2,.tp-h2,.tp .wrap > h2,.afs-h2,.post-cta h2,.post-meer h2){font-size:var(--fs-h2);line-height:1.12;}
+body[class] :is(.tp-cta h2,.tp .cta h2,.c3d-cta h2,.cta-band h2){font-size:calc(var(--fs-h2) * .85);}
+
+/* één eyebrow-stijl: gouden lijn, gold-dark, .75rem */
+body[class] :is(.eyebrow,.tp-eyebrow,.afs-eyebrow,.c3d-about .c3d-eyebrow,.c3d-success .c3d-eyebrow){font-family:var(--font-sans);font-size:.75rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);}
+body[class] :is(.tp-eyebrow,.afs-eyebrow,.c3d-success .c3d-eyebrow){display:inline-flex;align-items:center;gap:.6rem;}
+body[class] :is(.tp-eyebrow,.afs-eyebrow,.c3d-success .c3d-eyebrow)::before{content:"";width:28px;height:1px;background:var(--gold);}
+
+/* ---------- Knoppen: overal hetzelfde formaat en gedrag als .btn ---------- */
+.btn:not(.btn--ghost):not(.btn-g):not(.ghost){border:1px solid transparent;}   /* primair en ghost even hoog */
+body[class] :is(.c3h .btn,.c3w .btn,.c3t .btn,.c3b .btn,.c3p .btn,.tp .btn,.tp-btn,.afs-btn,.c3d-success .c3d-btn,.c3d-about .c3d-btn,.c3nf .btns a){
+  font-family:var(--font-sans);font-size:.95rem;font-weight:500;padding:.9rem 1.7rem;border-radius:var(--radius-pill);
+  transition:transform var(--transition),background var(--transition),color var(--transition),border-color var(--transition),box-shadow var(--transition);}
+body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary):hover{
+  background:var(--gold-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md);}
+body[class] :is(.btn--ghost,.c3h .btn-g,.c3w .btn.ghost,.c3b .btn.ghost,.tp .btn.ghost,.tp-btn--ghost,.afs-btn--ghost,.c3d-success .c3d-btn--ghost):hover{
+  border-color:var(--gold);transform:translateY(-2px);}
+body[class] :is(.c3d-about .c3d-btn,.c3nf .btns a):hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+
+/* ---------- Kaarten en radii ---------- */
+body[class] :is(.card,.c3c .card,.tp .card,.c3w .cell,.c3t a.card,.blog-kaart-link,.post-auteur,.afs-hours){border-radius:var(--radius-card);}
+body[class] :is(.split-media,.c3h .visual,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
+body[class] .tp-zone{border-radius:16px;}
+
+/* "Waarom Clinic3D": zinnen als rustige chip i.p.v. hoofdletter-pil (botsing met globale .tag) */
+body[class] .c3w .tag{display:inline-block;text-transform:none;letter-spacing:0;font-size:.88rem;font-weight:500;line-height:1.45;border-radius:10px;padding:.4rem .75rem;margin:.7rem 0 0;}
+
+/* ---------- Verticaal ritme en achtergronden ---------- */
+.section{padding-block:var(--section-y);}
+.section--tight{padding-block:var(--section-y-tight);}
+body[class] :is(.c3w .wrap,.c3t .wrap,.c3f .wrap,.c3b .wrap,.c3c .wrap,.c3p .wrap,.tp .wrap){padding-block:var(--section-y);}
+body[class] .tp-section{padding-block:calc(var(--section-y) * .8);}
+body[class] .c3d-about{padding-block:var(--section-y);background:var(--cream);}
+.p-home section.reviews{background:var(--cream);}
+body[class] .page-hero + .c3b .wrap{padding-top:.5rem;}           /* over-ons: geen dubbele witruimte */
+
+/* blokken op dezelfde containerbreedte en -marge als de header */
+body[class] .c3d-about{padding-inline:0;}
+body[class] .c3d-about-grid{max-width:var(--maxw);padding-inline:clamp(1.2rem,4vw,2.5rem);}
+body[class] :is(.c3b .wrap,.c3c .wrap){max-width:var(--maxw);}
+
+/* portret van dr. Kenis */
+body[class] .c3b .photo img{object-position:50% 22%;}
+
+/* ---------- FAQ: overal de stijl van de homepage ---------- */
+body[class] :is(.tp-faq details,.tp details,.bp-faq details){padding:0;border-bottom:1px solid var(--line);}
+body[class] :is(.tp-faq summary,.tp summary,.bp-faq summary){display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.35rem 0;list-style:none;cursor:pointer;font-family:var(--font-display);font-size:clamp(1.15rem,1.2vw + .8rem,1.35rem);font-weight:600;line-height:1.3;color:var(--ink);}
+body[class] :is(.tp-faq summary,.tp summary,.bp-faq summary)::-webkit-details-marker{display:none;}
+body[class] :is(.tp-faq summary,.bp-faq summary)::after{content:"+";}
+body[class] .tp-faq summary::after,body[class] .bp-faq summary::after,body[class] .tp summary .p{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-dark);display:grid;place-items:center;font:400 1.1rem/1 var(--font-sans);margin:0;transition:transform var(--transition),background var(--transition),color var(--transition);}
+body[class] .tp-faq details[open] summary::after,body[class] .bp-faq details[open] summary::after,body[class] .tp details[open] summary .p{content:"+";background:var(--gold);color:#fff;transform:rotate(45deg);}
+body[class] :is(.tp-faq details > p,.tp details > .a,.bp-faq details > p){margin:0;padding:0 0 1.35rem;font-size:1rem;line-height:1.7;color:var(--ink-soft);max-width:68ch;}
+body[class] :is(.tp-faq summary,.tp summary,.bp-faq summary,.c3f summary):hover{color:var(--gold-dark);}
+
+/* ---------- Toestemmings-plaatshouders (kaart, reviews) ---------- */
+body[class] .extern:not(.is-geladen) iframe[data-src]{display:none;}
+.extern--kaart{display:grid;height:100%;min-height:inherit;}
+.extern--kaart > .extern-plaatshouder{min-height:inherit;border:0;border-radius:0;}
+.extern--reviews .extern-plaatshouder{border:1px solid var(--line);border-radius:var(--radius-card);background:#fff;min-height:180px;}
+.extern-plaatshouder button{transition:background var(--transition),transform var(--transition);}
+.extern-plaatshouder button:hover{transform:translateY(-2px);}
+
+/* ---------- Blogartikel: één leeskolom, huispalet ---------- */
+body[class] .post-inhoud{max-width:var(--maxw-narrow);}
+body[class] .post-inhoud > :is(.c3d-article,.bp){max-width:none;margin:0;padding:0;background:transparent;box-shadow:none;border:0;}
+body[class] .post-inhoud :is(.c3d-article > .c3d-eyebrow,.c3d-byline,.bp-eyebrow,.bp-author){display:none;}   /* staan al in de artikelkop */
+body[class] .post-inhoud .c3d-article{--terra:var(--gold);--terra-deep:var(--gold-dark);--sand:var(--line);--cream:var(--ivory);}
+body[class] .post-inhoud .bp{--gold:#B0894F;}
+body[class] .post-inhoud :is(.c3d-cta,.bp-cta){background:linear-gradient(135deg,var(--espresso),#4a3d31);border-radius:var(--radius-media);}
+body[class] .post-inhoud .c3d-article .c3d-btn{background:var(--gold);color:#fff!important;}
+body[class] .post-inhoud .c3d-article .c3d-btn:hover{background:var(--gold-dark);}
+body[class] .post-inhoud :is(.c3d-article h2,.bp-body h2){font-size:clamp(1.6rem,1.4vw + 1rem,2rem);}
+body[class] .post-auteur .post-auteur-naam{font-size:1.4rem;line-height:1.2;margin-bottom:.3rem;}
+
+/* ---------- Mobiel ---------- */
+@media (max-width:860px){
+  body[class] .c3b .photo{aspect-ratio:1/1;max-width:360px;}
+}
+@media (max-width:620px){
+  body[class] .card{padding:1.4rem;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem 1.5rem;}
+  .footer-top > .footer-brand,.footer-top > .footer-col:last-child{grid-column:1 / -1;}
+}
+@media (max-width:560px){
+  body[class] .tp-zones{grid-template-columns:repeat(2,1fr);gap:12px;}
+  body[class] .tp-zone{padding:18px 14px;}
+  body[class] .blog-kaart-beeld.is-logo{aspect-ratio:auto;height:96px;}
+  body[class] .blog-kaart-beeld:not(.is-logo){aspect-ratio:16/9;}
+  body[class] .blog-kaart-tekst > p:not(.blog-kaart-meta){-webkit-line-clamp:2;}
+}
+@media (max-width:480px){
+  /* hero: eyebrow op één regel, knoppen op volle breedte, compacter beeld */
+  body[class] .c3h .eyebrow{letter-spacing:.14em;font-size:.7rem;}
+  body[class] .c3h .eyebrow::before{display:none;}
+  body[class] :is(.c3h .btns,.tp-hero-actions){display:grid;grid-template-columns:1fr;gap:.6rem;}
+  body[class] :is(.c3h .btns .btn,.tp-hero-actions .tp-btn){width:100%;text-align:center;justify-content:center;}
+  body[class] .c3h .visual{aspect-ratio:4/3;}
+  /* USP's als rij met icoon links */
+  body[class] .c3u .grid > *{display:grid;grid-template-columns:40px 1fr;column-gap:1rem;align-items:start;padding:1.1rem 1.2rem;}
+  body[class] .c3u .grid > * > :first-child{grid-row:span 2;}
+  /* cookiebanner compacter, gelijke knoppen */
+  .cc{left:.75rem;right:.75rem;width:auto;bottom:calc(.75rem + env(safe-area-inset-bottom));}
+  .cc-kaart{padding:1.05rem 1.1rem .9rem;}
+  .cc-titel{font-size:1.25rem;margin-bottom:.35rem;}
+  .cc-tekst{font-size:.85rem;line-height:1.5;margin-bottom:.8rem;}
+  .cc-knoppen{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+  .cc-btn{min-height:44px;padding:.6rem .5rem;}
+  .cc-link{grid-column:1 / -1;justify-self:center;margin:0;min-height:44px;padding:.5rem 1rem;}
+}
+
+/* footer: onderste rij op één lijn (ook de knop 'Cookie-instellingen') */
+.footer-bottom{align-items:center;}
+.footer-bottom .legal{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.4rem;}
+.footer-bottom .legal a,.footer-bottom .legal .footer-cookies{font-size:inherit;line-height:1.5;margin:0;}
+.footer-bottom .footer-cookies{color:#9D907F;}.footer-bottom .footer-cookies:hover{color:var(--gold-soft);}
