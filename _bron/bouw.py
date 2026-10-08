@@ -99,7 +99,7 @@ def css_deel(pad):
     # binden aan de eigen pagina (body-klasse p-<pagina>), anders lekken ze naar elkaar.
     if naam.startswith("tp-") and os.path.basename(os.path.dirname(pad)) == "paginas":
         css = scope(css, ".p-" + naam[3:-4], only=".tp")
-    return f"/* ---- {os.path.relpath(pad, BRON)} ---- */\n" + css
+    return f"/* ---- {os.path.relpath(pad, BRON).replace(os.sep, '/')} ---- */\n" + css
 
 
 def bundel():
@@ -108,7 +108,7 @@ def bundel():
                  + sorted(glob.glob(os.path.join(BRON, "css", "verfijning", "*.css"))))  # laatste laag: verfijning
     css = "\n\n".join(css_deel(p) for p in css_delen)
     schrijf("assets/css/site.css", css + "\n")
-    js_delen = ["header.js", "zwevende-knop.js", "cookies.js", "animaties.js"]
+    js_delen = ["header.js", "zwevende-knop.js", "cookies.js", "animaties.js", "blog.js"]
     js = "\n\n".join(f"/* ---- js/{n} ---- */\n" + lees("js/" + n).strip() for n in js_delen if os.path.exists(os.path.join(BRON, "js", n)))
     schrijf("assets/js/site.js", js + "\n")
     return versie("assets/css/site.css"), versie("assets/js/site.js")
@@ -252,28 +252,90 @@ def blog_bouwen(css_v, js_v):
         artikels.append(dict(a, slug=slug, inhoud=inhoud, d=d, gw=gewijzigd, minuten=a.get("leestijd") or leestijd(inhoud)))
     artikels.sort(key=lambda a: a["d"], reverse=True)
 
-    def kaart(a, kop="h2"):
+    def cat_slug(c):
+        return re.sub(r"[^a-z0-9]+", "-", c.lower().replace("&", "en")).strip("-")
+
+    def beeld_html(a, merk_klasse="blog-kaart-merk", lazy=True):
         beeld = a["afbeelding"]
         logo = beeld in LOGO_BEELDEN or not beeld
-        img = (f'<img src="{esc(beeld)}" alt="{esc(a["afbeelding_alt"] or a["titel"])}" loading="lazy" decoding="async">'
-               if not logo else '<span class="blog-kaart-merk" aria-hidden="true">Clinic<b>3D</b></span>')
+        if logo:
+            return True, f'<span class="{merk_klasse}" aria-hidden="true">Clinic<b>3D</b></span>'
+        extra = ' loading="lazy"' if lazy else ' fetchpriority="high"'
+        return False, f'<img src="{esc(beeld)}" alt="{esc(a["afbeelding_alt"] or a["titel"])}"{maat(beeld)}{extra} decoding="async">'
+
+    def meta_html(a):
         cat = a["categorieen"][0] if a["categorieen"] else "Blog"
-        return (f'<article class="blog-kaart reveal"><a class="blog-kaart-link" href="/post/{a["slug"]}">'
+        return (f'<p class="blog-kaart-meta"><span class="blog-kaart-cat">{esc(cat)}</span>'
+                f'<span class="blog-kaart-tijd"><time datetime="{a["d"].isoformat()}">{nl_datum(a["d"])}</time>'
+                f'<span class="blog-leestijd">{a["minuten"]} min leestijd</span></span></p>')
+
+    def kaart(a, kop="h2"):
+        logo, img = beeld_html(a)
+        cats = " ".join(cat_slug(c) for c in a["categorieen"])
+        return (f'<article class="blog-kaart reveal" data-cats="{esc(cats)}"><a class="blog-kaart-link" href="/post/{a["slug"]}">'
                 f'<div class="blog-kaart-beeld{" is-logo" if logo else ""}">{img}</div>'
-                f'<div class="blog-kaart-tekst"><p class="blog-kaart-meta"><span>{esc(cat)}</span>'
-                f'<time datetime="{a["d"].isoformat()}">{nl_datum(a["d"])}</time></p>'
+                f'<div class="blog-kaart-tekst">{meta_html(a)}'
                 f'<{kop}>{esc(a["titel"])}</{kop}><p>{esc(a["beschrijving"])}</p>'
                 f'<span class="blog-kaart-meer">Lees het artikel <span aria-hidden="true">→</span></span></div></a></article>')
 
-    # overzicht
+    def uitgelicht(a):
+        logo, img = beeld_html(a, "blog-top-merk", lazy=False)
+        cats = " ".join(cat_slug(c) for c in a["categorieen"])
+        return (f'<article class="blog-top reveal" data-cats="{esc(cats)}"><a class="blog-top-link" href="/post/{a["slug"]}">'
+                f'<div class="blog-top-beeld{" is-logo" if logo else ""}">{img}</div>'
+                f'<div class="blog-top-tekst"><span class="blog-top-label">Nieuwste artikel</span>{meta_html(a)}'
+                f'<h2>{esc(a["titel"])}</h2><p>{esc(a["beschrijving"])}</p>'
+                f'<span class="btn btn--primary">Lees het artikel <span aria-hidden="true">→</span></span></div></a></article>')
+
+    # onderwerpen voor de filter: op aantal artikels, dan op naam
+    telling = {}
+    for a in artikels:
+        for c in a["categorieen"]:
+            telling[c] = telling.get(c, 0) + 1
+    cats = sorted(telling, key=lambda c: (-telling[c], c.lower()))
+    filter_html = (
+        '<div class="blog-filter" role="group" aria-label="Filter op onderwerp" hidden>'
+        f'<button type="button" class="blog-filter-knop is-actief" data-cat="" aria-pressed="true">Alles <span>{len(artikels)}</span></button>'
+        + "".join(f'<button type="button" class="blog-filter-knop" data-cat="{cat_slug(c)}" aria-pressed="false">{esc(c)} <span>{telling[c]}</span></button>' for c in cats)
+        + '</div>')
+    vinkje = ('<span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span>')
+
+    # overzicht: hero met auteurskaart, nieuwste artikel uitgelicht, filter, raster en afsluitende CTA
+    nieuwste, rest = artikels[0], artikels[1:]
     overzicht = (
-        '<section class="page-hero blog-hero"><div class="container narrow center reveal">'
-        '<span class="eyebrow eyebrow--center">Blog</span>'
+        '<section class="page-hero blog-hero"><div class="container"><div class="blog-hero-grid">'
+        '<div class="blog-hero-tekst">'
+        '<span class="eyebrow">Blog</span>'
         '<h1>Advies van dr. Sasha Kenis</h1>'
         '<p class="lead">Eerlijke uitleg over behandelingen, resultaten en huidverzorging, zodat je goed geïnformeerd een keuze maakt.</p>'
+        '<ul class="blog-hero-punten">'
+        f'<li>{vinkje}Geschreven door een erkend esthetisch arts</li>'
+        f'<li>{vinkje}Eerlijk over wat een behandeling wél en niet doet</li>'
+        f'<li>{vinkje}Begrijpelijke taal, geen verkooppraat</li>'
+        '</ul></div>'
+        '<aside class="blog-auteur reveal" aria-label="Over de auteur">'
+        '<img src="/img/dr-sasha-kenis-portret-720.webp" alt="Portret van dr. Sasha Kenis, esthetisch arts en oprichter van Clinic3D" width="720" height="720" decoding="async">'
+        '<div class="blog-auteur-tekst"><span class="blog-auteur-label">Over de auteur</span>'
+        f'<p class="blog-auteur-naam">{esc(auteur["naam"])}</p>'
+        '<p class="blog-auteur-rol">Esthetisch arts en oprichter van Clinic3D in Hasselt</p>'
+        '<p class="blog-auteur-bio">Subtiele, op maat gemaakte behandelingen die je eigen schoonheid versterken in plaats van veranderen. Dat is de rode draad in de praktijk én in elk artikel.</p>'
+        '<a class="textlink" href="/over-ons">Meer over dr. Kenis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'
+        '</div></aside>'
+        '</div></div></section>'
+        '<section class="section section--tight blog-lijst"><div class="container">'
+        + uitgelicht(nieuwste) +
+        '<div class="blog-lijst-kop"><div class="section-head"><span class="eyebrow">Alle artikels</span><h2>Lees verder</h2></div>'
+        + filter_html + '</div>'
+        '<div class="blog-grid">' + "".join(kaart(a) for a in rest) + '</div>'
+        '<p class="blog-leeg" hidden>Geen artikels in dit onderwerp. <button type="button" class="blog-leeg-knop">Toon alle artikels</button></p>'
         '</div></section>'
-        '<section class="section section--tight blog-lijst"><div class="container"><div class="blog-grid">'
-        + "".join(kaart(a) for a in artikels) + '</div></div></section>'
+        '<section class="section section--tight blog-cta"><div class="container"><div class="cta-band reveal">'
+        '<span class="eyebrow eyebrow--center blog-cta-eyebrow">Liever persoonlijk advies?</span>'
+        '<h2>Bespreek het tijdens een gratis consult</h2>'
+        '<p>Lezen is een goed begin. Tijdens een vrijblijvend consult bekijkt dr. Kenis samen met jou wat bij jouw huid en wensen past.</p>'
+        '<div class="btn-row btn-row--center"><a class="btn btn--primary" href="/maak-een-afspraak">Boek je gratis consult</a>'
+        '<a class="btn btn--light" href="tel:+32468216136">Bel +32 468 21 61 36</a></div>'
+        '</div></div></section>'
     )
     meta = json.loads(lees("paginas.json"))["blog"]
     meta["ldjson"] = [json.dumps({"@context": "https://schema.org", "@graph": [

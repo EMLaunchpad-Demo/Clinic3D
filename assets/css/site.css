@@ -1,11 +1,11 @@
-/* ---- css\00-lettertypes.css ---- */
+/* ---- css/00-lettertypes.css ---- */
 /* Lettertypes, zelf gehost (SIL Open Font License): Cormorant Garamond en Jost (variabele fonts) */
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500 700;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500 700;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 @font-face{font-family:'Jost';font-style:normal;font-weight:300 600;font-display:swap;src:url(/assets/fonts/jost-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
 @font-face{font-family:'Jost';font-style:normal;font-weight:300 600;font-display:swap;src:url(/assets/fonts/jost-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 
-/* ---- css\01-basis.css ---- */
+/* ---- css/01-basis.css ---- */
 /* Ontwerpsysteem Clinic3D (kleuren, typografie, layout, componenten) */
 :root {
   --ivory:#FDFAF5; --cream:#F2EADF; --cream-deep:#EADFCF; --white:#FFFFFF;
@@ -173,7 +173,7 @@ a.card:hover,a.card:focus-visible{transform:translateY(-5px);box-shadow:var(--sh
 
 /* Scroll-animaties: zie js/animaties.js (verbergt nooit iets zonder JS of bij 'minder beweging') */
 
-/* ---- css\02-header.css ---- */
+/* ---- css/02-header.css ---- */
 /* Header en mobiel menu (knoppen komen uit 01-basis.css) */
 :root{--ink:#2B2520;--ink-soft:#5C534A;--gold:#B0894F;--gold-dark:#8A6836;--cream:#F2EADF;--line:#E7DCCD;--radius:18px;--radius-pill:999px;--shadow-sm:0 2px 10px rgba(43,37,32,.06);--shadow-md:0 12px 36px rgba(43,37,32,.10);--transition:.35s cubic-bezier(.22,.61,.36,1);--font-sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--font-display:"Cormorant Garamond",Georgia,serif;}
 html{scroll-padding-top:96px;}
@@ -241,7 +241,7 @@ body.no-scroll{overflow:hidden;}
 @media (max-width:420px){.nav-actions .btn{padding:.55rem 1rem;font-size:.85rem;}.brand img{height:40px;}}
 @media (max-width:374px){.site-header .nav{gap:.6rem;}.nav-actions{gap:.4rem;}.nav-actions .btn{padding:.5rem .8rem;font-size:.78rem;}.brand img{height:32px;}}
 
-/* ---- css\03-zwevende-knop.css ---- */
+/* ---- css/03-zwevende-knop.css ---- */
 /* Zwevende knop 'Boek een afspraak' met boekingspaneel.
    Desktop: knop verschijnt na de hero en opent een paneel met het GHL-boekingssysteem.
    Telefoon: ronde knop die rechtstreeks naar /maak-een-afspraak gaat. */
@@ -302,7 +302,7 @@ body.no-scroll{overflow:hidden;}
 }
 @media (prefers-reduced-motion:reduce){ .c3d-float-cta,.c3d-float-panel{ transition:none; } }
 
-/* ---- css\04-blog-bp.css ---- */
+/* ---- css/04-blog-bp.css ---- */
 /* Opmaak van de blogartikels (bp), samengevoegd uit 1 artikels */
 .bp{
   --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
@@ -345,7 +345,7 @@ body.no-scroll{overflow:hidden;}
   .bp-cta{ padding:30px 22px; }
 }
 
-/* ---- css\04-blog-c3d-article.css ---- */
+/* ---- css/04-blog-c3d-article.css ---- */
 /* Opmaak van de blogartikels (c3d-article), samengevoegd uit 5 artikels */
 .c3d-article{--cream:#FDFAF5;--sand:#E7D6BF;--terra:#B07A52;--terra-deep:#8A5A3B;--ink:#2A2622;--muted:#6E665C;--myth:#B8503C;--truth:#5C7A57;font-family:'Jost',system-ui,sans-serif;color:var(--ink);line-height:1.75;font-size:17px;max-width:780px;margin:0 auto}
 .c3d-article h2{font-family:'Cormorant Garamond',serif;font-size:2.1rem;line-height:1.15;font-weight:600;margin:2.8rem 0 1rem;color:var(--ink)}
@@ -396,7 +396,7 @@ body.no-scroll{overflow:hidden;}
 .c3d-article .c3d-sign h3{margin:.15rem 0 .35rem}
 .c3d-article .c3d-sign p{margin:0}
 
-/* ---- css\05-cookies-en-extern.css ---- */
+/* ---- css/05-cookies-en-extern.css ---- */
 /* Eigen cookiebanner en plaatshouders voor externe media (kaart, reviews) */
 .cc{position:fixed;left:clamp(.75rem,2vw,1.5rem);bottom:clamp(.75rem,2vw,1.5rem);z-index:10000;max-width:420px;width:calc(100% - 1.5rem);font-family:var(--font-sans);}
 .cc[hidden]{display:none;}
@@ -432,13 +432,66 @@ body.no-scroll{overflow:hidden;}
 .footer-cookies{font:inherit;color:inherit;background:none;border:none;padding:0;cursor:pointer;}
 .footer-cookies:hover{color:#FBF6EE;}
 
-/* ---- css\06-blog.css ---- */
+/* ---- css/06-blog.css ---- */
 /* Blogoverzicht en artikelpagina (eigen opmaak, vervangt de GHL-blog) */
 .extern--kaart{height:100%;min-height:inherit;}
 .extern:not(.is-geladen) iframe{display:none;}
 
-.blog-hero{padding-bottom:clamp(1rem,3vw,2rem);}
-.blog-hero .lead{margin-inline:auto;}
+/* Hero: tekst links, auteurskaart rechts */
+.blog-hero{padding-bottom:clamp(1.5rem,3vw,2.5rem);background:radial-gradient(70% 60% at 20% 0%,rgba(217,194,164,.3) 0%,rgba(217,194,164,0) 70%);}
+.blog-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;}
+.blog-hero h1{margin-bottom:1.2rem;}
+.blog-hero .lead{max-width:48ch;margin-top:0;}
+.blog-hero-punten{display:grid;gap:.7rem;margin-top:1.8rem;}
+.blog-hero-punten li{display:flex;gap:.8rem;align-items:center;font-size:.98rem;color:var(--ink-soft);}
+.blog-hero-punten .tick{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--cream);color:var(--gold-dark);display:grid;place-items:center;}
+.blog-hero-punten .tick svg{width:14px;height:14px;}
+.blog-auteur{display:grid;grid-template-columns:120px 1fr;gap:1.4rem;align-items:center;padding:1.6rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card,20px);box-shadow:var(--shadow-md);position:relative;}
+.blog-auteur::before{content:"";position:absolute;inset:auto auto -14px -14px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(217,194,164,.5),rgba(217,194,164,0) 70%);z-index:-1;}
+.blog-auteur img{width:120px;height:150px;border-radius:16px;object-fit:cover;object-position:50% 22%;box-shadow:var(--shadow-sm);}
+.blog-auteur-label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:.4rem;}
+.blog-auteur-naam{font-family:var(--font-display);font-size:1.6rem;font-weight:600;line-height:1.1;color:var(--ink);margin-bottom:.2rem;}
+.blog-auteur-rol{font-size:.88rem;color:var(--muted);margin-bottom:.7rem;}
+.blog-auteur-bio{font-size:.92rem;line-height:1.6;margin-bottom:.8rem;}
+.blog-auteur .textlink{font-size:.92rem;}
+@media (max-width:900px){.blog-hero-grid{grid-template-columns:1fr;gap:2rem;}.blog-auteur{max-width:560px;}}
+@media (max-width:480px){.blog-auteur{grid-template-columns:1fr;padding:1.3rem;}.blog-auteur img{width:96px;height:96px;border-radius:50%;}}
+
+/* Uitgelicht: het nieuwste artikel als brede kaart */
+.blog-top{margin-bottom:clamp(2.5rem,6vw,4.5rem);}
+.blog-top-link{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;border:1px solid var(--line);border-radius:var(--radius-media,28px);overflow:hidden;color:inherit;box-shadow:var(--shadow-md);transition:transform var(--transition),box-shadow var(--transition),border-color var(--transition);}
+.blog-top-link:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold-soft);color:inherit;}
+.blog-top-beeld{min-height:340px;background:var(--cream);overflow:hidden;display:grid;place-items:center;position:relative;}
+.blog-top-beeld img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,.61,.36,1);}
+.blog-top-link:hover .blog-top-beeld img{transform:scale(1.04);}
+.blog-top-beeld.is-logo{background:linear-gradient(150deg,var(--cream),var(--cream-deep));}
+.blog-top-beeld.is-logo::before{content:"";position:absolute;width:62%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(176,137,79,.25);box-shadow:inset 0 0 0 28px rgba(255,255,255,.35);}
+.blog-top-merk{position:relative;font-family:var(--font-display);font-size:clamp(2.6rem,4vw,3.6rem);font-weight:700;color:var(--ink);letter-spacing:.01em;}
+.blog-top-merk b{color:var(--gold);font-weight:700;}
+.blog-top-tekst{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;padding:clamp(1.8rem,4vw,3rem);}
+.blog-top-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);background:var(--cream);padding:.4rem .85rem;border-radius:var(--radius-pill);}
+.blog-top-label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);}
+.blog-top h2{font-size:clamp(1.7rem,2.6vw,2.4rem);line-height:1.12;margin:0;}
+.blog-top-tekst>p:not(.blog-kaart-meta){font-size:1.02rem;line-height:1.65;margin:0;}
+.blog-top-tekst .btn{margin-top:auto;padding-top:.9rem;}
+.blog-top-tekst .btn{margin-top:.6rem;}
+@media (max-width:860px){.blog-top-link{grid-template-columns:1fr;}.blog-top-beeld{min-height:0;aspect-ratio:16/9;}.blog-top-beeld.is-logo{aspect-ratio:auto;height:150px;}}
+
+/* Kop van het raster met filter op onderwerp */
+.blog-lijst-kop{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem 2rem;margin-bottom:clamp(1.8rem,4vw,2.6rem);}
+.blog-lijst-kop .section-head{margin-bottom:0;}
+.blog-lijst-kop .section-head .eyebrow{margin-bottom:.5rem;}
+.blog-filter{display:flex;flex-wrap:wrap;gap:.5rem;}
+.blog-filter[hidden]{display:none;}
+.blog-filter-knop{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:var(--radius-pill);border:1px solid var(--line);background:#fff;color:var(--ink-soft);font-size:.88rem;font-weight:500;transition:background var(--transition),color var(--transition),border-color var(--transition),transform var(--transition);}
+.blog-filter-knop span{font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums;}
+.blog-filter-knop:hover{border-color:var(--gold);color:var(--gold-dark);transform:translateY(-1px);}
+.blog-filter-knop.is-actief{background:var(--ink);border-color:var(--ink);color:#fff;}
+.blog-filter-knop.is-actief span{color:rgba(255,255,255,.65);}
+.blog-leeg{text-align:center;color:var(--muted);padding:2rem 0 .5rem;}
+.blog-leeg-knop{color:var(--gold-dark);font-weight:500;text-decoration:underline;text-underline-offset:3px;}
+.blog-leeg-knop:hover{color:var(--ink);}
+.blog-kaart[hidden],.blog-top[hidden]{display:none;}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,2rem);}
 @media (max-width:980px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:640px){.blog-grid{grid-template-columns:1fr;}}
@@ -448,12 +501,17 @@ body.no-scroll{overflow:hidden;}
 .blog-kaart-beeld{aspect-ratio:16/10;background:var(--cream);overflow:hidden;display:grid;place-items:center;}
 .blog-kaart-beeld img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,.61,.36,1);}
 .blog-kaart-link:hover .blog-kaart-beeld img{transform:scale(1.04);}
-.blog-kaart-beeld.is-logo{background:linear-gradient(150deg,var(--cream),var(--cream-deep));}
+.blog-kaart-beeld.is-logo{background:linear-gradient(150deg,var(--cream),var(--cream-deep));position:relative;}
+.blog-kaart-beeld.is-logo::before{content:"";position:absolute;width:52%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(176,137,79,.22);box-shadow:inset 0 0 0 18px rgba(255,255,255,.35);}
+.blog-kaart-merk{position:relative;}
 .blog-kaart-merk{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--ink);letter-spacing:.01em;}
 .blog-kaart-merk b{color:var(--gold);font-weight:700;}
 .blog-kaart-tekst{display:flex;flex-direction:column;gap:.55rem;padding:1.3rem 1.4rem 1.5rem;flex:1;}
 .blog-kaart-meta{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0;}
-.blog-kaart-meta span{color:var(--gold-dark);font-weight:600;}
+.blog-kaart-cat{color:var(--gold-dark);font-weight:600;}
+.blog-kaart-tijd{display:inline-flex;align-items:baseline;gap:.5rem;white-space:nowrap;}
+.blog-leestijd{text-transform:none;letter-spacing:0;font-size:.82rem;}
+.blog-leestijd::before{content:"·";margin-right:.5rem;color:var(--gold);}
 .blog-kaart h2,.blog-kaart h3{font-size:1.45rem;line-height:1.2;margin:0;}
 .blog-kaart-tekst>p:not(.blog-kaart-meta){font-size:.95rem;line-height:1.6;margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
 .blog-kaart-meer{margin-top:auto;padding-top:.4rem;font-size:.92rem;font-weight:500;color:var(--gold-dark);}
@@ -479,7 +537,13 @@ body.no-scroll{overflow:hidden;}
 .post-cta-knoppen{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1.6rem;}
 .post-meer .section-head{margin-bottom:2rem;}
 
-/* ---- css\07-juridisch.css ---- */
+/* Afsluitende CTA op het blogoverzicht */
+.blog-cta{padding-top:0;}
+.blog-cta .cta-band .eyebrow{color:var(--gold-soft);}
+.blog-cta .cta-band .eyebrow::before{background:var(--gold-soft);}
+.blog-cta .cta-band h2{color:#fff;}
+
+/* ---- css/07-juridisch.css ---- */
 /* Juridische pagina's (privacybeleid, algemene voorwaarden) */
 .juridisch-kop{padding-bottom:0;}
 .juridisch h2{font-size:clamp(1.5rem,2.6vw,1.9rem);margin:2.4rem 0 .8rem;}
@@ -508,7 +572,7 @@ body.no-scroll{overflow:hidden;}
   .juridisch-tabel td::before{content:attr(data-label);display:block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dark);}
 }
 
-/* ---- css\paginas\afs.css ---- */
+/* ---- css/paginas/afs.css ---- */
 .afs{
     --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
     --line:#E7DCCD; --muted:#6B5C4A;
@@ -593,7 +657,7 @@ body.no-scroll{overflow:hidden;}
 .afs-widget{min-height:clamp(480px,72vh,760px);}
 @media (max-width:520px){.afs-loader{padding-top:72px;}}
 
-/* ---- css\paginas\c3b.css ---- */
+/* ---- css/paginas/c3b.css ---- */
 .c3b{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3b .wrap{max-width:1080px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem);display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
 @media(max-width:860px){.c3b .wrap{grid-template-columns:1fr}}
@@ -607,7 +671,7 @@ body.no-scroll{overflow:hidden;}
 .c3b .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .c3b .riziv{font-size:.85rem;color:var(--ink-soft);margin-top:1rem}
 
-/* ---- css\paginas\c3c.css ---- */
+/* ---- css/paginas/c3c.css ---- */
 .c3c{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3c .wrap{max-width:1080px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .c3c .head{text-align:center;max-width:640px;margin:0 auto 2.4rem}
@@ -637,7 +701,7 @@ body.no-scroll{overflow:hidden;}
 @media (max-width:860px){.c3c .grid{grid-template-areas:"info" "form" "map";grid-template-rows:auto;}}
 @media (max-width:600px){.c3c .card{padding:1.2rem 1.2rem .4rem;}.c3c .form-frame{width:calc(100% + 1.6rem);margin-inline:-.8rem;}}
 
-/* ---- css\paginas\c3d-about.css ---- */
+/* ---- css/paginas/c3d-about.css ---- */
 .c3d-about{
   --gold:#B0894F; --gold-dark:#8A6836; --ink:#2B2520; --ink-soft:#5C534A;
   --cream-deep:#EADFCF; --blush:#D9C2B0; --line:#E7DCCD; --espresso:#221D19;
@@ -701,7 +765,7 @@ body.no-scroll{overflow:hidden;}
   .c3d-about-copy{ order:1; }
 }
 
-/* ---- css\paginas\c3d-success.css ---- */
+/* ---- css/paginas/c3d-success.css ---- */
 .c3d-success{
     --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
     --line:#E7DCCD; --muted:#6B5C4A;
@@ -766,7 +830,7 @@ body.no-scroll{overflow:hidden;}
     .c3d-success .c3d-title{ font-size:32px; }
   }
 
-/* ---- css\paginas\c3f.css ---- */
+/* ---- css/paginas/c3f.css ---- */
 .c3f{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3f .wrap{max-width:820px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .c3f .head{text-align:center;margin:0 auto 2rem}
@@ -781,7 +845,7 @@ body.no-scroll{overflow:hidden;}
 .c3f .a{padding:0 0 1.4rem;color:var(--ink-soft);line-height:1.7}
 .c3f .a p{margin:0 0 .8rem}.c3f .a a{color:var(--gold-dark);font-weight:600}
 
-/* ---- css\paginas\c3h.css ---- */
+/* ---- css/paginas/c3h.css ---- */
 .c3h{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3h .wrap{max-width:1180px;margin:0 auto;padding:2rem clamp(1.2rem,4vw,2.5rem) 2.2rem}
 .c3h .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,3.5vw,3rem);align-items:center}
@@ -806,7 +870,7 @@ body.no-scroll{overflow:hidden;}
 .c3h .badge p{margin:0;font-size:.78rem;line-height:1.3}
 .c3h .badge b{color:var(--ink)}
 
-/* ---- css\paginas\c3nf.css ---- */
+/* ---- css/paginas/c3nf.css ---- */
 .c3nf{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft);min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem}
 .c3nf .inner{max-width:560px}
 .c3nf .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;font-weight:600;color:var(--gold-dark);margin-bottom:1rem}
@@ -822,7 +886,7 @@ body.no-scroll{overflow:hidden;}
 .c3nf .links{margin-top:2.2rem;font-size:.9rem;color:var(--ink-soft)}
 .c3nf .links a{padding:0;border:0;color:var(--gold-dark);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 
-/* ---- css\paginas\c3p.css ---- */
+/* ---- css/paginas/c3p.css ---- */
 .c3p{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3p .wrap{max-width:820px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .c3p .head{text-align:center;max-width:620px;margin:0 auto 2.4rem}
@@ -841,7 +905,7 @@ body.no-scroll{overflow:hidden;}
 .c3p .cta{text-align:center;margin-top:1.6rem}
 .c3p .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:500;padding:.9rem 2rem;border-radius:999px;text-decoration:none}
 
-/* ---- css\paginas\c3t.css ---- */
+/* ---- css/paginas/c3t.css ---- */
 .c3t{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3t .wrap{max-width:1180px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .c3t .head{text-align:center;max-width:640px;margin:0 auto 2.2rem}
@@ -858,7 +922,7 @@ body.no-scroll{overflow:hidden;}
 .c3t .foot .q{font-family:var(--fd);font-size:1.5rem;color:var(--ink);margin:0 0 .9rem}
 .c3t .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:500;padding:.9rem 2rem;border-radius:999px;text-decoration:none}
 
-/* ---- css\paginas\c3u.css ---- */
+/* ---- css/paginas/c3u.css ---- */
 .c3u{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .c3u .wrap{max-width:1180px;margin:0 auto;padding:.5rem clamp(1.2rem,4vw,2.5rem) clamp(2.5rem,5vw,3.5rem)}
 .c3u .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
@@ -868,7 +932,7 @@ body.no-scroll{overflow:hidden;}
 .c3u h3{font-family:var(--fd);color:var(--ink);font-size:1.25rem;margin:0 0 .5rem}
 .c3u p{font-size:.95rem;margin:0}
 
-/* ---- css\paginas\tp-biostimulators-hasselt.css ---- */
+/* ---- css/paginas/tp-biostimulators-hasselt.css ---- */
 .p-biostimulators-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .p-biostimulators-hasselt .tp .wrap{max-width:900px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .p-biostimulators-hasselt .tp .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600;color:var(--gold-dark);margin-bottom:.7rem}
@@ -887,7 +951,7 @@ body.no-scroll{overflow:hidden;}
 .p-biostimulators-hasselt .tp summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.2rem 0;font-family:var(--fd);font-size:1.25rem;color:var(--ink);font-weight:600}.p-biostimulators-hasselt .tp summary::-webkit-details-marker{display:none}.p-biostimulators-hasselt .tp summary .p{color:var(--gold-dark)}.p-biostimulators-hasselt .tp details[open] summary .p{transform:rotate(45deg)}
 .p-biostimulators-hasselt .tp .a{padding:0 0 1.2rem;line-height:1.7}.p-biostimulators-hasselt .tp .note{font-size:.9rem;font-style:italic;color:var(--ink-soft);margin-top:.6rem}
 
-/* ---- css\paginas\tp-fillers-hasselt.css ---- */
+/* ---- css/paginas/tp-fillers-hasselt.css ---- */
 .p-fillers-hasselt .tp{
   --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
   --line:#E7DCCD; --muted:#6B5C4A;
@@ -961,7 +1025,7 @@ body.no-scroll{overflow:hidden;}
   .p-fillers-hasselt .tp-cta{ padding:38px 26px; }
 }
 
-/* ---- css\paginas\tp-haaruitval-behandeling-hasselt.css ---- */
+/* ---- css/paginas/tp-haaruitval-behandeling-hasselt.css ---- */
 .p-haaruitval-behandeling-hasselt .tp{
   --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
   --line:#E7DCCD; --muted:#6B5C4A;
@@ -1035,7 +1099,7 @@ body.no-scroll{overflow:hidden;}
   .p-haaruitval-behandeling-hasselt .tp-cta{ padding:38px 26px; }
 }
 
-/* ---- css\paginas\tp-medische-hifu-hasselt.css ---- */
+/* ---- css/paginas/tp-medische-hifu-hasselt.css ---- */
 .p-medische-hifu-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .p-medische-hifu-hasselt .tp .wrap{max-width:900px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .p-medische-hifu-hasselt .tp .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600;color:var(--gold-dark);margin-bottom:.7rem}
@@ -1054,7 +1118,7 @@ body.no-scroll{overflow:hidden;}
 .p-medische-hifu-hasselt .tp summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.2rem 0;font-family:var(--fd);font-size:1.25rem;color:var(--ink);font-weight:600}.p-medische-hifu-hasselt .tp summary::-webkit-details-marker{display:none}.p-medische-hifu-hasselt .tp summary .p{color:var(--gold-dark)}.p-medische-hifu-hasselt .tp details[open] summary .p{transform:rotate(45deg)}
 .p-medische-hifu-hasselt .tp .a{padding:0 0 1.2rem;line-height:1.7}.p-medische-hifu-hasselt .tp .note{font-size:.9rem;font-style:italic;color:var(--ink-soft);margin-top:.6rem}
 
-/* ---- css\paginas\tp-skinboosters-hasselt.css ---- */
+/* ---- css/paginas/tp-skinboosters-hasselt.css ---- */
 .p-skinboosters-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
 .p-skinboosters-hasselt .tp .wrap{max-width:900px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.2rem,4vw,2.5rem)}
 .p-skinboosters-hasselt .tp .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600;color:var(--gold-dark);margin-bottom:.7rem}
@@ -1083,7 +1147,7 @@ body.no-scroll{overflow:hidden;}
 .p-skinboosters-hasselt .tp .a{padding:0 0 1.2rem;line-height:1.7}
 .p-skinboosters-hasselt .tp .note{font-size:.9rem;font-style:italic;color:var(--ink-soft);margin-top:.6rem}
 
-/* ---- css\paginas\tp-spier-ontspanners.css ---- */
+/* ---- css/paginas/tp-spier-ontspanners.css ---- */
 .p-spier-ontspanners .tp{
   --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
   --line:#E7DCCD; --muted:#6B5C4A;
@@ -1172,7 +1236,7 @@ body.no-scroll{overflow:hidden;}
   .p-spier-ontspanners .tp-cta{ padding:38px 26px; }
 }
 
-/* ---- css\paginas\waarom.css ---- */
+/* ---- css/paginas/waarom.css ---- */
 /* Homepage – "Waarom Clinic3D": redactionele opbouw.
    Links (op desktop meeschuivend) de kop, het consult en de knoppen; rechts vier genummerde
    redenen als een pad: gouden cirkels verbonden door een fijne lijn, elk met een eigen belofte. */
@@ -1244,7 +1308,7 @@ body.no-scroll{overflow:hidden;}
 }
 @media (prefers-reduced-motion:reduce){.waarom-item,.waarom-nr{transition:none;}.waarom-item:hover{transform:none;}}
 
-/* ---- css\verfijning\01-eenheid.css ---- */
+/* ---- css/verfijning/01-eenheid.css ---- */
 /* Verfijning: één ontwerpsysteem over alle paginablokken heen.
    Zelfde kleuren, lettertypes en componenten; enkel strakker en consequenter.
    Laadt als laatste. "body[class]" geeft net genoeg gewicht om de oude blokregels te overstijgen. */
@@ -1375,7 +1439,7 @@ body[class] .post-auteur .post-auteur-naam{font-size:1.4rem;line-height:1.2;marg
 .footer-bottom .legal a,.footer-bottom .legal .footer-cookies{font-size:inherit;line-height:1.5;margin:0;}
 .footer-bottom .footer-cookies{color:#9D907F;}.footer-bottom .footer-cookies:hover{color:var(--gold-soft);}
 
-/* ---- css\verfijning\02-animaties.css ---- */
+/* ---- css/verfijning/02-animaties.css ---- */
 /* Rustige beweging: hero-entree bij het laden en FAQ's die soepel openen.
    Scroll-animaties lopen via js/animaties.js. Alles valt weg bij 'minder beweging'. */
 
@@ -1408,7 +1472,7 @@ main summary{transition:color .25s ease;}
   :is(main,.mobile-menu) details::details-content{transition:none;}
 }
 
-/* ---- css\verfijning\03-details.css ---- */
+/* ---- css/verfijning/03-details.css ---- */
 /* Details na de QA-ronde: leesbaarheid (contrast), ritme en kleine uitlijningen. */
 
 /* ---------- Knopkleur: iets dieper goud zodat witte tekst leesbaar is (WCAG AA 4,5:1) ---------- */
