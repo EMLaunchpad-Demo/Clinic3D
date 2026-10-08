@@ -2,17 +2,15 @@
    Scroll-animaties lopen via js/animaties.js. Alles valt weg bij 'minder beweging'. */
 
 @media (prefers-reduced-motion:no-preference){
-  /* hero: tekst schuift gestaffeld op, de foto zoomt subtiel in; de h1 zelf blijft staan (LCP) */
-  .c3h .eyebrow,.c3h .lead,.c3h .btns,.c3h .reviews,
+  /* hero's: tekst schuift gestaffeld op, de foto zoomt subtiel in; de h1 zelf blijft staan (LCP).
+     De homepagina-hero heeft zijn eigen entree in paginas/hero-home.css. */
   .page-hero .eyebrow,.page-hero .lead,.page-hero .stats,
   .tp-hero .tp-eyebrow,.tp-hero .tp-lead,.tp-hero .tp-hero-actions,
   .afs-hero .afs-eyebrow,.afs-hero .afs-lead,
   .post-kop .eyebrow,.post-kop .post-meta{animation:c3-op .8s cubic-bezier(.22,.61,.36,1) both;}
-  .c3h .lead,.page-hero .lead,.tp-hero .tp-lead,.afs-hero .afs-lead,.post-kop .post-meta{animation-delay:.08s;}
-  .c3h .btns,.page-hero .stats,.tp-hero .tp-hero-actions{animation-delay:.16s;}
-  .c3h .reviews{animation-delay:.24s;}
-  .c3h .visual img,.page-hero .split-media img{animation:c3-zoom 1.6s cubic-bezier(.22,.61,.36,1) both;}
-  .c3h .badge{animation:c3-op .7s .45s cubic-bezier(.22,.61,.36,1) both;}
+  .page-hero .lead,.tp-hero .tp-lead,.afs-hero .afs-lead,.post-kop .post-meta{animation-delay:.08s;}
+  .page-hero .stats,.tp-hero .tp-hero-actions{animation-delay:.16s;}
+  .page-hero .split-media img{animation:c3-zoom 1.6s cubic-bezier(.22,.61,.36,1) both;}
 }
 @keyframes c3-op{from{opacity:0;transform:translateY(12px);}}
 @keyframes c3-zoom{from{transform:scale(1.045);}}

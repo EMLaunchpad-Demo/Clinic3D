@@ -2,10 +2,10 @@
 
 /* ---------- Knopkleur: iets dieper goud zodat witte tekst leesbaar is (WCAG AA 4,5:1) ---------- */
 .btn--primary,.mobile-menu .mm-acties .btn,
-body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn),
+body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn),
 .cc-btn--goud,.extern-plaatshouder button,.c3d-float-cta{background:var(--gold-btn);border-color:var(--gold-btn);}
 .btn--primary:hover,.mobile-menu .mm-acties .btn:hover,
-body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn):hover,
+body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn):hover,
 .cc-btn--goud:hover,.extern-plaatshouder button:hover,.c3d-float-cta.is-zichtbaar:hover{background:var(--gold-btn-hover);border-color:var(--gold-btn-hover);}
 
 /* kleine gouden tekst op crème: iets donkerder voor contrast */
@@ -18,7 +18,6 @@ body[class] :is(.section--cream,.waarom,.c3d-about,.post-cta,.reviews) :is(.eyeb
 body[class] .c3f summary{line-height:1.3;}
 body[class] :is(.c3w .cta .lead,.c3t .foot .q){line-height:1.25;}
 body[class] .c3p .row{line-height:1.45;}
-body[class] .c3h .reviews{line-height:1.4;}
 
 /* ---------- Uitlijning ---------- */
 .footer-bottom p{margin:0;}

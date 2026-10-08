@@ -1,0 +1,145 @@
+/* Homepage-hero.
+   Een zachte crème-band met radiale gloed (zus van "Waarom Clinic3D") ligt achter de hero; links de grote
+   Cormorant-kop met één recht, goudkleurig accentwoord en een fijne gouden haarlijn; rechts het portret van
+   Dr. Kenis dat via darken en een zacht masker in de band versmelt en met de gekruiste armen over de bandrand
+   in het ivoor van de pagina vloeit. Achter de figuur een gouden boog met stip die het hoofd omsluit en de
+   frame-randen boven de schouders verlaat, zodat de lijn nooit over het hemd loopt. */
+
+.hero-home{--hero-home-overhang:48px;--hero-home-pad-b:1.75rem;--hero-home-goud-tekst:#7A5C30;
+  /* ivoren voet onder de band = overhang van de armen + onderschrift (±2.1rem) + onderpadding van de wrap */
+  --hero-home-voet:calc(var(--hero-home-overhang) + 2.1rem + var(--hero-home-pad-b));
+  position:relative;isolation:isolate;overflow:hidden;overflow:clip;background:var(--ivory);color:var(--ink-soft);font-family:var(--font-sans);}
+/* de crème-band met gloed; onder de band blijft het ivoor van de pagina (daar vloeien de armen in weg) */
+.hero-home::before{content:"";position:absolute;left:0;right:0;top:0;bottom:var(--hero-home-voet);z-index:-1;pointer-events:none;background:
+  radial-gradient(40% 64% at 79% 58%,rgba(217,194,164,.46) 0%,rgba(217,194,164,0) 100%),
+  radial-gradient(50% 60% at 94% 6%,rgba(176,137,79,.13) 0%,rgba(176,137,79,0) 100%),
+  radial-gradient(42% 55% at 4% 100%,rgba(217,194,164,.3) 0%,rgba(217,194,164,0) 100%),
+  var(--cream);}
+/* in de ivoren voet laat de band links zacht uitlopen (geen leeg ivoren vlak onder de tekstkolom); rechts, waar
+   de armen over de rand hangen en het onderschrift staat, blijft de rand een rustige rechte lijn */
+.hero-home::after{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--hero-home-voet);z-index:-1;pointer-events:none;background:
+  radial-gradient(58% 100% at 6% 0%,rgba(242,234,223,1) 0%,rgba(242,234,223,.55) 42%,rgba(242,234,223,0) 100%);}
+
+.hero-home__wrap{max-width:var(--maxw);margin:0 auto;padding:2.75rem clamp(1.2rem,4vw,2.5rem) var(--hero-home-pad-b);
+  display:grid;grid-template-columns:minmax(0,1fr) 470px;gap:clamp(2rem,4vw,3.5rem);align-items:center;}
+
+/* ---------- tekst ---------- */
+.hero-home__tekst{max-width:620px;padding-bottom:calc(var(--hero-home-voet) + 2.5rem);}
+.hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow{color:var(--hero-home-goud-tekst);margin-bottom:1.1rem;}
+.hero-home__titel{font-family:var(--font-display);font-weight:600;color:var(--ink);line-height:1.06;letter-spacing:-.012em;
+  font-size:clamp(2rem,2.2vw + 1.1rem,3.05rem);margin:0;}
+/* accent in dezelfde diepe goudtint als de eyebrow (#7A5C30): 5,2:1 op crème, 4,4:1 op de donkerste gloed, dus ook onder 24px veilig */
+.hero-home__accent{color:var(--hero-home-goud-tekst);font-weight:500;}
+/* fijne gouden haarlijn als ritme tussen kop en lead */
+.hero-home__titel::after{content:"";display:block;width:56px;height:1px;margin-top:1.1rem;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-soft) 70%,rgba(217,194,164,0) 100%);}
+.hero-home__lead{font-size:clamp(1.05rem,.5vw + .9rem,1.18rem);line-height:1.6;max-width:44ch;margin:1.05rem 0 1.8rem;text-wrap:pretty;}
+.hero-home__naam{white-space:nowrap;}
+.hero-home__knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem;}
+.hero-home__knoppen .btn{flex:0 0 auto;}
+.hero-home__knoppen .btn--ghost{background:rgba(253,250,245,.55);}
+.hero-home__vertrouwen{display:flex;align-items:center;flex-wrap:wrap;gap:.3rem .55rem;margin:0;font-size:.92rem;line-height:1.4;color:var(--ink-soft);}
+.hero-home__vertrouwen strong{color:var(--ink);font-weight:500;}
+.hero-home__sterren{width:94px;height:17px;fill:var(--gold);flex:none;margin-right:.1rem;}
+.hero-home__score,.hero-home__reviews{white-space:nowrap;}
+.hero-home__punt{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);vertical-align:middle;margin:-1px .55rem 0 0;}
+.hero-home__vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
+/* ---------- portret ----------
+   De figure versmelt via mix-blend-mode:darken met de band: per kanaal het minimum, dus de (licht opgehelderde)
+   witte muur wordt exact de kleur van de band en verdwijnt, terwijl huid en hemd hun eigen kleur houden (geen
+   grijze waas, geen donkerder gemaakte huid zoals bij multiply). Masker en blend staan bewust op verschillende
+   elementen (Chromium negeert de blend als beide op één element staan). De boog is een broertje ónder de figure:
+   door de blend blijft hij door de muur heen zichtbaar, dus hij ligt echt achter de figuur en loopt nooit over
+   het hemd (zijn geometrie verlaat het kader boven de schouders). Alleen onderaan loopt een zacht verloop, zodat
+   de gekruiste armen leesbaar blijven en pas bij de polsen in het ivoor wegvloeien.
+   Geometrie van de boog (viewBox 124, cirkel r=60 om het midden): bij width 124% en left -12% ligt het middelpunt
+   precies op de as van het portret; bij top -6% staat het op 56% van de breedte, zodat de cirkel het kader links
+   en rechts op ±21% van de hoogte verlaat (boven de schouders, die op ±45% beginnen) en de bovenkant 25px onder
+   de header blijft. max-width:none is nodig: 01-basis.css begrenst elke svg op 100% van zijn ouder. */
+.hero-home__beeld{position:relative;align-self:end;}
+.hero-home__boog{position:absolute;left:-12%;top:-6%;width:124%;max-width:none;height:auto;aspect-ratio:1;overflow:visible;pointer-events:none;z-index:0;}
+.hero-home__figuur{position:relative;z-index:1;margin:0;mix-blend-mode:darken;}
+.hero-home__portret{position:relative;aspect-ratio:9/10;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,rgba(0,0,0,.7) 89%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 78%,rgba(0,0,0,.7) 89%,transparent 100%);}
+.hero-home__portret img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:sepia(.18) brightness(1.1) saturate(1.08);}  /* sepia eerst: de neutraal-grijze muurschaduw naast de arm wordt warm crème i.p.v. lavendel tegen de band */
+/* "gum" voor de wandschaduw links naast het lichaam: de linker 16% van het kader is over de volle hoogte muur
+   (de figuur komt nooit verder dan 17% naar links; gemeten op de foto). Een ivoren strook die naar rechts
+   uitloopt, binnen de darken-groep, maakt die zone per kanaal lichter dan elke achtergrond, dus de blend toont
+   daar exact de band of het ivoor. De boog eronder blijft zichtbaar (goud is donkerder dan ivoor), en het
+   onderste masker geldt ook voor deze laag, dus ze vervaagt mee met de armen. */
+.hero-home__portret::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--ivory) 0%,var(--ivory) 8%,rgba(253,250,245,.7) 12.5%,rgba(253,250,245,0) 16.5%);}
+.hero-home__onderschrift{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:.55rem 0 0;
+  font-family:var(--font-display);font-weight:500;font-size:1.05rem;line-height:1.3;letter-spacing:.02em;color:var(--muted);}
+.hero-home__onderschrift::before,.hero-home__onderschrift::after{content:"";width:26px;height:1px;background:var(--gold-soft);}
+
+/* ---------- entree (rustig; de h1 blijft staan voor LCP) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero-home__eyebrow,.hero-home__lead,.hero-home__knoppen,.hero-home__vertrouwen,.hero-home__onderschrift{animation:hero-home-op .8s cubic-bezier(.22,.61,.36,1) both;}
+  .hero-home__lead{animation-delay:.08s;}
+  .hero-home__knoppen{animation-delay:.16s;}
+  .hero-home__vertrouwen{animation-delay:.24s;}
+  .hero-home__onderschrift{animation-delay:.5s;}
+  .hero-home__portret img{animation:hero-home-zoom 1.6s cubic-bezier(.22,.61,.36,1) both;}
+  .hero-home__boog{animation:hero-home-boog 1.2s .35s cubic-bezier(.22,.61,.36,1) both;}
+  @keyframes hero-home-op{from{opacity:0;transform:translateY(12px);}}
+  @keyframes hero-home-zoom{from{transform:scale(1.04);}}
+  @keyframes hero-home-boog{from{opacity:0;}}
+}
+
+/* ---------- breedtes ---------- */
+@media (max-width:1180px){
+  .hero-home__wrap{grid-template-columns:minmax(0,1fr) clamp(340px,38vw,470px);}
+}
+/* tablet en mobiel: alles op één as (gecentreerd), portret onder de tekst, armen over de bandrand */
+@media (max-width:900px){
+  .hero-home{--hero-home-overhang:40px;--hero-home-pad-b:1.1rem;}
+  .hero-home::after{display:none;}  /* gecentreerd: de voet is hier volledig gevuld door armen en onderschrift */
+  .hero-home__wrap{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:1.25rem;padding-top:2.25rem;}
+  .hero-home__tekst{max-width:36rem;padding-bottom:0;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow{justify-content:center;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow::after{content:"";width:28px;height:1px;background:var(--gold);display:inline-block;}
+  .hero-home__titel::after{margin-inline:auto;width:72px;background:linear-gradient(90deg,rgba(217,194,164,0) 0%,var(--gold) 50%,rgba(217,194,164,0) 100%);}
+  .hero-home__lead{margin-inline:auto;margin-bottom:1.5rem;}
+  .hero-home__knoppen{justify-content:center;margin-bottom:1.25rem;}
+  .hero-home__vertrouwen{justify-content:center;}
+  .hero-home__beeld{width:min(100%,380px);}
+  /* iets kleinere cirkel (r = 54% van de breedte) met het middelpunt op 52,5%: verlaat het kader op ±32% van de
+     hoogte (boven de schouders) en begint ±12px onder de sterrenregel */
+  .hero-home__boog{left:-6%;top:-3.5%;width:112%;}
+  .hero-home::before{background:
+    radial-gradient(60% 40% at 50% 78%,rgba(217,194,164,.42) 0%,rgba(217,194,164,0) 100%),
+    radial-gradient(50% 50% at 96% 4%,rgba(176,137,79,.12) 0%,rgba(176,137,79,0) 100%),
+    var(--cream);}
+}
+@media (max-width:440px){
+  .hero-home__br{display:none;}
+}
+@media (max-width:480px){
+  .hero-home{--hero-home-overhang:32px;}
+  .hero-home__wrap{padding-top:2rem;gap:1.1rem;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow{font-size:.72rem;letter-spacing:.14em;line-height:1.5;display:block;white-space:normal;margin-bottom:.9rem;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow::before,.hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow::after{display:none;}
+  .hero-home__titel{font-size:1.95rem;}
+  .hero-home__titel::after{margin-top:.9rem;width:56px;}
+  .hero-home__lead{margin:.9rem auto 1.35rem;}
+  .hero-home__naam{white-space:normal;}
+  .hero-home__knoppen{display:grid;grid-template-columns:1fr;gap:.6rem;width:100%;margin-bottom:1.1rem;}
+  .hero-home__knoppen .btn{width:100%;justify-content:center;min-height:56px;}
+  /* vertrouwensregel bewust op twee gecentreerde regels: sterren + score, daaronder de reviews (zonder losse stip) */
+  .hero-home__vertrouwen{font-size:.88rem;gap:.2rem .5rem;}
+  .hero-home__reviews{flex-basis:100%;text-align:center;}
+  .hero-home__punt{display:none;}
+  .hero-home__sterren{width:84px;height:15px;}
+  .hero-home__beeld{width:min(100%,300px);}
+  .hero-home__portret{aspect-ratio:1;}
+  .hero-home__portret img{object-position:50% 50%;}
+  .hero-home__onderschrift{font-size:1rem;}
+}
+@media (max-width:360px){
+  .hero-home__titel{font-size:1.75rem;}
+  .hero-home__vertrouwen{font-size:.84rem;}
+  .hero-home__sterren{width:78px;height:14px;}
+}

@@ -845,31 +845,6 @@ body.no-scroll{overflow:hidden;}
 .c3f .a{padding:0 0 1.4rem;color:var(--ink-soft);line-height:1.7}
 .c3f .a p{margin:0 0 .8rem}.c3f .a a{color:var(--gold-dark);font-weight:600}
 
-/* ---- css/paginas/c3h.css ---- */
-.c3h{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fs:"Jost",system-ui,sans-serif;--fd:"Cormorant Garamond",Georgia,serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
-.c3h .wrap{max-width:1180px;margin:0 auto;padding:2rem clamp(1.2rem,4vw,2.5rem) 2.2rem}
-.c3h .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,3.5vw,3rem);align-items:center}
-@media(max-width:900px){.c3h .grid{grid-template-columns:1fr}}
-.c3h .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600;color:var(--gold-dark);margin-bottom:.8rem}
-.c3h h1{font-family:var(--fd);color:var(--ink);font-weight:600;line-height:1.08;font-size:clamp(1.85rem,3.4vw,2.9rem);margin:0 0 .9rem;letter-spacing:-.01em}
-.c3h .lead{font-size:1rem;line-height:1.55;max-width:42ch;margin:0 0 1.3rem}
-.c3h .btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem}
-.c3h .btn{display:inline-flex;align-items:center;justify-content:center;font-weight:500;font-size:.95rem;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;transition:.25s}
-.c3h .btn-p{background:var(--gold);color:#fff}
-.c3h .btn-p:hover{background:var(--gold-dark)}
-.c3h .btn-g{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.c3h .btn-g:hover{border-color:var(--gold);color:var(--gold-dark)}
-.c3h .reviews{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
-.c3h .stars{color:#E8B54A;font-size:1.05rem;letter-spacing:1px}
-.c3h .rev-txt{font-size:.9rem}
-.c3h .rev-txt b{color:var(--ink)}
-.c3h .visual{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 26px 60px rgba(43,37,32,.13);aspect-ratio:4/4}
-.c3h .visual img{width:100%;height:100%;object-fit:cover;display:block}
-.c3h .badge{position:absolute;left:1rem;bottom:1rem;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:14px;padding:.7rem .95rem;display:flex;align-items:center;gap:.65rem;box-shadow:0 12px 30px rgba(43,37,32,.12)}
-.c3h .badge .g{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--gold-dark);line-height:1}
-.c3h .badge p{margin:0;font-size:.78rem;line-height:1.3}
-.c3h .badge b{color:var(--ink)}
-
 /* ---- css/paginas/c3nf.css ---- */
 .c3nf{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft);min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem}
 .c3nf .inner{max-width:560px}
@@ -931,6 +906,153 @@ body.no-scroll{overflow:hidden;}
 .c3u .ico{width:40px;height:40px;color:var(--gold);margin-bottom:1rem}
 .c3u h3{font-family:var(--fd);color:var(--ink);font-size:1.25rem;margin:0 0 .5rem}
 .c3u p{font-size:.95rem;margin:0}
+
+/* ---- css/paginas/hero-home.css ---- */
+/* Homepage-hero.
+   Een zachte crème-band met radiale gloed (zus van "Waarom Clinic3D") ligt achter de hero; links de grote
+   Cormorant-kop met één recht, goudkleurig accentwoord en een fijne gouden haarlijn; rechts het portret van
+   Dr. Kenis dat via darken en een zacht masker in de band versmelt en met de gekruiste armen over de bandrand
+   in het ivoor van de pagina vloeit. Achter de figuur een gouden boog met stip die het hoofd omsluit en de
+   frame-randen boven de schouders verlaat, zodat de lijn nooit over het hemd loopt. */
+
+.hero-home{--hero-home-overhang:48px;--hero-home-pad-b:1.75rem;--hero-home-goud-tekst:#7A5C30;
+  /* ivoren voet onder de band = overhang van de armen + onderschrift (±2.1rem) + onderpadding van de wrap */
+  --hero-home-voet:calc(var(--hero-home-overhang) + 2.1rem + var(--hero-home-pad-b));
+  position:relative;isolation:isolate;overflow:hidden;overflow:clip;background:var(--ivory);color:var(--ink-soft);font-family:var(--font-sans);}
+/* de crème-band met gloed; onder de band blijft het ivoor van de pagina (daar vloeien de armen in weg) */
+.hero-home::before{content:"";position:absolute;left:0;right:0;top:0;bottom:var(--hero-home-voet);z-index:-1;pointer-events:none;background:
+  radial-gradient(40% 64% at 79% 58%,rgba(217,194,164,.46) 0%,rgba(217,194,164,0) 100%),
+  radial-gradient(50% 60% at 94% 6%,rgba(176,137,79,.13) 0%,rgba(176,137,79,0) 100%),
+  radial-gradient(42% 55% at 4% 100%,rgba(217,194,164,.3) 0%,rgba(217,194,164,0) 100%),
+  var(--cream);}
+/* in de ivoren voet laat de band links zacht uitlopen (geen leeg ivoren vlak onder de tekstkolom); rechts, waar
+   de armen over de rand hangen en het onderschrift staat, blijft de rand een rustige rechte lijn */
+.hero-home::after{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--hero-home-voet);z-index:-1;pointer-events:none;background:
+  radial-gradient(58% 100% at 6% 0%,rgba(242,234,223,1) 0%,rgba(242,234,223,.55) 42%,rgba(242,234,223,0) 100%);}
+
+.hero-home__wrap{max-width:var(--maxw);margin:0 auto;padding:2.75rem clamp(1.2rem,4vw,2.5rem) var(--hero-home-pad-b);
+  display:grid;grid-template-columns:minmax(0,1fr) 470px;gap:clamp(2rem,4vw,3.5rem);align-items:center;}
+
+/* ---------- tekst ---------- */
+.hero-home__tekst{max-width:620px;padding-bottom:calc(var(--hero-home-voet) + 2.5rem);}
+.hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow{color:var(--hero-home-goud-tekst);margin-bottom:1.1rem;}
+.hero-home__titel{font-family:var(--font-display);font-weight:600;color:var(--ink);line-height:1.06;letter-spacing:-.012em;
+  font-size:clamp(2rem,2.2vw + 1.1rem,3.05rem);margin:0;}
+/* accent in dezelfde diepe goudtint als de eyebrow (#7A5C30): 5,2:1 op crème, 4,4:1 op de donkerste gloed, dus ook onder 24px veilig */
+.hero-home__accent{color:var(--hero-home-goud-tekst);font-weight:500;}
+/* fijne gouden haarlijn als ritme tussen kop en lead */
+.hero-home__titel::after{content:"";display:block;width:56px;height:1px;margin-top:1.1rem;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-soft) 70%,rgba(217,194,164,0) 100%);}
+.hero-home__lead{font-size:clamp(1.05rem,.5vw + .9rem,1.18rem);line-height:1.6;max-width:44ch;margin:1.05rem 0 1.8rem;text-wrap:pretty;}
+.hero-home__naam{white-space:nowrap;}
+.hero-home__knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem;}
+.hero-home__knoppen .btn{flex:0 0 auto;}
+.hero-home__knoppen .btn--ghost{background:rgba(253,250,245,.55);}
+.hero-home__vertrouwen{display:flex;align-items:center;flex-wrap:wrap;gap:.3rem .55rem;margin:0;font-size:.92rem;line-height:1.4;color:var(--ink-soft);}
+.hero-home__vertrouwen strong{color:var(--ink);font-weight:500;}
+.hero-home__sterren{width:94px;height:17px;fill:var(--gold);flex:none;margin-right:.1rem;}
+.hero-home__score,.hero-home__reviews{white-space:nowrap;}
+.hero-home__punt{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);vertical-align:middle;margin:-1px .55rem 0 0;}
+.hero-home__vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
+/* ---------- portret ----------
+   De figure versmelt via mix-blend-mode:darken met de band: per kanaal het minimum, dus de (licht opgehelderde)
+   witte muur wordt exact de kleur van de band en verdwijnt, terwijl huid en hemd hun eigen kleur houden (geen
+   grijze waas, geen donkerder gemaakte huid zoals bij multiply). Masker en blend staan bewust op verschillende
+   elementen (Chromium negeert de blend als beide op één element staan). De boog is een broertje ónder de figure:
+   door de blend blijft hij door de muur heen zichtbaar, dus hij ligt echt achter de figuur en loopt nooit over
+   het hemd (zijn geometrie verlaat het kader boven de schouders). Alleen onderaan loopt een zacht verloop, zodat
+   de gekruiste armen leesbaar blijven en pas bij de polsen in het ivoor wegvloeien.
+   Geometrie van de boog (viewBox 124, cirkel r=60 om het midden): bij width 124% en left -12% ligt het middelpunt
+   precies op de as van het portret; bij top -6% staat het op 56% van de breedte, zodat de cirkel het kader links
+   en rechts op ±21% van de hoogte verlaat (boven de schouders, die op ±45% beginnen) en de bovenkant 25px onder
+   de header blijft. max-width:none is nodig: 01-basis.css begrenst elke svg op 100% van zijn ouder. */
+.hero-home__beeld{position:relative;align-self:end;}
+.hero-home__boog{position:absolute;left:-12%;top:-6%;width:124%;max-width:none;height:auto;aspect-ratio:1;overflow:visible;pointer-events:none;z-index:0;}
+.hero-home__figuur{position:relative;z-index:1;margin:0;mix-blend-mode:darken;}
+.hero-home__portret{position:relative;aspect-ratio:9/10;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,rgba(0,0,0,.7) 89%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 78%,rgba(0,0,0,.7) 89%,transparent 100%);}
+.hero-home__portret img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:sepia(.18) brightness(1.1) saturate(1.08);}  /* sepia eerst: de neutraal-grijze muurschaduw naast de arm wordt warm crème i.p.v. lavendel tegen de band */
+/* "gum" voor de wandschaduw links naast het lichaam: de linker 16% van het kader is over de volle hoogte muur
+   (de figuur komt nooit verder dan 17% naar links; gemeten op de foto). Een ivoren strook die naar rechts
+   uitloopt, binnen de darken-groep, maakt die zone per kanaal lichter dan elke achtergrond, dus de blend toont
+   daar exact de band of het ivoor. De boog eronder blijft zichtbaar (goud is donkerder dan ivoor), en het
+   onderste masker geldt ook voor deze laag, dus ze vervaagt mee met de armen. */
+.hero-home__portret::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--ivory) 0%,var(--ivory) 8%,rgba(253,250,245,.7) 12.5%,rgba(253,250,245,0) 16.5%);}
+.hero-home__onderschrift{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:.55rem 0 0;
+  font-family:var(--font-display);font-weight:500;font-size:1.05rem;line-height:1.3;letter-spacing:.02em;color:var(--muted);}
+.hero-home__onderschrift::before,.hero-home__onderschrift::after{content:"";width:26px;height:1px;background:var(--gold-soft);}
+
+/* ---------- entree (rustig; de h1 blijft staan voor LCP) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero-home__eyebrow,.hero-home__lead,.hero-home__knoppen,.hero-home__vertrouwen,.hero-home__onderschrift{animation:hero-home-op .8s cubic-bezier(.22,.61,.36,1) both;}
+  .hero-home__lead{animation-delay:.08s;}
+  .hero-home__knoppen{animation-delay:.16s;}
+  .hero-home__vertrouwen{animation-delay:.24s;}
+  .hero-home__onderschrift{animation-delay:.5s;}
+  .hero-home__portret img{animation:hero-home-zoom 1.6s cubic-bezier(.22,.61,.36,1) both;}
+  .hero-home__boog{animation:hero-home-boog 1.2s .35s cubic-bezier(.22,.61,.36,1) both;}
+  @keyframes hero-home-op{from{opacity:0;transform:translateY(12px);}}
+  @keyframes hero-home-zoom{from{transform:scale(1.04);}}
+  @keyframes hero-home-boog{from{opacity:0;}}
+}
+
+/* ---------- breedtes ---------- */
+@media (max-width:1180px){
+  .hero-home__wrap{grid-template-columns:minmax(0,1fr) clamp(340px,38vw,470px);}
+}
+/* tablet en mobiel: alles op één as (gecentreerd), portret onder de tekst, armen over de bandrand */
+@media (max-width:900px){
+  .hero-home{--hero-home-overhang:40px;--hero-home-pad-b:1.1rem;}
+  .hero-home::after{display:none;}  /* gecentreerd: de voet is hier volledig gevuld door armen en onderschrift */
+  .hero-home__wrap{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:1.25rem;padding-top:2.25rem;}
+  .hero-home__tekst{max-width:36rem;padding-bottom:0;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow{justify-content:center;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow::after{content:"";width:28px;height:1px;background:var(--gold);display:inline-block;}
+  .hero-home__titel::after{margin-inline:auto;width:72px;background:linear-gradient(90deg,rgba(217,194,164,0) 0%,var(--gold) 50%,rgba(217,194,164,0) 100%);}
+  .hero-home__lead{margin-inline:auto;margin-bottom:1.5rem;}
+  .hero-home__knoppen{justify-content:center;margin-bottom:1.25rem;}
+  .hero-home__vertrouwen{justify-content:center;}
+  .hero-home__beeld{width:min(100%,380px);}
+  /* iets kleinere cirkel (r = 54% van de breedte) met het middelpunt op 52,5%: verlaat het kader op ±32% van de
+     hoogte (boven de schouders) en begint ±12px onder de sterrenregel */
+  .hero-home__boog{left:-6%;top:-3.5%;width:112%;}
+  .hero-home::before{background:
+    radial-gradient(60% 40% at 50% 78%,rgba(217,194,164,.42) 0%,rgba(217,194,164,0) 100%),
+    radial-gradient(50% 50% at 96% 4%,rgba(176,137,79,.12) 0%,rgba(176,137,79,0) 100%),
+    var(--cream);}
+}
+@media (max-width:440px){
+  .hero-home__br{display:none;}
+}
+@media (max-width:480px){
+  .hero-home{--hero-home-overhang:32px;}
+  .hero-home__wrap{padding-top:2rem;gap:1.1rem;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow{font-size:.72rem;letter-spacing:.14em;line-height:1.5;display:block;white-space:normal;margin-bottom:.9rem;}
+  .hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow::before,.hero-home .hero-home__tekst .hero-home__eyebrow.eyebrow::after{display:none;}
+  .hero-home__titel{font-size:1.95rem;}
+  .hero-home__titel::after{margin-top:.9rem;width:56px;}
+  .hero-home__lead{margin:.9rem auto 1.35rem;}
+  .hero-home__naam{white-space:normal;}
+  .hero-home__knoppen{display:grid;grid-template-columns:1fr;gap:.6rem;width:100%;margin-bottom:1.1rem;}
+  .hero-home__knoppen .btn{width:100%;justify-content:center;min-height:56px;}
+  /* vertrouwensregel bewust op twee gecentreerde regels: sterren + score, daaronder de reviews (zonder losse stip) */
+  .hero-home__vertrouwen{font-size:.88rem;gap:.2rem .5rem;}
+  .hero-home__reviews{flex-basis:100%;text-align:center;}
+  .hero-home__punt{display:none;}
+  .hero-home__sterren{width:84px;height:15px;}
+  .hero-home__beeld{width:min(100%,300px);}
+  .hero-home__portret{aspect-ratio:1;}
+  .hero-home__portret img{object-position:50% 50%;}
+  .hero-home__onderschrift{font-size:1rem;}
+}
+@media (max-width:360px){
+  .hero-home__titel{font-size:1.75rem;}
+  .hero-home__vertrouwen{font-size:.84rem;}
+  .hero-home__sterren{width:78px;height:14px;}
+}
 
 /* ---- css/paginas/tp-biostimulators-hasselt.css ---- */
 .p-biostimulators-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
@@ -1324,7 +1446,7 @@ body.no-scroll{overflow:hidden;}
 body{font-variant-numeric:lining-nums;}            /* rechte cijfers in prijzen, uren en telefoon */
 
 /* ---------- Typografie ---------- */
-h1,body[class] :is(.c3h h1,.c3p h1,.c3nf h1,.c3c h1,.tp-title,.tp h1,.afs-title,.c3d-success .c3d-title,.post-kop h1){font-size:var(--fs-h1);line-height:1.08;}
+h1,body[class] :is(.c3p h1,.c3nf h1,.c3c h1,.tp-title,.tp h1,.afs-title,.c3d-success .c3d-title,.post-kop h1){font-size:var(--fs-h1);line-height:1.08;}
 h2,body[class] :is(.section-head h2,.c3w h2,.c3t h2,.c3f h2,.c3b h2,.c3d-about-copy h2,.tp-h2,.tp .wrap > h2,.afs-h2,.post-cta h2,.post-meer h2){font-size:var(--fs-h2);line-height:1.12;}
 body[class] :is(.tp-cta h2,.tp .cta h2,.c3d-cta h2,.cta-band h2){font-size:calc(var(--fs-h2) * .85);}
 
@@ -1335,18 +1457,18 @@ body[class] :is(.tp-eyebrow,.afs-eyebrow,.c3d-success .c3d-eyebrow)::before{cont
 
 /* ---------- Knoppen: overal hetzelfde formaat en gedrag als .btn ---------- */
 .btn:not(.btn--ghost):not(.btn-g):not(.ghost){border:1px solid transparent;}   /* primair en ghost even hoog */
-body[class] :is(.c3h .btn,.c3w .btn,.c3t .btn,.c3b .btn,.c3p .btn,.tp .btn,.tp-btn,.afs-btn,.c3d-success .c3d-btn,.c3d-about .c3d-btn,.c3nf .btns a){
+body[class] :is(.c3w .btn,.c3t .btn,.c3b .btn,.c3p .btn,.tp .btn,.tp-btn,.afs-btn,.c3d-success .c3d-btn,.c3d-about .c3d-btn,.c3nf .btns a){
   font-family:var(--font-sans);font-size:.95rem;font-weight:500;padding:.9rem 1.7rem;border-radius:var(--radius-pill);
   transition:transform var(--transition),background var(--transition),color var(--transition),border-color var(--transition),box-shadow var(--transition);}
-body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary):hover{
+body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary):hover{
   background:var(--gold-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md);}
-body[class] :is(.btn--ghost,.c3h .btn-g,.c3w .btn.ghost,.c3b .btn.ghost,.tp .btn.ghost,.tp-btn--ghost,.afs-btn--ghost,.c3d-success .c3d-btn--ghost):hover{
+body[class] :is(.btn--ghost,.c3w .btn.ghost,.c3b .btn.ghost,.tp .btn.ghost,.tp-btn--ghost,.afs-btn--ghost,.c3d-success .c3d-btn--ghost):hover{
   border-color:var(--gold);transform:translateY(-2px);}
 body[class] :is(.c3d-about .c3d-btn,.c3nf .btns a):hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
 
 /* ---------- Kaarten en radii ---------- */
 body[class] :is(.card,.c3c .card,.tp .card,.c3w .cell,.c3t a.card,.blog-kaart-link,.post-auteur,.afs-hours){border-radius:var(--radius-card);}
-body[class] :is(.split-media,.c3h .visual,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
+body[class] :is(.split-media,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
 body[class] .tp-zone{border-radius:16px;}
 
 
@@ -1414,12 +1536,9 @@ body[class] .post-auteur .post-auteur-naam{font-size:1.4rem;line-height:1.2;marg
   body[class] .blog-kaart-tekst > p:not(.blog-kaart-meta){-webkit-line-clamp:2;}
 }
 @media (max-width:480px){
-  /* hero: eyebrow op één regel, knoppen op volle breedte, compacter beeld */
-  body[class] .c3h .eyebrow{letter-spacing:.14em;font-size:.7rem;}
-  body[class] .c3h .eyebrow::before{display:none;}
-  body[class] :is(.c3h .btns,.tp-hero-actions){display:grid;grid-template-columns:1fr;gap:.6rem;}
-  body[class] :is(.c3h .btns .btn,.tp-hero-actions .tp-btn){width:100%;text-align:center;justify-content:center;}
-  body[class] .c3h .visual{aspect-ratio:4/3;}
+  /* behandelpagina's: hero-knoppen op volle breedte */
+  body[class] .tp-hero-actions{display:grid;grid-template-columns:1fr;gap:.6rem;}
+  body[class] .tp-hero-actions .tp-btn{width:100%;text-align:center;justify-content:center;}
   /* USP's als rij met icoon links */
   body[class] .c3u .grid > *{display:grid;grid-template-columns:40px 1fr;column-gap:1rem;align-items:start;padding:1.1rem 1.2rem;}
   body[class] .c3u .grid > * > :first-child{grid-row:span 2;}
@@ -1444,17 +1563,15 @@ body[class] .post-auteur .post-auteur-naam{font-size:1.4rem;line-height:1.2;marg
    Scroll-animaties lopen via js/animaties.js. Alles valt weg bij 'minder beweging'. */
 
 @media (prefers-reduced-motion:no-preference){
-  /* hero: tekst schuift gestaffeld op, de foto zoomt subtiel in; de h1 zelf blijft staan (LCP) */
-  .c3h .eyebrow,.c3h .lead,.c3h .btns,.c3h .reviews,
+  /* hero's: tekst schuift gestaffeld op, de foto zoomt subtiel in; de h1 zelf blijft staan (LCP).
+     De homepagina-hero heeft zijn eigen entree in paginas/hero-home.css. */
   .page-hero .eyebrow,.page-hero .lead,.page-hero .stats,
   .tp-hero .tp-eyebrow,.tp-hero .tp-lead,.tp-hero .tp-hero-actions,
   .afs-hero .afs-eyebrow,.afs-hero .afs-lead,
   .post-kop .eyebrow,.post-kop .post-meta{animation:c3-op .8s cubic-bezier(.22,.61,.36,1) both;}
-  .c3h .lead,.page-hero .lead,.tp-hero .tp-lead,.afs-hero .afs-lead,.post-kop .post-meta{animation-delay:.08s;}
-  .c3h .btns,.page-hero .stats,.tp-hero .tp-hero-actions{animation-delay:.16s;}
-  .c3h .reviews{animation-delay:.24s;}
-  .c3h .visual img,.page-hero .split-media img{animation:c3-zoom 1.6s cubic-bezier(.22,.61,.36,1) both;}
-  .c3h .badge{animation:c3-op .7s .45s cubic-bezier(.22,.61,.36,1) both;}
+  .page-hero .lead,.tp-hero .tp-lead,.afs-hero .afs-lead,.post-kop .post-meta{animation-delay:.08s;}
+  .page-hero .stats,.tp-hero .tp-hero-actions{animation-delay:.16s;}
+  .page-hero .split-media img{animation:c3-zoom 1.6s cubic-bezier(.22,.61,.36,1) both;}
 }
 @keyframes c3-op{from{opacity:0;transform:translateY(12px);}}
 @keyframes c3-zoom{from{transform:scale(1.045);}}
@@ -1477,10 +1594,10 @@ main summary{transition:color .25s ease;}
 
 /* ---------- Knopkleur: iets dieper goud zodat witte tekst leesbaar is (WCAG AA 4,5:1) ---------- */
 .btn--primary,.mobile-menu .mm-acties .btn,
-body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn),
+body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn),
 .cc-btn--goud,.extern-plaatshouder button,.c3d-float-cta{background:var(--gold-btn);border-color:var(--gold-btn);}
 .btn--primary:hover,.mobile-menu .mm-acties .btn:hover,
-body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn):hover,
+body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn):hover,
 .cc-btn--goud:hover,.extern-plaatshouder button:hover,.c3d-float-cta.is-zichtbaar:hover{background:var(--gold-btn-hover);border-color:var(--gold-btn-hover);}
 
 /* kleine gouden tekst op crème: iets donkerder voor contrast */
@@ -1493,7 +1610,6 @@ body[class] :is(.section--cream,.waarom,.c3d-about,.post-cta,.reviews) :is(.eyeb
 body[class] .c3f summary{line-height:1.3;}
 body[class] :is(.c3w .cta .lead,.c3t .foot .q){line-height:1.25;}
 body[class] .c3p .row{line-height:1.45;}
-body[class] .c3h .reviews{line-height:1.4;}
 
 /* ---------- Uitlijning ---------- */
 .footer-bottom p{margin:0;}

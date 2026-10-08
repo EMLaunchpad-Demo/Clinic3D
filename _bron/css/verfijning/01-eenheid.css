@@ -13,7 +13,7 @@
 body{font-variant-numeric:lining-nums;}            /* rechte cijfers in prijzen, uren en telefoon */
 
 /* ---------- Typografie ---------- */
-h1,body[class] :is(.c3h h1,.c3p h1,.c3nf h1,.c3c h1,.tp-title,.tp h1,.afs-title,.c3d-success .c3d-title,.post-kop h1){font-size:var(--fs-h1);line-height:1.08;}
+h1,body[class] :is(.c3p h1,.c3nf h1,.c3c h1,.tp-title,.tp h1,.afs-title,.c3d-success .c3d-title,.post-kop h1){font-size:var(--fs-h1);line-height:1.08;}
 h2,body[class] :is(.section-head h2,.c3w h2,.c3t h2,.c3f h2,.c3b h2,.c3d-about-copy h2,.tp-h2,.tp .wrap > h2,.afs-h2,.post-cta h2,.post-meer h2){font-size:var(--fs-h2);line-height:1.12;}
 body[class] :is(.tp-cta h2,.tp .cta h2,.c3d-cta h2,.cta-band h2){font-size:calc(var(--fs-h2) * .85);}
 
@@ -24,18 +24,18 @@ body[class] :is(.tp-eyebrow,.afs-eyebrow,.c3d-success .c3d-eyebrow)::before{cont
 
 /* ---------- Knoppen: overal hetzelfde formaat en gedrag als .btn ---------- */
 .btn:not(.btn--ghost):not(.btn-g):not(.ghost){border:1px solid transparent;}   /* primair en ghost even hoog */
-body[class] :is(.c3h .btn,.c3w .btn,.c3t .btn,.c3b .btn,.c3p .btn,.tp .btn,.tp-btn,.afs-btn,.c3d-success .c3d-btn,.c3d-about .c3d-btn,.c3nf .btns a){
+body[class] :is(.c3w .btn,.c3t .btn,.c3b .btn,.c3p .btn,.tp .btn,.tp-btn,.afs-btn,.c3d-success .c3d-btn,.c3d-about .c3d-btn,.c3nf .btns a){
   font-family:var(--font-sans);font-size:.95rem;font-weight:500;padding:.9rem 1.7rem;border-radius:var(--radius-pill);
   transition:transform var(--transition),background var(--transition),color var(--transition),border-color var(--transition),box-shadow var(--transition);}
-body[class] :is(.c3h .btn-p,.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary):hover{
+body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary):hover{
   background:var(--gold-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md);}
-body[class] :is(.btn--ghost,.c3h .btn-g,.c3w .btn.ghost,.c3b .btn.ghost,.tp .btn.ghost,.tp-btn--ghost,.afs-btn--ghost,.c3d-success .c3d-btn--ghost):hover{
+body[class] :is(.btn--ghost,.c3w .btn.ghost,.c3b .btn.ghost,.tp .btn.ghost,.tp-btn--ghost,.afs-btn--ghost,.c3d-success .c3d-btn--ghost):hover{
   border-color:var(--gold);transform:translateY(-2px);}
 body[class] :is(.c3d-about .c3d-btn,.c3nf .btns a):hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
 
 /* ---------- Kaarten en radii ---------- */
 body[class] :is(.card,.c3c .card,.tp .card,.c3w .cell,.c3t a.card,.blog-kaart-link,.post-auteur,.afs-hours){border-radius:var(--radius-card);}
-body[class] :is(.split-media,.c3h .visual,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
+body[class] :is(.split-media,.c3b .photo,.c3d-about-media,.map-embed,.c3c .map,.post-beeld img,.afs-widget){border-radius:var(--radius-media);}
 body[class] .tp-zone{border-radius:16px;}
 
 
@@ -103,12 +103,9 @@ body[class] .post-auteur .post-auteur-naam{font-size:1.4rem;line-height:1.2;marg
   body[class] .blog-kaart-tekst > p:not(.blog-kaart-meta){-webkit-line-clamp:2;}
 }
 @media (max-width:480px){
-  /* hero: eyebrow op één regel, knoppen op volle breedte, compacter beeld */
-  body[class] .c3h .eyebrow{letter-spacing:.14em;font-size:.7rem;}
-  body[class] .c3h .eyebrow::before{display:none;}
-  body[class] :is(.c3h .btns,.tp-hero-actions){display:grid;grid-template-columns:1fr;gap:.6rem;}
-  body[class] :is(.c3h .btns .btn,.tp-hero-actions .tp-btn){width:100%;text-align:center;justify-content:center;}
-  body[class] .c3h .visual{aspect-ratio:4/3;}
+  /* behandelpagina's: hero-knoppen op volle breedte */
+  body[class] .tp-hero-actions{display:grid;grid-template-columns:1fr;gap:.6rem;}
+  body[class] .tp-hero-actions .tp-btn{width:100%;text-align:center;justify-content:center;}
   /* USP's als rij met icoon links */
   body[class] .c3u .grid > *{display:grid;grid-template-columns:40px 1fr;column-gap:1rem;align-items:start;padding:1.1rem 1.2rem;}
   body[class] .c3u .grid > * > :first-child{grid-row:span 2;}
