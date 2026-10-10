@@ -21,7 +21,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=c9717f0c">
+<link rel="stylesheet" href="/assets/css/site.css?v=9f253568">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalProcedure","@id":"https://clinic3d.be/fillers-hasselt#procedure","name":"Fillers","description":"Behandeling met hyaluronzuur-fillers om volume en contour te herstellen (lippen, traangoot, jukbeenderen, kaaklijn), uitgevoerd door een arts.","procedureType":"https://schema.org/PercutaneousProcedure","bodyLocation":"Gelaat","howPerformed":"Precisie-injecties met hyaluronzuur, toegediend door een arts na een persoonlijke intake.","url":"https://clinic3d.be/fillers-hasselt","provider":{"@id":"https://clinic3d.be/#clinic"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Hoelang blijft het resultaat van fillers zichtbaar?","acceptedAnswer":{"@type":"Answer","text":"Afhankelijk van de zone en het gebruikte product houdt het resultaat gemiddeld zes tot twaalf maanden aan. Dit wordt tijdens je consult concreet met je besproken."}},{"@type":"Question","name":"Doet een filler-behandeling pijn?","acceptedAnswer":{"@type":"Answer","text":"De meeste patiënten ervaren enkel een lichte druk of prik. Indien gewenst wordt een verdovende crème aangebracht voor extra comfort."}},{"@type":"Question","name":"Zie ik er \"opgespoten\" uit?","acceptedAnswer":{"@type":"Answer","text":"Dat is precies wat dr. Kenis wil vermijden. Er wordt bewust gekozen voor een terughoudende, natuurlijke aanpak — het doel is dat je er fris en uitgerust uitziet, niet \"behandeld\"."}},{"@type":"Question","name":"Wat kost het eerste consult?","acceptedAnswer":{"@type":"Answer","text":"Niets. Het eerste consult bij dr. Sasha Kenis is steeds gratis en volledig vrijblijvend."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://clinic3d.be/"},{"@type":"ListItem","position":2,"name":"Behandelingen","item":"https://clinic3d.be/behandelingen"},{"@type":"ListItem","position":3,"name":"Fillers Hasselt","item":"https://clinic3d.be/fillers-hasselt"}]},{"@type":"MedicalClinic","@id":"https://clinic3d.be/#clinic","name":"Clinic3D","url":"https://clinic3d.be","telephone":"+32468216136","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Luikersteenweg 301 bus 1","postalCode":"3500","addressLocality":"Hasselt","addressRegion":"Limburg","addressCountry":"BE"},"physician":{"@type":"Physician","name":"Dr. Sasha Kenis","address":{"@type":"PostalAddress","streetAddress":"Luikersteenweg 301 bus 1","postalCode":"3500","addressLocality":"Hasselt","addressRegion":"Limburg","addressCountry":"BE"}}}]}</script>
 </head>
 <body class="p-fillers-hasselt">
@@ -71,27 +71,52 @@
     </div>
   </div>
 </header>
-<nav class="mobile-menu" id="mobileMenu" aria-label="Mobiele navigatie">
-  <a href="/">Home</a>
-  <a href="/over-ons">Over ons</a>
-  <details class="mm-groep">
-    <summary>Behandelingen <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-    <div class="mm-sub">
-      <a href="/behandelingen">Alle behandelingen</a>
-      <a href="/spier-ontspanners">Spierontspanners</a>
-      <a href="/fillers-hasselt">Fillers</a>
-      <a href="/skinboosters-hasselt">Skinboosters</a>
-      <a href="/biostimulators-hasselt">Biostimulators</a>
-      <a href="/haaruitval-behandeling-hasselt">Haarbehandelingen</a>
-      <a href="/medische-hifu-hasselt">Medische HIFU</a>
+<nav class="mobile-menu mm-paneelmenu" id="mobileMenu" aria-label="Mobiele navigatie">
+  <div class="mm-paneel">
+    <div class="mm-top">
+      <span class="mm-merk"><img src="/img/logo-clinic3d-header.webp" alt="Clinic3D" width="128" height="46"></span>
+      <button type="button" class="mm-sluit" data-menu-sluit aria-label="Menu sluiten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
-  </details>
-  <a href="/blog">Blog</a>
-  <a href="/contact">Contact</a>
-  <div class="mm-acties">
-    <a class="btn btn--primary" href="/maak-een-afspraak">Boek je afspraak</a>
-    <a class="mm-tel" href="tel:+32468216136"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+32 468 21 61 36</a>
+    <p class="mm-eyebrow"><span class="mm-nw">Medisch-esthetische kliniek</span> <span class="mm-nw">· Hasselt</span></p>
+    <ul class="mm-lijst">
+      <li class="mm-item"><a href="/"><span class="mm-label">Home</span></a></li>
+      <li class="mm-item"><a href="/over-ons"><span class="mm-label">Over ons</span></a></li>
+      <li class="mm-item mm-item--groep">
+        <details class="mm-groep">
+          <summary><span class="mm-label">Behandelingen</span><span class="mm-chev" aria-hidden="true"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="mm-sub">
+            <a class="mm-sub-alle" href="/behandelingen"><span>Alle behandelingen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="/spier-ontspanners">Spierontspanners</a>
+            <a href="/fillers-hasselt">Fillers</a>
+            <a href="/skinboosters-hasselt">Skinboosters</a>
+            <a href="/biostimulators-hasselt">Biostimulators</a>
+            <a href="/haaruitval-behandeling-hasselt">Haarbehandelingen</a>
+            <a href="/medische-hifu-hasselt">Medische HIFU</a>
+          </div>
+        </details>
+      </li>
+      <li class="mm-item"><a href="/blog"><span class="mm-label">Blog</span></a></li>
+      <li class="mm-item"><a href="/contact"><span class="mm-label">Contact</span></a></li>
+    </ul>
+    <div class="mm-kaart">
+      <div class="mm-actiepaar">
+        <a class="btn btn--primary" href="/maak-een-afspraak">Boek je afspraak</a>
+        <a class="mm-tel" href="tel:+32468216136"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+32 468 21 61 36</span></a>
+      </div>
+      <div class="mm-info">
+        <p class="mm-adres"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><span><span class="mm-nw">Luikersteenweg 301 bus 1,</span> <span class="mm-nw">3500 Hasselt</span></span></p>
+        <p class="mm-uren"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><span class="mm-uren-rij"><span class="mm-nw mm-uur"><span class="mm-dag">Ma</span> 10–19u</span><span class="mm-sep"> · </span><span class="mm-nw mm-uur"><span class="mm-dag">Di &amp; Do</span> 16–19u</span><span class="mm-sep mm-sep--2"> · </span><span class="mm-nw mm-uur mm-uur--vr"><span class="mm-dag">Vr</span> 11–19u</span></span><span class="mm-uren-nota">Uitsluitend op afspraak</span></span></p>
+      </div>
+      <div class="mm-onder">
+        <a class="mm-mail" href="mailto:info@clinic3d.be"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@clinic3d.be</span></a>
+        <div class="mm-social">
+          <a href="https://www.instagram.com/aesthetics_clinic_3d/" target="_blank" rel="noopener" aria-label="Clinic3D op Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/clinic3d" target="_blank" rel="noopener" aria-label="Clinic3D op Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h2.5V4.5H14a4 4 0 0 0-4 4V11H7.5v3.5H10V21h3.5v-6.5H16l.5-3.5h-3V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+        </div>
+      </div>
+    </div>
   </div>
+  <button type="button" class="mm-achtergrond" data-menu-sluit tabindex="-1" aria-hidden="true"></button>
 </nav>
 <main id="main">
 <!DOCTYPE html>
@@ -259,6 +284,6 @@
   </div>
   <iframe id="c3dFloatIframe" title="Boekingssysteem Clinic3D" data-src="https://api.leadconnectorhq.com/booking/U08LkHeoQdx8yNxCQvps" allow="payment" scrolling="yes" style="overflow-y:auto;-webkit-overflow-scrolling:touch;"></iframe>
 </div>
-<script src="/assets/js/site.js?v=564946b6" defer></script>
+<script src="/assets/js/site.js?v=71aa472e" defer></script>
 </body>
 </html>

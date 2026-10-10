@@ -26,7 +26,17 @@
   if (m && t) {
     t.addEventListener("click", function (e) { e.stopPropagation(); zet(!m.classList.contains("is-open")); });
     m.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { zet(false); }); });
+    m.querySelectorAll("[data-menu-sluit]").forEach(function (b) { b.addEventListener("click", function () { zet(false, true); }); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && m.classList.contains("is-open")) zet(false, true); });
+    // Tab blijft binnen het open menu: na het laatste item terug naar het eerste (en omgekeerd)
+    m.addEventListener("keydown", function (e) {
+      if (e.key !== "Tab" || !m.classList.contains("is-open")) return;
+      var f = Array.prototype.filter.call(m.querySelectorAll('a[href],button:not([tabindex="-1"]),summary'), function (x) { return x.getClientRects().length; });
+      if (!f.length) return;
+      var eerste = f[0], laatste = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === eerste) { e.preventDefault(); laatste.focus(); }
+      else if (!e.shiftKey && document.activeElement === laatste) { e.preventDefault(); eerste.focus(); }
+    });
     var bq = window.matchMedia("(min-width:981px)");
     var bf = function (q) { if (q.matches) zet(false); };
     if (bq.addEventListener) bq.addEventListener("change", bf); else bq.addListener(bf);

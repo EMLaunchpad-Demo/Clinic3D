@@ -214,32 +214,235 @@ body{padding-top:78px;background:#FDFAF5;}
 .nav-drop-menu a:hover{background:var(--cream);color:var(--ink);padding-left:1.1rem;}
 .nav-drop-menu a[aria-current="page"]{background:var(--cream);color:var(--ink);}
 
-/* Mobiel menu: alle pagina's, behandelingen als uitklapgroep, boekknop en telefoon */
-.mobile-menu{position:fixed;top:78px;left:0;right:0;bottom:0;width:auto;height:auto;background:#FDFAF5;z-index:9999;transform:translateX(100%);visibility:hidden;transition:transform var(--transition),visibility 0s linear .35s;padding:1rem clamp(1.2rem,4vw,2.5rem) calc(2rem + env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;}
-.mobile-menu.is-open{transform:translateX(0)!important;visibility:visible;transition:transform var(--transition),visibility 0s;}
-.mobile-menu > a,.mobile-menu summary{font-family:var(--font-display);font-size:1.6rem;color:var(--ink);padding:.75rem 0;border-bottom:1px solid var(--line);text-decoration:none;}
-.mobile-menu a[aria-current="page"]{color:var(--gold-dark);}
-.mobile-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;}
-.mobile-menu summary::-webkit-details-marker{display:none;}
-.mobile-menu summary .chev{width:.7em;height:.7em;color:var(--gold);transition:transform var(--transition);}
-.mobile-menu details[open] summary .chev{transform:rotate(180deg);}
-.mobile-menu .mm-sub{display:grid;padding:.4rem 0 .8rem;border-bottom:1px solid var(--line);}
-.mobile-menu .mm-sub a{font-family:var(--font-sans);font-size:1.05rem;color:var(--ink-soft);padding:.6rem 0 .6rem 1rem;border-left:1px solid var(--gold-soft,#D9C2A4);text-decoration:none;}
-.mobile-menu .mm-sub a:hover,.mobile-menu .mm-sub a[aria-current="page"]{color:var(--ink);border-left-color:var(--gold);}
-.mobile-menu .mm-acties{display:grid;gap:.9rem;justify-items:center;margin-top:1.8rem;}
-.mobile-menu .mm-acties .btn{width:100%;color:#fff;font-size:1rem;padding:1rem 1.7rem;}
-.mobile-menu .mm-tel{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-sans);font-size:1rem;font-weight:500;color:var(--ink);padding:.5rem 0;text-decoration:none;}
-.mobile-menu .mm-tel svg{width:1.05em;height:1.05em;color:var(--gold);}
-.mobile-menu.is-open > *{animation:mm-in .5s cubic-bezier(.22,.61,.36,1) both;}
-.mobile-menu.is-open > :nth-child(2){animation-delay:.04s}.mobile-menu.is-open > :nth-child(3){animation-delay:.08s}
-.mobile-menu.is-open > :nth-child(4){animation-delay:.12s}.mobile-menu.is-open > :nth-child(5){animation-delay:.16s}
-.mobile-menu.is-open > :nth-child(6){animation-delay:.22s}
-@keyframes mm-in{from{opacity:0;transform:translateX(18px);}}
-@media (prefers-reduced-motion:reduce){.mobile-menu.is-open > *{animation:none;}}
-body.no-scroll{overflow:hidden;}
 @media (max-width:980px){.nav-links,.nav-phone{display:none;}.nav-toggle{display:flex;}}
 @media (max-width:420px){.nav-actions .btn{padding:.55rem 1rem;font-size:.85rem;}.brand img{height:40px;}}
 @media (max-width:374px){.site-header .nav{gap:.6rem;}.nav-actions{gap:.4rem;}.nav-actions .btn{padding:.5rem .8rem;font-size:.78rem;}.brand img{height:32px;}}
+
+/* ---- css/02b-mobiel-menu.css ---- */
+/* Mobiel menu: een ivoren zijpaneel schuift van rechts over de gedimde, licht vervaagde pagina.
+   .mobile-menu    = de overlay (vult het scherm, dimt en vervaagt de pagina, scrolt als het paneel langer is dan het scherm);
+   .mm-paneel      = het paneel (volle breedte op telefoon, max. 400px op tablet): balk, eyebrow, lijst en crème-kaart;
+   .mm-achtergrond = onzichtbare knop in de vrije ruimte links van het paneel (tablet): tikken erop sluit het menu. */
+.mobile-menu{position:fixed;inset:0;z-index:9999;display:flex;flex-wrap:wrap;align-content:flex-start;align-items:stretch;
+  background:rgba(43,37,32,.42);-webkit-backdrop-filter:blur(6px) saturate(1.15);backdrop-filter:blur(6px) saturate(1.15);
+  overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scroll-padding-top:calc(var(--mm-balk,78px) + 14px);scroll-padding-bottom:1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(176,137,79,.45) transparent;
+  visibility:hidden;opacity:0;font-family:var(--font-sans);color:var(--ink);}
+.mobile-menu.is-open{visibility:visible;opacity:1;}
+body.no-scroll{overflow:hidden;}
+/* het menu bedekt de header: verberg die dan ook voor het toetsenbord (header.js maakt alleen main, footer en de zwevende knop inert) */
+body:has(.mobile-menu.is-open) .site-header,body:has(.mobile-menu.is-open) .skip-link{visibility:hidden;}
+.mobile-menu::-webkit-scrollbar{width:6px;}
+.mobile-menu::-webkit-scrollbar-thumb{background:rgba(176,137,79,.45);border-radius:3px;}
+.mobile-menu :focus-visible{outline:2px solid var(--gold-dark);outline-offset:3px;}
+/* de chips staan tegen de rand van de uitklapgroep (die knipt af voor de open-animatie): ring binnen de chip */
+.mobile-menu .mm-sub a:focus-visible{outline-offset:-4px;}
+.mobile-menu .mm-nw{white-space:nowrap;}
+
+.mobile-menu .mm-achtergrond{order:0;flex:1 1 0;min-width:0;display:block;border:0;margin:0;padding:0;background:transparent;cursor:pointer;}
+
+/* het paneel: één doorlopende, zachte crème gloed (zoals hero en Waarom), geen begrensde strook */
+.mobile-menu .mm-paneel{--mm-pad:clamp(1.2rem,5vw,1.9rem);order:1;flex:0 0 100%;width:100%;max-width:100%;min-height:100%;position:relative;display:flex;flex-direction:column;min-width:0;
+  background:
+    radial-gradient(75% 38% at 104% 30%,rgba(217,194,164,.34) 0%,rgba(217,194,164,0) 100%),
+    radial-gradient(70% 34% at -6% 74%,rgba(217,194,164,.26) 0%,rgba(217,194,164,0) 100%),
+    radial-gradient(60% 30% at 96% 104%,rgba(176,137,79,.12) 0%,rgba(176,137,79,0) 100%),
+    var(--ivory);
+  box-shadow:-30px 0 70px -24px rgba(34,29,25,.55);transform:translateX(100%);
+  padding:0 var(--mm-pad) calc(1.1rem + env(safe-area-inset-bottom));}
+.mobile-menu.is-open .mm-paneel{transform:none;}
+
+/* bovenbalk: volledig ivoor, zelfde hoogte als de site-header; logo en X blijven op hun plek.
+   Onder de balk vervloeit het ivoor in de gloed (geen harde rand), de gouden haarlijn loopt van marge tot marge. */
+.mobile-menu .mm-top{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--mm-balk,78px);flex:none;
+  margin:0 calc(-1*var(--mm-pad));padding:0 var(--mm-pad) 0 clamp(1.2rem,4vw,2.5rem);background:var(--ivory);}
+.mobile-menu .mm-top::after{content:"";position:absolute;left:var(--mm-pad);right:var(--mm-pad);bottom:0;height:1px;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-soft) 50%,rgba(217,194,164,0) 100%);}
+.mobile-menu .mm-top::before{content:"";position:absolute;left:0;right:0;top:100%;height:22px;pointer-events:none;
+  background:linear-gradient(180deg,var(--ivory) 0%,rgba(253,250,245,0) 100%);}
+.mobile-menu .mm-merk{display:flex;align-items:center;}
+.mobile-menu .mm-merk img{height:46px;width:auto;display:block;}
+.mobile-menu .mm-sluit{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;padding:0;margin-right:-.15rem;
+  border:1px solid var(--gold-soft);background:#fff;color:var(--ink);cursor:pointer;}
+.mobile-menu .mm-sluit svg{width:18px;height:18px;}
+
+/* redactionele aanhef, zoals de eyebrow van de hero */
+.mobile-menu .mm-eyebrow{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:.1rem .35rem;margin:1.15rem 0 .35rem;
+  font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:#7A5C30;}
+.mobile-menu .mm-eyebrow::before{content:"";flex:none;width:22px;height:1px;margin-right:.3rem;background:var(--gold);}
+
+/* hoofdnavigatie: royale Cormorant met fijne lijnen; de actieve pagina krijgt een gouden haarlijn en een zachte crème band */
+.mobile-menu .mm-lijst{list-style:none;margin:0;padding:0;}
+.mobile-menu .mm-item{border-bottom:1px solid var(--line);}
+/* rijhoogte schaalt mee met de schermhoogte (vaste waarde per scherm, dus niets verspringt als de groep opengaat):
+   op hoge schermen meer lucht, zodat er geen leeg vlak boven de kaart blijft */
+.mobile-menu .mm-item > a,.mobile-menu summary{position:relative;display:flex;align-items:center;gap:.7rem;min-height:var(--mm-rij,58px);padding:.4rem 0;
+  font-family:var(--font-display);font-size:1.62rem;font-weight:500;line-height:1.1;letter-spacing:-.005em;color:var(--ink);text-decoration:none;}
+.mobile-menu summary{list-style:none;cursor:pointer;}
+.mobile-menu summary::-webkit-details-marker{display:none;}
+.mobile-menu .mm-label{min-width:0;}
+.mobile-menu .mm-item > a[aria-current="page"],.mobile-menu .mm-groep:has(.mm-sub a[aria-current="page"]) > summary{
+  padding-inline:.75rem 0;border-radius:14px;
+  background:linear-gradient(90deg,rgba(242,234,223,.95) 0%,rgba(242,234,223,.5) 55%,rgba(242,234,223,0) 100%);}
+.mobile-menu .mm-item > a[aria-current="page"]::before,.mobile-menu .mm-groep:has(.mm-sub a[aria-current="page"]) > summary::before{
+  content:"";flex:none;width:20px;height:1px;background:var(--gold-dark);}
+.mobile-menu .mm-item > a[aria-current="page"] .mm-label,.mobile-menu .mm-groep:has(.mm-sub a[aria-current="page"]) > summary .mm-label{color:#7A5C30;}
+.mobile-menu .mm-chev{flex:none;margin-left:auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--gold-soft);color:var(--gold-dark);background:#fff;}
+.mobile-menu .mm-chev .chev{width:14px;height:14px;}
+.mobile-menu details[open] .mm-chev{background:var(--gold);border-color:var(--gold);color:#fff;}
+.mobile-menu details[open] .mm-chev .chev{transform:rotate(180deg);}
+
+/* behandelingen: raster van ivoren chips met fijne goudlijn; "Alle behandelingen" als brede kaart met pijl */
+.mobile-menu .mm-sub{display:grid;grid-template-columns:1fr 1fr;gap:.45rem;padding:.15rem 0 .95rem;}
+.mobile-menu .mm-sub a{display:flex;align-items:center;gap:.5rem;min-width:0;min-height:46px;padding:.45rem .8rem;border-radius:14px;
+  border:1px solid rgba(176,137,79,.46);background:rgba(255,255,255,.66);
+  font-family:var(--font-sans);font-size:.93rem;font-weight:400;line-height:1.2;color:var(--ink);text-decoration:none;}
+.mobile-menu .mm-sub a.mm-sub-alle{grid-column:1 / -1;justify-content:space-between;color:#7A5C30;font-weight:500;border-color:var(--gold-soft);
+  background:linear-gradient(90deg,rgba(242,234,223,.9),rgba(255,255,255,.7));}
+.mobile-menu .mm-sub a.mm-sub-alle svg{flex:none;width:17px;height:17px;}
+.mobile-menu .mm-sub a[aria-current="page"]{position:relative;background:#fff;border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold),0 6px 16px -10px rgba(138,104,54,.55);
+  color:#7A5C30;font-weight:500;}
+.mobile-menu .mm-sub a[aria-current="page"]:not(.mm-sub-alle)::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+
+/* crème-kaart: actiepaar (boeken + bellen), praktische info, e-mail en socials. Verankerd onderaan het paneel. */
+.mobile-menu .mm-kaart{position:relative;z-index:1;margin-top:auto;padding:.95rem .95rem .55rem;border:1px solid var(--line);border-radius:20px;display:grid;
+  background:radial-gradient(60% 70% at 100% 0%,rgba(176,137,79,.13) 0%,rgba(176,137,79,0) 100%),var(--cream);box-shadow:var(--shadow-sm);}
+.mobile-menu .mm-lijst{margin-bottom:1.2rem;}
+.mobile-menu .mm-actiepaar{display:grid;gap:.5rem;}
+.mobile-menu .mm-kaart .btn{width:100%;min-height:52px;padding:.85rem 1.4rem;font-size:1rem;color:#fff;background:var(--gold-btn,#94703C);border-color:var(--gold-btn,#94703C);transform:none;}
+.mobile-menu .mm-kaart .btn:hover,.mobile-menu .mm-kaart .btn:active{background:var(--gold-btn,#94703C);border-color:var(--gold-btn,#94703C);color:#fff;transform:none;}
+.mobile-menu .mm-tel{display:flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.5rem 1rem;border-radius:999px;
+  border:1px solid rgba(176,137,79,.42);background:rgba(255,255,255,.7);font-size:.98rem;font-weight:500;letter-spacing:.02em;color:var(--ink);text-decoration:none;white-space:nowrap;}
+.mobile-menu .mm-tel svg{flex:none;width:17px;height:17px;color:#7A5C30;}
+.mobile-menu .mm-info{display:grid;gap:.35rem;margin-top:.8rem;padding-top:.75rem;border-top:1px solid rgba(176,137,79,.22);}
+.mobile-menu .mm-adres,.mobile-menu .mm-uren{display:flex;align-items:flex-start;gap:.65rem;margin:0;font-size:.83rem;line-height:1.45;color:var(--ink-soft);}
+.mobile-menu .mm-adres svg,.mobile-menu .mm-uren svg,.mobile-menu .mm-mail svg{flex:none;width:17px;height:17px;margin-top:.1rem;color:#7A5C30;}
+.mobile-menu .mm-uren-rij{display:block;color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums;}
+.mobile-menu .mm-uren-nota{display:block;color:var(--ink-soft);}
+.mobile-menu .mm-dag{font-weight:inherit;}
+.mobile-menu .mm-onder{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-top:.45rem;padding-top:.35rem;border-top:1px solid rgba(176,137,79,.22);}
+.mobile-menu .mm-mail{display:flex;align-items:center;gap:.65rem;min-height:44px;min-width:0;font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;}
+.mobile-menu .mm-mail svg{margin-top:0;}
+.mobile-menu .mm-social{display:flex;gap:.4rem;flex:none;}
+.mobile-menu .mm-social a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold-soft);color:var(--gold-dark);background:rgba(255,255,255,.6);}
+.mobile-menu .mm-social svg{width:18px;height:18px;}
+
+/* muis: zachte reacties (alleen op apparaten die echt kunnen zweven, zodat een tik geen blijvende kleurtoestand achterlaat) */
+@media (hover:hover){
+  .mobile-menu .mm-sluit:hover{border-color:var(--gold);color:var(--gold-dark);}
+  .mobile-menu .mm-item > a:hover .mm-label{color:#7A5C30;}
+  .mobile-menu details:not([open]) > summary:hover .mm-chev{border-color:var(--gold);}
+  .mobile-menu .mm-sub a:hover{border-color:var(--gold);background:#fff;}
+  .mobile-menu .mm-kaart .btn:hover{background:var(--gold-btn-hover,#7A5C30);border-color:var(--gold-btn-hover,#7A5C30);}
+  .mobile-menu .mm-tel:hover{border-color:var(--gold);background:#fff;color:#7A5C30;}
+  .mobile-menu .mm-mail:hover{color:#7A5C30;}
+  .mobile-menu .mm-social a:hover{background:var(--gold);border-color:var(--gold);color:#fff;}
+}
+
+/* telefoons tot 420px: iets compacter ritme zodat alles op 390 en 360 zonder scrollen past */
+@media (max-width:420px){
+  .mobile-menu .mm-item > a,.mobile-menu summary{--mm-rij:clamp(55px,calc((100vh - 518px) / 5),76px);font-size:1.56rem;}
+  .mobile-menu .mm-merk img{height:40px;}
+}
+/* smalle telefoons */
+@media (max-width:374px){
+  .mobile-menu .mm-paneel{--mm-pad:1.05rem;}
+  .mobile-menu{--mm-cc:330px;}
+  .mobile-menu .mm-merk img{height:32px;}
+  .mobile-menu .mm-eyebrow{font-size:.7rem;letter-spacing:.12em;margin-top:.85rem;}
+  .mobile-menu .mm-item > a,.mobile-menu summary{--mm-rij:50px;font-size:1.45rem;}
+  .mobile-menu .mm-sub{gap:.35rem;}
+  .mobile-menu .mm-sub a{min-height:44px;padding:.4rem .6rem;font-size:.84rem;border-radius:12px;}
+  .mobile-menu .mm-kaart{padding:.8rem .8rem .45rem;}
+  .mobile-menu .mm-kaart .btn{min-height:50px;}
+  .mobile-menu .mm-tel{min-height:46px;}
+  .mobile-menu .mm-adres,.mobile-menu .mm-uren{font-size:.8rem;gap:.55rem;}
+  .mobile-menu .mm-mail{font-size:.85rem;gap:.5rem;}
+}
+@media (max-width:359px){
+  .mobile-menu .mm-eyebrow::before{display:none;}
+  .mobile-menu .mm-sep--2{display:none;}
+  .mobile-menu .mm-uur--vr{display:block;}
+}
+/* hoge schermen: de openingsuren als klein rooster met fijne stippellijn; vult de kaart en houdt de lijst vrij van een leeg vlak */
+@media (max-width:559px) and (min-height:700px),(min-width:560px) and (min-height:960px){
+  .mobile-menu .mm-uren > span{flex:1 1 auto;min-width:0;}
+  .mobile-menu .mm-uren-rij{display:grid;gap:.12rem;max-width:17.5rem;margin-bottom:.15rem;}
+  .mobile-menu .mm-uren-rij .mm-sep{display:none;}
+  .mobile-menu .mm-uur{display:flex;align-items:baseline;gap:.5rem;}
+  .mobile-menu .mm-dag{flex:1 1 auto;display:flex;align-items:baseline;gap:.5rem;color:var(--ink-soft);font-weight:400;}
+  .mobile-menu .mm-dag::after{content:"";flex:1 1 auto;min-width:1rem;border-bottom:1px dotted rgba(176,137,79,.55);transform:translateY(-.22em);}
+  .mobile-menu .mm-kaart{padding-top:1.05rem;}
+  .mobile-menu .mm-info{gap:.5rem;margin-top:.9rem;padding-top:.85rem;}
+}
+/* vanaf 560px: een bewust zijpaneel van 400px met ruimere binnenmarges; de pagina blijft links zichtbaar achter de dimming
+   (onder 560px volle breedte, dus geen smalle restrook net boven 400px) */
+@media (min-width:560px){
+  .mobile-menu{--mm-cc:290px;}
+  .mobile-menu .mm-paneel{--mm-pad:1.75rem;flex-basis:400px;width:400px;}
+  .mobile-menu .mm-top{padding-left:var(--mm-pad);}
+  .mobile-menu .mm-merk img{height:42px;}
+  .mobile-menu .mm-eyebrow{margin-top:1.8rem;margin-bottom:.6rem;font-size:.76rem;}
+  .mobile-menu .mm-item > a,.mobile-menu summary{font-size:1.75rem;--mm-rij:clamp(70px,calc((100vh - 580px) / 5),96px);}
+  .mobile-menu .mm-sub a{min-height:50px;}
+  .mobile-menu .mm-lijst{margin-bottom:1.8rem;}
+  .mobile-menu .mm-kaart{padding:1.15rem 1.15rem .7rem;}
+  .mobile-menu .mm-kaart .btn{min-height:56px;}
+  .mobile-menu .mm-tel{min-height:52px;}
+  .mobile-menu .mm-info{gap:.5rem;margin-top:1rem;padding-top:.95rem;}
+  .mobile-menu .mm-adres,.mobile-menu .mm-uren{font-size:.88rem;}
+  .mobile-menu .mm-onder{margin-top:.7rem;padding-top:.5rem;}
+}
+/* hoge tablets: wat meer lucht in de lijst, zodat de kaart onderaan niet los komt te staan */
+@media (min-width:560px) and (min-height:900px){
+  .mobile-menu .mm-item > a,.mobile-menu summary{font-size:1.85rem;}
+  .mobile-menu .mm-eyebrow{margin-top:2.4rem;margin-bottom:1rem;}
+}
+
+/* lage schermen (telefoon in landscape): compacter ritme, lagere balk */
+@media (max-height:520px){
+  .mobile-menu .mm-eyebrow{margin:.75rem 0 .2rem;}
+  .mobile-menu .mm-item > a,.mobile-menu summary{--mm-rij:50px;font-size:1.45rem;}
+  .mobile-menu .mm-sub{gap:.4rem;padding-bottom:.75rem;}
+  .mobile-menu .mm-sub a{min-height:44px;}
+  .mobile-menu .mm-lijst{margin-bottom:1rem;}
+  .mobile-menu .mm-kaart{padding:.85rem .9rem .5rem;}
+  .mobile-menu .mm-kaart .btn{min-height:48px;padding:.7rem 1rem;font-size:.95rem;}
+  .mobile-menu .mm-tel{min-height:48px;padding:.5rem .7rem;font-size:.92rem;letter-spacing:0;}
+  .mobile-menu .mm-info{gap:.3rem;margin-top:.7rem;padding-top:.65rem;}
+  .mobile-menu .mm-onder{margin-top:.35rem;padding-top:.25rem;}
+}
+/* landscape met zijpaneel: lagere balk (de header-logo staat dan links, dus niets verspringt) */
+@media (max-height:520px) and (min-width:560px){
+  .mobile-menu{--mm-balk:64px;}
+  .mobile-menu .mm-merk img{height:34px;}
+}
+/* cookiebanner nog zichtbaar (eerste bezoek, ligt bewust boven het menu): extra ruimte onderaan,
+   zodat de kaart met boekknop en telefoon boven de banner kan worden gescrold */
+body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{padding-bottom:calc(var(--mm-cc,260px) + 1.5rem + env(safe-area-inset-bottom));}
+
+/* beweging: overlay vervaagt in, paneel schuift in, onderdelen volgen gestaffeld */
+@media (prefers-reduced-motion:no-preference){
+  .mobile-menu{transition:opacity .38s cubic-bezier(.22,.61,.36,1),visibility 0s linear .38s;}
+  .mobile-menu.is-open{transition:opacity .3s cubic-bezier(.22,.61,.36,1),visibility 0s;}
+  .mobile-menu .mm-paneel{transition:transform .46s cubic-bezier(.22,.61,.36,1);}
+  /* de header verdwijnt pas als het paneel er volledig over ligt: geen flits bij het openen */
+  body:has(.mobile-menu.is-open) .site-header{transition:visibility 0s linear .46s;}
+  .mobile-menu .mm-chev,.mobile-menu .mm-chev .chev,.mobile-menu .mm-sluit,.mobile-menu .mm-social a,.mobile-menu .mm-sub a,.mobile-menu .mm-tel,.mobile-menu .mm-label{transition:transform .35s cubic-bezier(.22,.61,.36,1),background .25s ease,border-color .25s ease,color .25s ease;}
+  .mobile-menu.is-open .mm-eyebrow,.mobile-menu.is-open .mm-item,.mobile-menu.is-open .mm-kaart{animation:mm-in .55s cubic-bezier(.22,.61,.36,1) both;}
+  .mobile-menu.is-open .mm-eyebrow{animation-delay:.1s;}
+  .mobile-menu.is-open .mm-item:nth-child(1){animation-delay:.14s;}
+  .mobile-menu.is-open .mm-item:nth-child(2){animation-delay:.18s;}
+  .mobile-menu.is-open .mm-item:nth-child(3){animation-delay:.22s;}
+  .mobile-menu.is-open .mm-item:nth-child(4){animation-delay:.26s;}
+  .mobile-menu.is-open .mm-item:nth-child(5){animation-delay:.3s;}
+  .mobile-menu.is-open .mm-kaart{animation-delay:.36s;}
+}
+@keyframes mm-in{from{opacity:0;transform:translateX(22px);}}
+@media (prefers-reduced-motion:reduce){
+  .mobile-menu,.mobile-menu .mm-paneel{transition:none;}
+  .mobile-menu.is-open .mm-eyebrow,.mobile-menu.is-open .mm-item,.mobile-menu.is-open .mm-kaart{animation:none;}
+}
 
 /* ---- css/03-zwevende-knop.css ---- */
 /* Zwevende knop 'Boek een afspraak' met boekingspaneel.
@@ -1593,10 +1796,10 @@ main summary{transition:color .25s ease;}
 /* Details na de QA-ronde: leesbaarheid (contrast), ritme en kleine uitlijningen. */
 
 /* ---------- Knopkleur: iets dieper goud zodat witte tekst leesbaar is (WCAG AA 4,5:1) ---------- */
-.btn--primary,.mobile-menu .mm-acties .btn,
+.btn--primary,
 body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn),
 .cc-btn--goud,.extern-plaatshouder button,.c3d-float-cta{background:var(--gold-btn);border-color:var(--gold-btn);}
-.btn--primary:hover,.mobile-menu .mm-acties .btn:hover,
+.btn--primary:hover,
 body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn):hover,
 .cc-btn--goud:hover,.extern-plaatshouder button:hover,.c3d-float-cta.is-zichtbaar:hover{background:var(--gold-btn-hover);border-color:var(--gold-btn-hover);}
 

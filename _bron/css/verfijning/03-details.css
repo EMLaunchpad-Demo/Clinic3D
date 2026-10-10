@@ -1,10 +1,10 @@
 /* Details na de QA-ronde: leesbaarheid (contrast), ritme en kleine uitlijningen. */
 
 /* ---------- Knopkleur: iets dieper goud zodat witte tekst leesbaar is (WCAG AA 4,5:1) ---------- */
-.btn--primary,.mobile-menu .mm-acties .btn,
+.btn--primary,
 body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn),
 .cc-btn--goud,.extern-plaatshouder button,.c3d-float-cta{background:var(--gold-btn);border-color:var(--gold-btn);}
-.btn--primary:hover,.mobile-menu .mm-acties .btn:hover,
+.btn--primary:hover,
 body[class] :is(.c3w .btn:not(.ghost),.c3t .btn,.c3b .btn:not(.ghost),.c3p .btn,.tp .btn:not(.ghost),.tp-btn--primary,.afs-btn--primary,.c3d-success .c3d-btn--primary,.c3nf .btns a.p,.tp-cta .tp-btn--primary,.post-inhoud .c3d-article .c3d-btn):hover,
 .cc-btn--goud:hover,.extern-plaatshouder button:hover,.c3d-float-cta.is-zichtbaar:hover{background:var(--gold-btn-hover);border-color:var(--gold-btn-hover);}
 
