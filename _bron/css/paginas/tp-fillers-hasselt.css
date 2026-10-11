@@ -70,3 +70,12 @@
   .tp-hero{ padding:52px 0 36px; }
   .tp-cta{ padding:38px 26px; }
 }
+
+/* Prijslijst per behandeling (zelfde namen en prijzen als /behandelingen) */
+.tp-plist-title{ text-align:center; font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:24px; color:var(--ink); margin:40px 0 14px; }
+.tp-plist{ max-width:600px; margin:8px auto 0; background:#fff; border:1px solid var(--line); border-radius:14px; padding:4px 24px; }
+.tp-plist-row{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; line-height:1.45; }
+.tp-plist-row:last-child{ border-bottom:none; }
+.tp-plist-row b{ font-weight:500; color:var(--ink); }
+.tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
+@media (max-width:420px){ .tp-plist{ padding:4px 16px; } .tp-plist-row{ font-size:14px; } }

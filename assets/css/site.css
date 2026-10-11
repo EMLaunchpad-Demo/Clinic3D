@@ -1350,6 +1350,15 @@ body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{pa
   .p-fillers-hasselt .tp-cta{ padding:38px 26px; }
 }
 
+
+.p-fillers-hasselt .tp-plist-title{ text-align:center; font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:24px; color:var(--ink); margin:40px 0 14px; }
+.p-fillers-hasselt .tp-plist{ max-width:600px; margin:8px auto 0; background:#fff; border:1px solid var(--line); border-radius:14px; padding:4px 24px; }
+.p-fillers-hasselt .tp-plist-row{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; line-height:1.45; }
+.p-fillers-hasselt .tp-plist-row:last-child{ border-bottom:none; }
+.p-fillers-hasselt .tp-plist-row b{ font-weight:500; color:var(--ink); }
+.p-fillers-hasselt .tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
+@media (max-width:420px){ .p-fillers-hasselt .tp-plist{ padding:4px 16px; } .p-fillers-hasselt .tp-plist-row{ font-size:14px; } }
+
 /* ---- css/paginas/tp-haaruitval-behandeling-hasselt.css ---- */
 .p-haaruitval-behandeling-hasselt .tp{
   --gold:#B0894F; --gold-dark:#8A6836; --ink:#221D19; --ivory:#FDFAF5;
@@ -1423,6 +1432,15 @@ body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{pa
   .p-haaruitval-behandeling-hasselt .tp-hero{ padding:52px 0 36px; }
   .p-haaruitval-behandeling-hasselt .tp-cta{ padding:38px 26px; }
 }
+
+
+.p-haaruitval-behandeling-hasselt .tp-plist-title{ text-align:center; font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:24px; color:var(--ink); margin:40px 0 14px; }
+.p-haaruitval-behandeling-hasselt .tp-plist{ max-width:600px; margin:8px auto 0; background:#fff; border:1px solid var(--line); border-radius:14px; padding:4px 24px; }
+.p-haaruitval-behandeling-hasselt .tp-plist-row{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; line-height:1.45; }
+.p-haaruitval-behandeling-hasselt .tp-plist-row:last-child{ border-bottom:none; }
+.p-haaruitval-behandeling-hasselt .tp-plist-row b{ font-weight:500; color:var(--ink); }
+.p-haaruitval-behandeling-hasselt .tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
+@media (max-width:420px){ .p-haaruitval-behandeling-hasselt .tp-plist{ padding:4px 16px; } .p-haaruitval-behandeling-hasselt .tp-plist-row{ font-size:14px; } }
 
 /* ---- css/paginas/tp-medische-hifu-hasselt.css ---- */
 .p-medische-hifu-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
@@ -1560,6 +1578,15 @@ body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{pa
   .p-spier-ontspanners .tp-hero{ padding:52px 0 36px; }
   .p-spier-ontspanners .tp-cta{ padding:38px 26px; }
 }
+
+
+.p-spier-ontspanners .tp-plist-title{ text-align:center; font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:24px; color:var(--ink); margin:40px 0 14px; }
+.p-spier-ontspanners .tp-plist{ max-width:600px; margin:8px auto 0; background:#fff; border:1px solid var(--line); border-radius:14px; padding:4px 24px; }
+.p-spier-ontspanners .tp-plist-row{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; line-height:1.45; }
+.p-spier-ontspanners .tp-plist-row:last-child{ border-bottom:none; }
+.p-spier-ontspanners .tp-plist-row b{ font-weight:500; color:var(--ink); }
+.p-spier-ontspanners .tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
+@media (max-width:420px){ .p-spier-ontspanners .tp-plist{ padding:4px 16px; } .p-spier-ontspanners .tp-plist-row{ font-size:14px; } }
 
 /* ---- css/paginas/waarom.css ---- */
 /* Homepage – "Waarom Clinic3D": redactionele opbouw.
