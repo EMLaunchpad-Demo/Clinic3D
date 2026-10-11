@@ -1358,6 +1358,7 @@ body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{pa
 .p-fillers-hasselt .tp-plist-row b{ font-weight:500; color:var(--ink); }
 .p-fillers-hasselt .tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
 @media (max-width:420px){ .p-fillers-hasselt .tp-plist{ padding:4px 16px; } .p-fillers-hasselt .tp-plist-row{ font-size:14px; } }
+.p-fillers-hasselt .tp-price-cta{ text-align:center; margin:28px 0 0; }
 
 /* ---- css/paginas/tp-haaruitval-behandeling-hasselt.css ---- */
 .p-haaruitval-behandeling-hasselt .tp{
@@ -1441,6 +1442,7 @@ body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{pa
 .p-haaruitval-behandeling-hasselt .tp-plist-row b{ font-weight:500; color:var(--ink); }
 .p-haaruitval-behandeling-hasselt .tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
 @media (max-width:420px){ .p-haaruitval-behandeling-hasselt .tp-plist{ padding:4px 16px; } .p-haaruitval-behandeling-hasselt .tp-plist-row{ font-size:14px; } }
+.p-haaruitval-behandeling-hasselt .tp-price-cta{ text-align:center; margin:28px 0 0; }
 
 /* ---- css/paginas/tp-medische-hifu-hasselt.css ---- */
 .p-medische-hifu-hasselt .tp{--gold:#B0894F;--gold-dark:#8A6836;--ivory:#FDFAF5;--cream:#F2EADF;--ink:#2B2520;--ink-soft:#5C534A;--line:#E7DCCD;--truth:#5C7A57;--fd:"Cormorant Garamond",Georgia,serif;--fs:"Jost",system-ui,sans-serif;background:var(--ivory);font-family:var(--fs);color:var(--ink-soft)}
@@ -1587,6 +1589,7 @@ body:has(.mobile-menu.is-open):has(.cc:not([hidden])) .mobile-menu .mm-paneel{pa
 .p-spier-ontspanners .tp-plist-row b{ font-weight:500; color:var(--ink); }
 .p-spier-ontspanners .tp-plist-row span{ flex:none; color:var(--gold-dark); font-weight:600; white-space:nowrap; }
 @media (max-width:420px){ .p-spier-ontspanners .tp-plist{ padding:4px 16px; } .p-spier-ontspanners .tp-plist-row{ font-size:14px; } }
+.p-spier-ontspanners .tp-price-cta{ text-align:center; margin:28px 0 0; }
 
 /* ---- css/paginas/waarom.css ---- */
 /* Homepage – "Waarom Clinic3D": redactionele opbouw.

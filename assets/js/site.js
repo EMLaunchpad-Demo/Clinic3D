@@ -66,7 +66,7 @@
 })();
 
 /* ---- js/zwevende-knop.js ---- */
-/* Zwevende knop 'Boek een afspraak': verschijnt na de hero en verdwijnt bij de footer (zodat
+/* Zwevende knop 'Boek je afspraak': verschijnt na de hero en verdwijnt bij de footer (zodat
    'Cookie-instellingen' bereikbaar blijft). Desktop opent het boekingspaneel; telefoon en lage
    schermen gaan naar de volledige boekingspagina. Het GHL-boekingssysteem laadt pas bij openen. */
 (function () {
@@ -92,7 +92,7 @@
       btn.setAttribute("aria-controls", "c3dFloatPanel");
       btn.setAttribute("aria-expanded", isOpen() ? "true" : "false");
       panel.setAttribute("role", "dialog");
-      panel.setAttribute("aria-label", "Boek een afspraak");
+      panel.setAttribute("aria-label", "Boek je afspraak");
     }
   }
   function isOpen() { return panel.classList.contains("is-open"); }
